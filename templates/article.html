@@ -1,0 +1,42 @@
+<!-- templates/article.html
+     Reusable article template. Copy this into pages/ when creating new articles.
+     Keep metadata at the top, use <details> for expandable subsections, and include image captions and references.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article title — Jer's Neuroscience Compendium</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="/">Jer's Neuroscience Compendium</a></div></header>
+  <main class="container">
+    <article class="article">
+      <header>
+        <h1><!-- Article title --></h1>
+        <p class="muted">Updated: YYYY-MM-DD · Category</p>
+      </header>
+
+      <section>
+        <p><!-- Intro paragraph --></p>
+      </section>
+
+      <details class="article-section">
+        <summary>Section</summary>
+        <div class="section-content">
+          <p><!-- Content --></p>
+        </div>
+      </details>
+
+      <footer>
+        <h4>References</h4>
+        <ol></ol>
+      </footer>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="container"><p>&copy; Jer — Jer's Neuroscience Compendium</p></div></footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>
