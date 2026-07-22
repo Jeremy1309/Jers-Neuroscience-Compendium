@@ -4,23 +4,49 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About — Jer's Neuroscience Compendium</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <meta name="description" content="About the creator and purpose of the compendium." />
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-  <header class="site-header"><div class="container header-inner"><a class="brand" href="/">Jer's Neuroscience Compendium</a></div></header>
-  <main class="container">
-    <h1>About Me</h1>
-    <p class="muted">Neuroscience graduate. This compendium is a personal project to organize and explain neuroscience concepts clearly, accurately, and accessibly.</p>
-    <section>
-      <h2>Background</h2>
-      <p>Education: neuroscience degree (add institution and year). Research interests and relevant experience.</p>
-    </section>
-    <section>
-      <h2>Purpose</h2>
-      <p>Explain the motivation behind the compendium and how you plan to expand it (interactive atlas, quizzes, simulations, references).</p>
-    </section>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-left">
+        <a class="back-link" href="../index.html">← Home</a>
+      </div>
+      <div class="header-center">
+        <a class="brand" href="../index.html">Jer's Neuroscience Compendium</a>
+      </div>
+      <div class="header-right">
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="main-nav" class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="brain.html">The Brain</a></li>
+          <li><a href="neurons.html">Neurons</a></li>
+          <li><a href="neuropharm.html">Neuropharmacology</a></li>
+          <li><a href="disorders.html">Diseases &amp; Disorders</a></li>
+          <li><a href="topics.html">Concepts &amp; Research</a></li>
+          <li><a href="about.html">About Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article-shell">
+    <article class="article-card">
+      <h1>About Me</h1>
+      <div class="section-content">
+        <p>My name is Jeremy Fumagalli, and I am the creator of Jer's Neuroscience Compendium — a personal passion project dedicated to exploring the science of the brain, behaviour, and the biological processes that make us who we are.</p>
+        <p>When I am not playing basketball, rock climbing, working out at the gym, or making memories with friends, I am often thinking about neuroscience (especially neuropharmacology). This field has captured my interest since my first neuroscience course. The way molecules, receptors, and neurons interact to influence behaviour, cognition, and disease continues to be one of the most fascinating areas of science to me.</p>
+        <p>This website is my attempt to organize and expand upon the knowledge I have gained through my university studies at Carleton University (2020–2024), scientific literature, and independent exploration. My goal is to create a resource that makes neuroscience more accessible — not only for myself, but also for friends, family, and anyone curious about this awesome field.</p>
+        <p>Through this project, I hope to continue learning, share what I discover, and build a growing collection of explanations, diagrams, and interactive resources that explore the many areas of neuroscience.</p>
+        <p>Thank you for visiting Jer's Neuroscience Compendium — I hope you learn something fascinating!</p>
+      </div>
+    </article>
   </main>
-  <footer class="site-footer"><div class="container'><p>&copy; Jer — Jer's Neuroscience Compendium</p></div></footer>
-  <script src="/js/main.js"></script>
+  <footer class="site-footer"><div class="container"><p>&copy; Jer — Jer's Neuroscience Compendium</p></div></footer>
+  <script src="../js/main.js"></script>
 </body>
 </html>

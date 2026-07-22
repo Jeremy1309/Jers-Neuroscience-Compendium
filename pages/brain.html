@@ -4,65 +4,140 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Brain — Jer's Neuroscience Compendium</title>
-  <meta name="description" content="The Brain: organization, lobes, and regions." />
-  <link rel="stylesheet" href="/css/styles.css">
+  <meta name="description" content="Anatomy of the brain, cortical lobes, important regions, and the nervous system." />
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="/">Jer's Neuroscience Compendium</a>
-      <button id="nav-toggle" class="nav-toggle" aria-expanded="false">Menu</button>
+      <div class="header-left">
+        <a class="back-link" href="../index.html">← Home</a>
+      </div>
+      <div class="header-center">
+        <a class="brand" href="../index.html">Jer's Neuroscience Compendium</a>
+      </div>
+      <div class="header-right">
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      </div>
+    </div>
+    <div class="container">
       <nav id="main-nav" class="main-nav" aria-label="Primary">
         <ul>
-          <li><a href="/pages/brain.html">The Brain</a></li>
-          <li><a href="/pages/neurons.html">Neurons</a></li>
-          <li><a href="/pages/disorders.html">Diseases &amp; Disorders</a></li>
-          <li><a href="/pages/neuropharm.html">Neuropharmacology</a></li>
-          <li><a href="/pages/topics.html">Additional Topics</a></li>
-          <li><a href="/pages/about.html">About Me</a></li>
+          <li><a href="brain.html">The Brain</a></li>
+          <li><a href="neurons.html">Neurons</a></li>
+          <li><a href="neuropharm.html">Neuropharmacology</a></li>
+          <li><a href="disorders.html">Diseases &amp; Disorders</a></li>
+          <li><a href="topics.html">Concepts &amp; Research</a></li>
+          <li><a href="quizzes.html">Quizzes</a></li>
+          <li><a href="about.html">About Me</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <h1>The Brain</h1>
-    <p class="muted">Purpose: Understanding the structure and organization of the nervous system.</p>
+  <main class="container article-shell">
+    <div class="article-layout">
+      <aside class="topic-rail">
+        <h2>Highlighted Topics</h2>
+        <nav class="topic-nav" aria-label="Brain sections">
+          <a href="#cortical-lobes">Cortical Lobes</a>
+          <a href="#brain-regions">Important Brain Regions</a>
+          <a href="#nervous-system">Nervous System</a>
+          <a href="#neuron-glossary">Neuron Glossary</a>
+          <a href="#brain-glossary">Brain Glossary</a>
+        </nav>
+      </aside>
 
-    <section>
-      <h2 id="overview">Overview of the nervous system</h2>
-      <p>Summary and orientation. Use the interactive brain on the homepage to jump to specific regions and return here for in-depth articles.</p>
-      <ul>
-        <li id="cns"><strong>Central nervous system</strong> — brain and spinal cord.</li>
-        <li id="pns"><strong>Peripheral nervous system</strong> — nerves and ganglia outside the CNS.</li>
-        <li id="ans"><strong>Autonomic nervous system</strong> — sympathetic and parasympathetic branches.</li>
-      </ul>
-    </section>
+      <article class="article-card">
+        <h1>The Brain</h1>
+        <p class="article-intro">While neurons are the fundamental units of the brain, the brain itself is organized into distinct sections, each responsible for different functions and processes.</p>
 
-    <section>
-      <h2 id="cortical-lobes">Cortical lobes</h2>
-      <ul>
-        <li id="frontal-lobe"><strong>Frontal lobe</strong> — executive functions, planning, motor control.</li>
-        <li id="parietal-lobe"><strong>Parietal lobe</strong> — somatosensory processing and spatial reasoning.</li>
-        <li id="temporal-lobe"><strong>Temporal lobe</strong> — auditory processing, memory, language.</li>
-        <li id="occipital-lobe"><strong>Occipital lobe</strong> — vision.</li>
-      </ul>
-    </section>
+        <section class="article-section" id="cortical-lobes">
+          <summary>Cortical Lobes</summary>
+          <div class="section-content">
+            <ul>
+              <li id="frontal-lobe"><strong>Frontal lobe:</strong> Responsible for executive function, decision making, planning, impulse control, and voluntary action.</li>
+              <li id="occipital-lobe"><strong>Occipital lobe:</strong> Responsible for vision.</li>
+              <li id="parietal-lobe"><strong>Parietal lobe:</strong> Responsible for tactile function and somatosensory information.</li>
+              <li id="temporal-lobe"><strong>Temporal lobe:</strong> Responsible for auditory signals, gustation (taste), emotion, memory, and related processing.</li>
+            </ul>
+          </div>
+        </section>
 
-    <section>
-      <h2 id="brain-regions">Brain regions</h2>
-      <ul>
-        <li id="hippocampus"><strong>Hippocampus</strong> — memory formation.</li>
-        <li id="amygdala"><strong>Amygdala</strong> — emotion and fear processing.</li>
-        <li id="prefrontal"><strong>Prefrontal cortex</strong> — higher cognition and planning.</li>
-        <li id="basal-ganglia"><strong>Basal ganglia</strong> — motor control and habit learning.</li>
-        <li id="thalamus"><strong>Thalamus</strong> — sensory relay.</li>
-        <li id="hypothalamus"><strong>Hypothalamus</strong> — homeostasis and endocrine control.</li>
-        <li id="brainstem"><strong>Brainstem</strong> — vital functions and arousal.</li>
-        <li id="cerebellum"><strong>Cerebellum</strong> — coordination and motor learning.</li>
-      </ul>
-    </section>
+        <section class="article-section" id="brain-regions">
+          <summary>Important Brain Regions</summary>
+          <div class="section-content">
+            <ul>
+              <li id="brainstem"><strong>Brainstem:</strong> Responsible for many vital autonomous functions of life, such as breathing, consciousness, blood pressure, heart rate, and sleep.</li>
+              <li id="cerebellum"><strong>Cerebellum:</strong> Responsible for the control of fine motor movements, particularly coordination and timing rather than initiating movement.</li>
+              <li id="basal-ganglia"><strong>Basal Ganglia:</strong> A group of brain structures involved in coordinating movement and regulating behavior such as habit formation, learning, emotion, and addiction.</li>
+              <li id="hypothalamus"><strong>Hypothalamus:</strong> Produces hormones and influences feeding, behavior, and sleep.</li>
+              <li id="corpus-callosum"><strong>Corpus Callosum:</strong> Allows communication between the two hemispheres.</li>
+              <li id="pineal-gland"><strong>Pineal gland:</strong> Responsible for controlling the body's circadian rhythm and related biological timing.</li>
+              <li id="thalamus"><strong>Thalamus (relay station):</strong> Responsible for relaying and redirecting sensory information into the cortex, acting as a gateway for stimuli that reach conscious attention.</li>
+              <li id="hippocampus"><strong>Hippocampus:</strong> Responsible for memory storage and neurogenesis.</li>
+              <li id="amygdala"><strong>Amygdala:</strong> Responsible for processing fearful and threatening stimuli and helping consolidate stressful or traumatic memories and experiences.</li>
+            </ul>
+          </div>
+        </section>
 
+        <section class="article-section" id="nervous-system">
+          <summary>Breakdown of the Nervous System</summary>
+          <div class="section-content">
+            <p><strong>Neurons</strong> are highly specialized cells responsible for carrying out the brain's essential functions, such as processing information, generating thoughts, and controlling behavior. These cells serve as the primary communicators in the nervous system, transmitting signals throughout the body via electrical and chemical processes. The human brain contains approximately 80–100 billion neurons, forming complex networks that enable all cognitive and physical functions.</p>
+            <p>There are many types of neurons, each with a specific role:</p>
+            <ul>
+              <li><strong>Sensory neurons:</strong> Carry afferent signals from sensory organs such as the eyes, skin, and ears to the brain.</li>
+              <li><strong>Motor neurons:</strong> Transmit efferent signals from the brain and spinal cord to muscles, enabling movement and coordination.</li>
+              <li><strong>Interneurons:</strong> Act as intermediaries between sensory and motor neurons to facilitate reflexes and more complex circuits.</li>
+              <li><strong>Other specialized neurons:</strong> Examples include pyramidal neurons, which are involved in higher-order functions such as learning and memory in the cerebral cortex, and Purkinje cells, which are critical for motor control in the cerebellum.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="article-section" id="neuron-glossary">
+          <summary>Neuron Glossary</summary>
+          <div class="section-content">
+            <ul>
+              <li><strong>Soma (cell body):</strong> The central part of a neuron that integrates incoming signals and determines whether to generate an action potential.</li>
+              <li><strong>Nucleus:</strong> Located inside the soma, it houses the cell's genetic material and regulates protein synthesis and cell maintenance.</li>
+              <li><strong>Dendrites:</strong> Branches that extend off the soma to receive information from other neurons.</li>
+              <li><strong>Axon:</strong> Carries information from the neuron to other neurons.</li>
+              <li><strong>Axon hillock:</strong> The point at which the axon leaves the soma.</li>
+              <li><strong>Myelin sheath:</strong> Fatty material that insulates axons for faster and stronger signal conduction.</li>
+              <li><strong>Node of Ranvier:</strong> Parts of the axon that are not covered by the myelin sheath.</li>
+              <li><strong>Terminal bouton:</strong> The end of the axon, which is positioned near the dendritic spine of another neuron.</li>
+              <li><strong>Synapse:</strong> The junction or space between one neuron and another.</li>
+              <li><strong>Neurotransmitters:</strong> Chemical messengers released at the synapse that bind to receptors on target cells to transmit signals.</li>
+              <li><strong>Receptors:</strong> Proteins on cell surfaces or within cells that produce activity when binding to a specific neurotransmitter, hormone, or other molecule.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="article-section" id="brain-glossary">
+          <summary>Brain Glossary</summary>
+          <div class="section-content">
+            <ul>
+              <li><strong>Central Nervous System (CNS):</strong> The brain and spinal cord.</li>
+              <li><strong>Peripheral Nervous System (PNS):</strong> All nerves that branch out from the brain and spinal cord to the rest of the body.</li>
+              <li><strong>White Matter:</strong> Areas in the brain and spinal cord composed primarily of myelinated axons.</li>
+              <li><strong>Grey Matter:</strong> Brain tissue made up of neuron cell bodies, dendrites, and synapses; it is where processing and decision-making occur.</li>
+              <li><strong>Blood-Brain Barrier (BBB):</strong> A highly selective semipermeable membrane that separates circulating blood from the brain to protect it from exogenous toxins and chemicals.</li>
+              <li><strong>Ligand:</strong> A molecule that binds to a receptor with some selectivity.</li>
+              <li><strong>Agonist:</strong> Produces a biological effect by binding to a receptor and causing action.</li>
+              <li><strong>Antagonist:</strong> Produces no effect by binding to a receptor and causing no action.</li>
+              <li><strong>Inverse Agonist:</strong> Induces an effect opposite to that of an agonist.</li>
+              <li><strong>Affinity:</strong> The strength of the attraction between a ligand and a receptor.</li>
+              <li><strong>ED50:</strong> The amount of drug that produces the desired effect in 50% of patients.</li>
+              <li><strong>TD50:</strong> The dose at which a drug will be toxic to 50% of patients.</li>
+              <li><strong>Therapeutic Index:</strong> A measure of how safe a drug is by comparing TD50 with ED50.</li>
+              <li><strong>Hemorrhage:</strong> Active, ongoing brain bleeding.</li>
+              <li><strong>Hematoma:</strong> Bleeding that has more or less clotted; a contusion is a type of hematoma.</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -71,6 +146,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

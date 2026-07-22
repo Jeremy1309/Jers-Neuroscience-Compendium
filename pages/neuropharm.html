@@ -4,19 +4,145 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Neuropharmacology — Jer's Neuroscience Compendium</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <meta name="description" content="Drug action, receptor mechanisms, and neuropharmacology topics organized for study." />
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-  <header class="site-header"><div class="container header-inner"><a class="brand" href="/">Jer's Neuroscience Compendium</a></div></header>
-  <main class="container">
-    <h1>Neuropharmacology</h1>
-    <p class="muted">Purpose: Explore how drugs interact with the nervous system.</p>
-    <section>
-      <h2>Neurotransmitters &amp; receptors</h2>
-      <p>Overview: dopamine, serotonin, GABA, glutamate, and others.</p>
-    </section>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-left">
+        <a class="back-link" href="../index.html">← Home</a>
+      </div>
+      <div class="header-center">
+        <a class="brand" href="../index.html">Jer's Neuroscience Compendium</a>
+      </div>
+      <div class="header-right">
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="main-nav" class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="brain.html">The Brain</a></li>
+          <li><a href="neurons.html">Neurons</a></li>
+          <li><a href="neuropharm.html">Neuropharmacology</a></li>
+          <li><a href="disorders.html">Diseases &amp; Disorders</a></li>
+          <li><a href="topics.html">Concepts &amp; Research</a></li>
+          <li><a href="quizzes.html">Quizzes</a></li>
+          <li><a href="about.html">About Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article-shell">
+    <div class="article-layout">
+      <aside class="topic-rail">
+        <h2>Highlighted Topics</h2>
+        <nav class="topic-nav" aria-label="Neuropharmacology sections">
+          <a href="#drug-action">Drug Action</a>
+          <a href="#routes-of-administration">Routes of Administration</a>
+          <a href="#metabolism">Metabolism</a>
+          <a href="#dopamine-pathways">Dopamine Pathways</a>
+          <a href="#amphetamines">Amphetamines</a>
+          <a href="#opioids">Opioids</a>
+          <a href="#cannabis">Cannabis</a>
+        </nav>
+      </aside>
+
+      <article class="article-card">
+        <h1>Neuropharmacology</h1>
+        <p class="article-intro">Drug action refers to the molecular changes produced when a drug binds to a receptor or target site, while the drug effect describes the broader physiological and psychological changes that result. Pharmacology depends not only on receptor binding, but also on route of administration, metabolism, and neural circuitry.</p>
+
+        <section class="article-section" id="drug-action">
+          <summary>Drug Action &amp; Drug Effect</summary>
+          <div class="section-content">
+            <p><strong>Drug action</strong> refers to the specific molecular change produced by a drug when it binds to its target site or receptor.</p>
+            <p><strong>Drug effect</strong> describes the larger physiological and psychological alterations that follow from that action across the organism.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="routes-of-administration">
+          <summary>Routes of Administration</summary>
+          <div class="section-content">
+            <p>Drugs can be given orally, by inhalation, intramuscularly (IM), intravenously (IV), intraperitoneally (IP), subcutaneously (SQ), or into the epidural or subarachnoid spaces.</p>
+            <p>The route of administration heavily influences the speed and intensity of the effect. Inhalation is especially fast because it bypasses digestive processing and first-pass liver metabolism, making it one of the quickest ways to place a drug into the brain. Arterial injection (IA) could, in theory, deliver drugs even faster, but it is rarely used because arteries are deeper, thicker-walled, and under higher pressure than veins.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="metabolism">
+          <summary>Metabolism</summary>
+          <div class="section-content">
+            <p>Metabolism is the chemical alteration of drugs, typically reducing their effects and making them easier to excrete. This often involves converting compounds from hydrophobic to hydrophilic forms to aid elimination.</p>
+            <p>The liver, gastrointestinal tract, and kidneys are key sites of metabolic processing.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="dopamine-pathways">
+          <summary>Dopamine in the CNS</summary>
+          <div class="section-content">
+            <p>The midbrain is the primary source of dopamine in the central nervous system, and it is organized into three major pathways.</p>
+            <ul>
+              <li><strong>Nigrostriatal pathway:</strong> controls voluntary motor movement. Substantia nigra projects dopamine neurons to the caudate-putamen. Dysfunction can contribute to Parkinson's disease and Huntington's disease.</li>
+              <li><strong>Mesolimbic pathway:</strong> associated with reward and reinforcement. Ventral tegmental area (VTA) projects dopamine neurons to the nucleus accumbens. Dysfunction is linked to substance use and addiction.</li>
+              <li><strong>Mesocortical pathway:</strong> important for prefrontal cortex functions such as motivation and salience. VTA projects dopamine neurons to the prefrontal cortex, and dysregulation can contribute to schizophrenia, depression, and ADHD.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="article-section" id="amphetamines">
+          <summary>Amphetamines</summary>
+          <div class="section-content">
+            <p>Amphetamines are a broad class of psychostimulants that include licit and illicit, natural and synthetic drugs. They are often described as sympathomimetic because they activate the sympathetic nervous system and mimic physiological arousal. Historically, they were used during World War II to reduce battle fatigue and enhance performance.</p>
+            <p>Typical effects include increased heart rate, blood pressure, vasodilation, bronchodilation, body temperature, energy, alertness, libido, and euphoria, while appetite decreases and insomnia may increase.</p>
+            <p>Most amphetamines increase dopamine levels by promoting release from presynaptic terminals and inhibiting reuptake through the dopamine transporter (DAT). Some also reduce breakdown by inhibiting monoamine oxidase (MAO).</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="cocaine">
+          <summary>Cocaine</summary>
+          <div class="section-content">
+            <p>Cocaine is the classic example of an amphetamine-like psychostimulant, but its mechanism differs slightly from other amphetamines. Its main real-life effect is inhibition of dopamine reuptake, causing increased dopamine in the synaptic cleft and enhanced post-synaptic neurotransmission.</p>
+            <p>Cocaine acts as a topical anesthetic by blocking sodium channels and was first described in this role by Sigmund Freud. It is derived from the coca plant, which grows in the Andean mountains; the leaves contain a small amount of cocaine, which is then extracted and purified using chemical steps.</p>
+            <p>Cocaine's half-life is roughly 0.7 to 1.5 hours depending on route, dose, and the individual. Powder is snorted, while crack cocaine is a smokeable processed form.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="methamphetamines">
+          <summary>Methamphetamines</summary>
+          <div class="section-content">
+            <p>Methamphetamine is essentially amphetamine with an added methyl group, making it more lipid-soluble and allowing it to cross the blood-brain barrier more effectively. It is also more stable against enzymatic degradation, giving it a longer half-life than many other stimulants.</p>
+            <p>Common forms include MDMA and ecstasy, which are psychoactive compounds often sold in capsule or tablet form and sometimes mixed with other substances.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="opioids">
+          <summary>Opioids</summary>
+          <div class="section-content">
+            <p>Endogenous opioids are naturally produced in the body and help modulate pain, hunger, thirst, mood, and immune responses. Opium is extracted from the poppy plant, while opioid is the broader term that includes opiates, synthetic compounds, and endogenous peptides acting on opioid receptors.</p>
+            <p>Opioids inhibit GABA interneurons in the ventral tegmental area, which indirectly increases dopamine signaling in the nucleus accumbens and contributes to reward and euphoria.</p>
+            <p>They also hyperpolarize neurons by opening potassium channels and reducing voltage-gated calcium entry, thereby decreasing neurotransmitter release. Multiple opioid receptors exist, with distinct distributions and effects: MOR, DOR, KOR, and NOP-R.</p>
+            <p>Common opioids include heroin, lean, and oxycodone. Heroin is more lipid-soluble than morphine and crosses the blood-brain barrier more quickly.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="cannabis">
+          <summary>Cannabis</summary>
+          <div class="section-content">
+            <p>Cannabis influences dopamine through a disinhibitory mechanism. Before marijuana enters the system, inhibitory neurotransmitters are active and suppress dopamine release. Anandamide, the body's natural cannabinoid, binds to cannabinoid receptors and reduces the release of inhibitory neurotransmitters, thereby disinhibiting dopamine release.</p>
+            <p>THC mimics anandamide and can permit prolonged dopamine release, contributing to the characteristic subjective effects of cannabis.</p>
+          </div>
+        </section>
+      </article>
+    </div>
   </main>
-  <footer class="site-footer"><div class="container"><p>&copy; Jer — Jer's Neuroscience Compendium</p></div></footer>
-  <script src="/js/main.js"></script>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; Jer — Jer's Neuroscience Compendium</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
 </body>
 </html>

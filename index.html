@@ -5,136 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jer's Neuroscience Compendium</title>
   <meta name="description" content="A personal neuroscience encyclopedia built from university studies, scientific literature, and continued learning." />
-  <link rel="stylesheet" href="/css/styles.css" />
-  <link rel="icon" href="/assets/favicon.png" />
-  <!-- Fonts for a modern academic look -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body class="site-root">
-  <!-- Main site header / navigation. Keep this consistent across pages. -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/">Jer's Neuroscience Compendium</a>
-      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
-      <nav id="main-nav" class="main-nav" aria-label="Primary">
-        <ul>
-          <li><a href="/pages/brain.html">The Brain</a></li>
-          <li><a href="/pages/neurons.html">Neurons</a></li>
-          <li><a href="/pages/disorders.html">Diseases &amp; Disorders</a></li>
-          <li><a href="/pages/neuropharm.html">Neuropharmacology</a></li>
-          <li><a href="/pages/topics.html">Additional Topics</a></li>
-          <li><a href="/pages/about.html">About Me</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
   <main>
-    <!-- HERO: introduction to the compendium -->
     <section class="hero immersive-hero">
       <div class="container hero-inner">
         <div class="hero-text">
+          <p class="eyebrow">Neuroscience compendium</p>
           <h1>Jer's Neuroscience Compendium</h1>
-          <p class="subtitle">A personal neuroscience encyclopedia built from university studies, scientific literature, and continued learning.</p>
-          <p class="hero-lead">Explore the brain visually and dive into focused articles, diagrams, and interactive materials. This compendium blends concise explanations with an atlas-style approach to help you learn and recall neuroscience concepts.</p>
+          <p class="subtitle">A personal reference for neuroscience, neuroanatomy, and pharmacology.</p>
+          <p class="hero-lead">This site brings together core neuroanatomy concepts, key systems, and drug mechanisms in one clean academic resource. Use the topic cards below to move into focused content pages that are organized around the most important subtopics.</p>
         </div>
 
-        <!-- Central interactive brain feature (SVG placeholder). Regions have data-region attributes for JS interactivity. -->
-        <div class="brain-wrapper" aria-hidden="false">
-          <!-- Tooltip shown on hover/click -->
-          <div id="brain-tooltip" class="brain-tooltip" role="tooltip" hidden></div>
-
-          <!-- Simplified anatomical SVG with major lobes and a few subcortical regions. Each region has a data-region key used by JS. -->
-          <svg id="brain-svg" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" class="brain-svg" aria-label="Interactive brain map">
-            <!-- Left cerebral hemisphere (simplified) -->
-            <g class="lobe-group">
-              <path id="frontal" data-region="frontal_lobe" d="M120 220 C60 180 80 120 140 100 C200 80 300 60 360 90 C420 120 460 200 420 250 C380 300 220 300 120 220" fill="#f0f7ff" stroke="#cfe6ff" stroke-width="2"/>
-              <path id="parietal" data-region="parietal_lobe" d="M360 90 C420 120 460 200 420 250 C380 300 500 340 560 320 C620 300 660 240 640 200 C620 160 520 120 360 90" fill="#fff8ec" stroke="#ffe6c7" stroke-width="2"/>
-              <path id="temporal" data-region="temporal_lobe" d="M120 220 C80 260 120 320 180 340 C240 360 340 360 420 300 C340 300 240 300 180 280 C140 268 120 240 120 220" fill="#eefef6" stroke="#d7ffec" stroke-width="2"/>
-              <path id="occipital" data-region="occipital_lobe" d="M560 320 C640 300 720 260 740 200 C760 140 700 120 640 140 C580 160 540 220 560 320" fill="#fff4f6" stroke="#ffdce6" stroke-width="2"/>
-            </g>
-
-            <!-- Subcortical regions (simplified blobs) -->
-            <g class="subcortical-group">
-              <ellipse id="hippocampus" data-region="hippocampus" cx="300" cy="340" rx="40" ry="18" fill="#fde8ff" stroke="#f5cfff"/>
-              <ellipse id="amygdala" data-region="amygdala" cx="360" cy="360" rx="30" ry="16" fill="#fff0e6" stroke="#ffd2b3"/>
-              <ellipse id="cerebellum" data-region="cerebellum" cx="620" cy="420" rx="80" ry="40" fill="#e8f8ff" stroke="#cfeeff"/>
-              <ellipse id="brainstem" data-region="brainstem" cx="540" cy="460" rx="36" ry="80" fill="#f6fff0" stroke="#e6ffd3"/>
-            </g>
-
-          </svg>
+        <div class="hero-panel">
+          <div class="hero-panel-card">
+            <h2>What you will find</h2>
+            <ul>
+              <li>Clear explanations of cortical regions and major structures</li>
+              <li>Focused pages on neurons, brain organization, and disorders</li>
+              <li>Drug and receptor frameworks for neuropharmacology study</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Below the brain: interactive category cards / expandable categories -->
+    <section class="homepage-preview container">
+      <h2>Study Snapshot</h2>
+      <div class="preview-grid">
+        <article class="preview-card">
+          <h3>Interactive Atlas</h3>
+          <p>Brain regions, diagrams, and learning pathways are organized into focused study pages.</p>
+        </article>
+        <article class="preview-card">
+          <h3>Glossary + Key Terms</h3>
+          <p>Core terminology is collected into clean reference sections for quick review.</p>
+        </article>
+        <article class="preview-card">
+          <h3>Quizzes (Coming Soon)</h3>
+          <p>A new quiz hub will eventually provide practice on mechanisms, pathways, and disorders.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="categories container">
       <h2>Explore Topics</h2>
       <div class="category-grid">
-        <details class="category-card">
-          <summary>🧠 The Brain</summary>
-          <div class="category-content">
-            <p>Understanding the structure and organization of the nervous system.</p>
-            <ul>
-              <li>Overview of the nervous system (CNS, PNS, ANS)</li>
-              <li>Cortical lobes: Frontal, Parietal, Temporal, Occipital</li>
-              <li>Brain regions: Hippocampus, Amygdala, Prefrontal cortex, Basal ganglia, Thalamus, Hypothalamus, Brainstem, Cerebellum</li>
-            </ul>
-            <a class="more-link" href="/pages/brain.html">Open The Brain</a>
-          </div>
-        </details>
-
-        <details class="category-card">
-          <summary>⚡ Neurons &amp; Neural Signaling</summary>
-          <div class="category-content">
-            <p>How neurons communicate: anatomy, action potentials, synapses, and receptors.</p>
-            <a class="more-link" href="/pages/neurons.html">Open Neurons</a>
-          </div>
-        </details>
-
-        <details class="category-card">
-          <summary>💊 Neuropharmacology</summary>
-          <div class="category-content">
-            <p>Explore neurotransmitters, drug mechanisms, and therapeutic approaches.</p>
-            <a class="more-link" href="/pages/neuropharm.html">Open Neuropharmacology</a>
-          </div>
-        </details>
-
-        <details class="category-card">
-          <summary>🧬 Diseases &amp; Disorders</summary>
-          <div class="category-content">
-            <p>Neurological and psychiatric conditions, their neural bases, and clinical features.</p>
-            <a class="more-link" href="/pages/disorders.html">Open Disorders</a>
-          </div>
-        </details>
-
-        <details class="category-card">
-          <summary>🔬 Concepts &amp; Research</summary>
-          <div class="category-content">
-            <p>Synaptic plasticity, LTP, learning &amp; memory, development, and current research.</p>
-            <a class="more-link" href="/pages/topics.html">Open Topics</a>
-          </div>
-        </details>
-
-        <details class="category-card">
-          <summary>👤 About Me</summary>
-          <div class="category-content">
-            <p>Author background, motivations, and how this compendium was created.</p>
-            <a class="more-link" href="/pages/about.html">About Jer</a>
-          </div>
-        </details>
+        <a class="category-card" href="pages/brain.html">
+          <span class="category-icon">🧠</span>
+          <span class="category-title">The Brain</span>
+        </a>
+        <a class="category-card" href="pages/neurons.html">
+          <span class="category-icon">⚡</span>
+          <span class="category-title">Neurons</span>
+        </a>
+        <a class="category-card" href="pages/neuropharm.html">
+          <span class="category-icon">💊</span>
+          <span class="category-title">Neuropharmacology</span>
+        </a>
+        <a class="category-card" href="pages/disorders.html">
+          <span class="category-icon">🧬</span>
+          <span class="category-title">Diseases &amp; Disorders</span>
+        </a>
+        <a class="category-card" href="pages/topics.html">
+          <span class="category-icon">🔬</span>
+          <span class="category-title">Concepts &amp; Research</span>
+        </a>
+        <a class="category-card" href="pages/quizzes.html">
+          <span class="category-icon">✅</span>
+          <span class="category-title">Quizzes</span>
+        </a>
+        <a class="category-card" href="pages/about.html">
+          <span class="category-icon">👤</span>
+          <span class="category-title">About Me</span>
+        </a>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <p>&copy; Jer — Jer's Neuroscience Compendium</p>
-      <p class="muted">Designed for clarity, expandability, and scientific accuracy. Future interactive atlas features planned.</p>
+      <p class="muted">Designed for clarity, expandability, and scientific accuracy.</p>
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

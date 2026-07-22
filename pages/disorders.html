@@ -4,40 +4,108 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Diseases & Disorders — Jer's Neuroscience Compendium</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <meta name="description" content="Neurodegenerative and neurological disorders overview." />
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-  <header class="site-header"><div class="container header-inner"><a class="brand" href="/">Jer's Neuroscience Compendium</a></div></header>
-  <main class="container">
-    <h1>Diseases &amp; Disorders</h1>
-    <p class="muted">Purpose: Explain neurological and psychiatric conditions from a neuroscience perspective.</p>
-    <section>
-      <h2>Neurodegenerative disorders</h2>
-      <ul>
-        <li>Alzheimer's disease</li>
-        <li>Parkinson's disease</li>
-        <li>CTE</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Psychiatric disorders</h2>
-      <ul>
-        <li>Depression</li>
-        <li>Anxiety</li>
-        <li>Schizophrenia</li>
-        <li>Addiction</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Other neurological conditions</h2>
-      <ul>
-        <li>Epilepsy</li>
-        <li>Stroke</li>
-        <li>Traumatic brain injury</li>
-      </ul>
-    </section>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-left">
+        <a class="back-link" href="../index.html">← Home</a>
+      </div>
+      <div class="header-center">
+        <a class="brand" href="../index.html">Jer's Neuroscience Compendium</a>
+      </div>
+      <div class="header-right">
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="main-nav" class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="brain.html">The Brain</a></li>
+          <li><a href="neurons.html">Neurons</a></li>
+          <li><a href="neuropharm.html">Neuropharmacology</a></li>
+          <li><a href="disorders.html">Diseases &amp; Disorders</a></li>
+          <li><a href="topics.html">Concepts &amp; Research</a></li>
+          <li><a href="quizzes.html">Quizzes</a></li>
+          <li><a href="about.html">About Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article-shell">
+    <div class="article-layout">
+      <aside class="topic-rail">
+        <h2>Highlighted Topics</h2>
+        <nav class="topic-nav" aria-label="Disorders sections">
+          <a href="#parkinsons">Parkinson's</a>
+          <a href="#huntingtons">Huntington's</a>
+          <a href="#alzheimers">Alzheimer's</a>
+          <a href="#als">ALS</a>
+          <a href="#ms">Multiple Sclerosis</a>
+        </nav>
+      </aside>
+
+      <article class="article-card">
+        <h1>Diseases &amp; Disorders</h1>
+        <p class="article-intro">Neurological disorders can arise from degeneration, autoimmunity, trauma, or altered signaling, and they often disrupt the same circuits that support movement, memory, mood, and cognition.</p>
+
+        <section class="article-section" id="parkinsons">
+          <summary>Parkinson's Disease (PD)</summary>
+          <div class="section-content">
+            <p>Parkinson's disease is a long-term degenerative disorder of the central nervous system. Symptoms generally develop slowly over time and affect the motor system. Clinical symptoms include tremors, rigidity, akinesia (lack of or slowed movement), and postural instability, often summarized by the acronym TRAP.</p>
+            <p>The main pathological characteristic of Parkinson's is mass cell death in the basal ganglia and substantia nigra. Up to 70% of dopamine-secreting neurons in the substantia nigra are affected. The dopamine depletion in the substantia nigra and nigrostriatal pathway leads to a dysfunctional motor loop of the basal ganglia.</p>
+            <p>Affected neurons show the presence of Lewy bodies, abnormal aggregates of alpha-synuclein protein that develop inside the neuron. Pathological alpha-synuclein acts as a template that corrupts normal alpha-synuclein and leads to spherical masses in the cytoplasm, leading to apoptosis of the affected neuron.</p>
+            <p>In Parkinson's disease, the dopaminergic neurons of the substantia nigra pars compacta degenerate; the direct pathway output of the striatum is weakened and indirect output is strengthened, leading to excessive inhibitory output of the GPi and suppressing movement generation.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="huntingtons">
+          <summary>Huntington's Disease (HD)</summary>
+          <div class="section-content">
+            <p>Huntington's disease is a progressive neurodegenerative disorder with a singular genetic cause: a trinucleotide repeat (CAG) in the huntingtin (HTT) gene results in a gain-of-function mutation. The threshold is at 40 repeats; more repeats generally lead to earlier onset.</p>
+            <p>The main pathological characteristic of Huntington's is loss of GABAergic medium spiny neurons in the striatum, which normally make up the indirect pathway responsible for inhibiting movement.</p>
+            <p>HD typically presents with movement disorders such as chorea (involuntary movements), cognitive decline, and psychiatric symptoms including mood swings, depression, and personality changes. The disease is autosomal dominant, meaning a child of an affected parent has a 50% chance of inheriting it. Testing can identify the mutated gene, but there is currently no cure or way to slow progression.</p>
+            <p>In HD, striatal inhibitory neurons of the indirect pathway degenerate, leading to insufficient inhibitory output of the GPi and excessive movement generation.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="alzheimers">
+          <summary>Alzheimer's Disease (AD)</summary>
+          <div class="section-content">
+            <p>Alzheimer's disease is a progressive neurodegenerative disorder characterized by plaques (extracellular deposits of beta-amyloid) and tangles (intracellular hyperphosphorylated microtubule-binding proteins called Tau) that begin forming in predictable areas important for learning and memory and then spread to other regions. Mass shrinking of cortical thickness can be observed in late stages, due to degeneration of dendritic trees and general atrophy of neurons.</p>
+            <p>Alzheimer's is the most common cause of dementia, a mild to major cognitive disorder that is an endpoint of many neurological diseases.</p>
+            <p>There are many ways a person can develop AD, including genetic predisposition (around 70% of risk), exposure to environmental toxins, immune reactions, slow viruses, and prions (misfolded infectious proteins).</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="als">
+          <summary>Amyotrophic Lateral Sclerosis (ALS)</summary>
+          <div class="section-content">
+            <p>ALS is a neurological disorder that affects motor neurons, the nerve cells in the brain and spinal cord that control voluntary muscle movement and breathing. As motor neurons degenerate and die, they stop sending messages to the muscles, which causes muscle weakness, fasciculations, and atrophy.</p>
+            <p>Eventually, the brain loses its ability to initiate and control voluntary movements such as walking, talking, chewing, and breathing. Most people with ALS die from respiratory failure, usually within three to five years from symptom onset, though about 10% survive for a decade or more.</p>
+            <p>ALS is progressive and can be sporadic or familial. Risk factors include age, sex, and race/ethnicity, although the disease affects people of all backgrounds.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="ms">
+          <summary>Multiple Sclerosis (MS)</summary>
+          <div class="section-content">
+            <p>Multiple sclerosis is an autoimmune disease in which the immune system attacks the protective covering (myelin) of nerve fibers, causing communication problems between the brain and the rest of the body.</p>
+          </div>
+        </section>
+      </article>
+    </div>
   </main>
-  <footer class="site-footer"><div class="container"><p>&copy; Jer — Jer's Neuroscience Compendium</p></div></footer>
-  <script src="/js/main.js"></script>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; Jer — Jer's Neuroscience Compendium</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
 </body>
 </html>
