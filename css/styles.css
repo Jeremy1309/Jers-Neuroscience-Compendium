@@ -380,7 +380,7 @@ model-viewer{
 
 .neuron-svg__backwash{
   fill:none;
-  stroke:rgba(108, 213, 255, 0.16);
+  stroke:rgba(112, 237, 170, 0.16);
   stroke-width:10;
   stroke-linecap:round;
   stroke-linejoin:round;
@@ -395,29 +395,29 @@ model-viewer{
 }
 
 .neuron-svg__branch{
-  stroke:rgba(98, 198, 255, 0.96);
+  stroke:rgba(86, 222, 153, 0.96);
   stroke-width:7;
 }
 
 .neuron-svg__axon{
-  stroke:rgba(46, 170, 228, 0.96);
+  stroke:rgba(56, 196, 123, 0.96);
   stroke-width:8;
 }
 
 .neuron-svg__root{
-  stroke:rgba(170, 232, 255, 0.82);
+  stroke:rgba(176, 248, 205, 0.82);
   stroke-width:3.5;
 }
 
 .neuron-svg__soma{
   fill:url(#neuron-soma-fill);
-  stroke:rgba(235, 252, 255, 0.88);
+  stroke:rgba(230, 255, 239, 0.88);
   stroke-width:3;
 }
 
 .neuron-svg__soma-ring{
   fill:none;
-  stroke:rgba(135, 231, 255, 0.5);
+  stroke:rgba(126, 236, 174, 0.5);
   stroke-width:2;
 }
 
@@ -426,7 +426,7 @@ model-viewer{
 }
 
 .neuron-svg__glow-soft{
-  fill:rgba(129, 232, 255, 0.4);
+  fill:rgba(134, 242, 176, 0.4);
 }
 
 .site-footer{

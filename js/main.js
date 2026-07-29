@@ -51,15 +51,15 @@ document.addEventListener('DOMContentLoaded', function () {
       <svg class="neuron-illustration" viewBox="0 0 1000 680" role="img" aria-label="Stylized neuron illustration" preserveAspectRatio="xMidYMid meet">
         <defs>
           <radialGradient id="neuron-back-glow" cx="50%" cy="50%" r="58%">
-            <stop offset="0%" stop-color="rgba(155, 238, 255, 0.28)"/>
-            <stop offset="45%" stop-color="rgba(99, 208, 255, 0.16)"/>
-            <stop offset="100%" stop-color="rgba(99, 208, 255, 0)"/>
+            <stop offset="0%" stop-color="rgba(163, 255, 205, 0.28)"/>
+            <stop offset="45%" stop-color="rgba(96, 230, 171, 0.16)"/>
+            <stop offset="100%" stop-color="rgba(96, 230, 171, 0)"/>
           </radialGradient>
           <radialGradient id="neuron-soma-fill" cx="35%" cy="30%" r="72%">
             <stop offset="0%" stop-color="#ffffff"/>
-            <stop offset="22%" stop-color="#f3fbff"/>
-            <stop offset="52%" stop-color="#90dff6"/>
-            <stop offset="100%" stop-color="#1d87bf"/>
+            <stop offset="22%" stop-color="#f5fff9"/>
+            <stop offset="52%" stop-color="#9ff0c6"/>
+            <stop offset="100%" stop-color="#2fae6f"/>
           </radialGradient>
           <filter id="neuron-glow" x="-30%" y="-30%" width="160%" height="160%">
             <feGaussianBlur stdDeviation="8" result="blur"/>
