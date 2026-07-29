@@ -8,187 +8,98 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  const stage = document.getElementById('network-stage');
-  const background = document.getElementById('network-background');
-  const networkNodes = document.getElementById('network-nodes');
-  const networkLines = document.getElementById('network-lines');
-  const detailTitle = document.getElementById('network-detail-title');
-  const detailCopy = document.getElementById('network-detail-copy');
+  const menuToggle = document.getElementById('home-menu-toggle');
+  const menu = document.getElementById('home-menu');
 
-  if(stage && background && networkNodes && networkLines && detailTitle && detailCopy){
-    const nodes = [
-      { id: 'n1', title: 'Neuron 01', note: 'Future topic slot for a neuroscience concept.', x: 16, y: 22, radius: 98, leftAngle: -14, rightAngle: 10 },
-      { id: 'n2', title: 'Neuron 02', note: 'Reserved for a future topic description.', x: 34, y: 14, radius: 106, leftAngle: -8, rightAngle: 16 },
-      { id: 'n3', title: 'Neuron 03', note: 'A placeholder node for later content.', x: 59, y: 16, radius: 102, leftAngle: -16, rightAngle: 12 },
-      { id: 'n4', title: 'Neuron 04', note: 'Future educational content can be attached here.', x: 82, y: 28, radius: 96, leftAngle: -6, rightAngle: 20 },
-      { id: 'n5', title: 'Neuron 05', note: 'Designed to become a topic link later.', x: 20, y: 50, radius: 108, leftAngle: -12, rightAngle: 14 },
-      { id: 'n6', title: 'Neuron 06', note: 'Space left open for future details.', x: 42, y: 45, radius: 100, leftAngle: -10, rightAngle: 10 },
-      { id: 'n7', title: 'Neuron 07', note: 'An interactive shell for future navigation.', x: 63, y: 50, radius: 110, leftAngle: -18, rightAngle: 14 },
-      { id: 'n8', title: 'Neuron 08', note: 'Placeholder for a topic page yet to be added.', x: 84, y: 56, radius: 98, leftAngle: -8, rightAngle: 18 },
-      { id: 'n9', title: 'Neuron 09', note: 'This slot can later point to a subject page.', x: 31, y: 79, radius: 104, leftAngle: -16, rightAngle: 8 },
-      { id: 'n10', title: 'Neuron 10', note: 'Reserved for future neuroscience content.', x: 66, y: 82, radius: 102, leftAngle: -12, rightAngle: 12 }
-    ];
-
-    const decorativeNodes = [
-      { x: 4, y: 10, size: 8, delay: 0 }, { x: 10, y: 18, size: 7, delay: 1.2 }, { x: 18, y: 8, size: 9, delay: 0.6 },
-      { x: 28, y: 6, size: 8, delay: 1.8 }, { x: 38, y: 10, size: 7, delay: 0.9 }, { x: 46, y: 8, size: 8, delay: 1.5 },
-      { x: 58, y: 10, size: 7, delay: 1 }, { x: 70, y: 12, size: 9, delay: 0.3 }, { x: 82, y: 10, size: 8, delay: 1.1 },
-      { x: 92, y: 18, size: 7, delay: 1.7 }, { x: 96, y: 34, size: 8, delay: 0.8 }, { x: 94, y: 52, size: 7, delay: 1.4 },
-      { x: 88, y: 74, size: 9, delay: 0.5 }, { x: 78, y: 88, size: 7, delay: 1.3 }, { x: 64, y: 94, size: 8, delay: 0.7 },
-      { x: 50, y: 96, size: 7, delay: 1.5 }, { x: 34, y: 92, size: 8, delay: 0.4 }, { x: 20, y: 90, size: 7, delay: 1.1 },
-      { x: 8, y: 76, size: 9, delay: 0.2 }, { x: 4, y: 58, size: 7, delay: 1.4 }, { x: 4, y: 42, size: 8, delay: 0.6 },
-      { x: 10, y: 30, size: 7, delay: 1.6 }, { x: 18, y: 56, size: 8, delay: 0.9 }, { x: 30, y: 22, size: 7, delay: 1.25 }
-    ];
-
-    const connections = [
-      { from: 0, to: 1 }, { from: 1, to: 2 }, { from: 2, to: 3 }, { from: 0, to: 4 }, { from: 1, to: 5 },
-      { from: 2, to: 6 }, { from: 3, to: 7 }, { from: 4, to: 5 }, { from: 5, to: 6 }, { from: 6, to: 7 },
-      { from: 4, to: 8 }, { from: 5, to: 8 }, { from: 6, to: 9 }, { from: 7, to: 9 }, { from: 8, to: 9 },
-      { from: 0, to: 5 }, { from: 1, to: 6 }, { from: 2, to: 7 }, { from: 3, to: 6 }, { from: 4, to: 6 },
-      { from: 0, to: 6 }, { from: 1, to: 7 }, { from: 2, to: 8 }, { from: 3, to: 9 }, { from: 4, to: 7 },
-      { from: 5, to: 9 }, { from: 6, to: 8 }, { from: [-8, 18], to: 0, sourceRadius: 34, targetRadius: nodes[0].radius },
-      { from: 3, to: [108, 18], sourceRadius: nodes[3].radius, targetRadius: 36 },
-      { from: [8, 104], to: 9, sourceRadius: 34, targetRadius: nodes[9].radius },
-      { from: [104, 68], to: [116, 48], sourceRadius: 30, targetRadius: 30 },
-      { from: [12, 96], to: [34, 78], sourceRadius: 32, targetRadius: 32 },
-      { from: [90, 4], to: [112, 20], sourceRadius: 30, targetRadius: 28 },
-      { from: [6, 64], to: [22, 92], sourceRadius: 30, targetRadius: 30 }
-    ];
-
-    const active = { id: null };
-
-    const createDecorativeLayer = () => {
-      background.innerHTML = decorativeNodes.map((node, index) => {
-        const style = [
-          `left:${node.x}%`,
-          `top:${node.y}%`,
-          `width:${node.size}px`,
-          `height:${node.size}px`,
-          `animation-delay:${node.delay}s`
-        ].join(';');
-        return `<span class="decorative-neuron" data-index="${index}" style="${style}"></span>`;
-      }).join('');
+  if(menuToggle && menu){
+    const setMenuState = (isOpen) => {
+      menuToggle.classList.toggle('is-open', isOpen);
+      menu.classList.toggle('is-open', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
     };
 
-    const pointFor = (entry) => {
-      if(Array.isArray(entry)){
-        return { x: entry[0], y: entry[1] };
-      }
-      return { x: entry.x, y: entry.y };
-    };
-
-    const nodeEdgePoint = (from, to, radius) => {
-      const dx = to.x - from.x;
-      const dy = to.y - from.y;
-      const length = Math.sqrt((dx * dx) + (dy * dy)) || 1;
-      const inset = radius / 2 + 8;
-      return {
-        x: from.x + (dx / length) * inset,
-        y: from.y + (dy / length) * inset
-      };
-    };
-
-    const pathFor = (fromEntry, toEntry, sourceRadius = 100, targetRadius = 100) => {
-      const from = pointFor(fromEntry);
-      const to = pointFor(toEntry);
-      const start = nodeEdgePoint(from, to, sourceRadius);
-      const end = nodeEdgePoint(to, from, targetRadius);
-      const dx = end.x - start.x;
-      const dy = end.y - start.y;
-      const distance = Math.sqrt(dx * dx + dy * dy) || 1;
-      const bend = Math.min(140, 18 + distance * 0.18);
-      const direction = ((from.x + to.x) % 2 > 1) ? 1 : -1;
-      const cp1 = { x: (start.x + end.x) / 2 + (direction * bend), y: (start.y + end.y) / 2 - (direction * bend * 0.42) };
-      return `M ${start.x} ${start.y} Q ${cp1.x} ${cp1.y} ${end.x} ${end.y}`;
-    };
-
-    const renderConnections = () => {
-      const baseConnections = connections.map((connection) => {
-        const fromNode = typeof connection.from === 'number' ? nodes[connection.from] : connection.from;
-        const toNode = typeof connection.to === 'number' ? nodes[connection.to] : connection.to;
-        const fromRadius = connection.sourceRadius || (typeof connection.from === 'number' ? nodes[connection.from].radius : 96);
-        const toRadius = connection.targetRadius || (typeof connection.to === 'number' ? nodes[connection.to].radius : 96);
-        const bridgeClass = Array.isArray(connection.from) || Array.isArray(connection.to) ? 'is-bridge' : '';
-        return `<path class="${bridgeClass}" d="${pathFor(fromNode, toNode, fromRadius, toRadius)}"></path>`;
-      }).join('');
-
-      networkLines.innerHTML = `<defs><filter id="network-soft-glow"><feGaussianBlur stdDeviation="1.25" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>${baseConnections}`;
-    };
-
-    const renderNodes = () => {
-      networkNodes.innerHTML = nodes.map((node, index) => {
-        const style = [
-          `left:${node.x}%`,
-          `top:${node.y}%`,
-          `--axon-left:${node.leftAngle}deg`,
-          `--axon-right:${node.rightAngle}deg`
-        ].join(';');
-
-        return `
-          <button class="neuron-node" type="button" data-id="${node.id}" data-title="${node.title}" data-note="${node.note}" style="${style}" aria-label="${node.title}">
-            <span class="neuron-node__axon neuron-node__axon--left" aria-hidden="true"></span>
-            <span class="neuron-node__axon neuron-node__axon--right" aria-hidden="true"></span>
-            <span class="neuron-node__soma" aria-hidden="true"><span class="neuron-node__core">${String(index + 1).padStart(2, '0')}</span></span>
-            <span class="neuron-node__label"><strong>${node.title}</strong><span>Future topic slot</span></span>
-          </button>
-        `;
-      }).join('');
-    };
-
-    const setDetail = (node) => {
-      detailTitle.textContent = node ? node.title : 'Hover a neuron';
-      detailCopy.textContent = node ? node.note : 'The network is ready to link into neuroscience topics as the site expands.';
-    };
-
-    const clearActive = () => {
-      active.id = null;
-      networkNodes.querySelectorAll('.neuron-node').forEach((button) => {
-        button.classList.remove('is-active');
-      });
-      setDetail(null);
-    };
-
-    const activateNode = (button) => {
-      const node = {
-        id: button.getAttribute('data-id'),
-        title: button.getAttribute('data-title') || 'Neuron',
-        note: button.getAttribute('data-note') || 'Future topic slot.'
-      };
-
-      active.id = node.id;
-      networkNodes.querySelectorAll('.neuron-node').forEach((item) => {
-        item.classList.toggle('is-active', item === button);
-      });
-      setDetail(node);
-    };
-
-    createDecorativeLayer();
-    renderConnections();
-    renderNodes();
-    setDetail(null);
-
-    networkNodes.querySelectorAll('.neuron-node').forEach((button) => {
-      button.addEventListener('pointerenter', () => activateNode(button));
-      button.addEventListener('focus', () => activateNode(button));
-      button.addEventListener('pointerleave', () => {
-        if(active.id === button.getAttribute('data-id')){
-          clearActive();
-        }
-      });
-      button.addEventListener('blur', () => {
-        if(active.id === button.getAttribute('data-id')){
-          clearActive();
-        }
-      });
-      button.addEventListener('click', () => activateNode(button));
+    menuToggle.addEventListener('click', () => {
+      setMenuState(!menu.classList.contains('is-open'));
     });
 
-    const updateConnectionHighlight = () => {
-      networkLines.querySelectorAll('path').forEach((path) => {
-        path.removeAttribute('filter');
-      });
-    };
+    menu.addEventListener('click', (event) => {
+      if(event.target instanceof HTMLAnchorElement){
+        setMenuState(false);
+      }
+    });
 
-    updateConnectionHighlight();
+    document.addEventListener('keydown', (event) => {
+      if(event.key === 'Escape'){
+        setMenuState(false);
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      if(menu.classList.contains('is-open')){
+        const target = event.target;
+        if(target instanceof Node && !menu.contains(target) && !menuToggle.contains(target)){
+          setMenuState(false);
+        }
+      }
+    });
+  }
+
+  const stage = document.getElementById('network-stage');
+
+  if(stage){
+    stage.innerHTML = `
+      <svg class="neuron-illustration" viewBox="0 0 1000 680" role="img" aria-label="Stylized neuron illustration" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <radialGradient id="neuron-back-glow" cx="50%" cy="50%" r="58%">
+            <stop offset="0%" stop-color="rgba(155, 238, 255, 0.28)"/>
+            <stop offset="45%" stop-color="rgba(99, 208, 255, 0.16)"/>
+            <stop offset="100%" stop-color="rgba(99, 208, 255, 0)"/>
+          </radialGradient>
+          <radialGradient id="neuron-soma-fill" cx="35%" cy="30%" r="72%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="22%" stop-color="#f3fbff"/>
+            <stop offset="52%" stop-color="#90dff6"/>
+            <stop offset="100%" stop-color="#1d87bf"/>
+          </radialGradient>
+          <filter id="neuron-glow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="8" result="blur"/>
+            <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0.05  0 0 1 0 0.15  0 0 0 0.55 0" result="softGlow"/>
+            <feMerge>
+              <feMergeNode in="softGlow"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <filter id="neuron-soma-glow" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="10" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <ellipse cx="500" cy="330" rx="190" ry="180" fill="url(#neuron-back-glow)" opacity="0.85"/>
+
+        <path class="neuron-svg__backwash" filter="url(#neuron-glow)" d="M 330 315 C 285 270, 250 230, 215 190 C 260 212, 305 218, 356 248 C 386 266, 416 275, 452 280"/>
+        <path class="neuron-svg__backwash" filter="url(#neuron-glow)" d="M 356 308 C 300 266, 268 226, 230 175 C 292 196, 338 205, 382 235 C 408 253, 434 265, 455 278"/>
+        <path class="neuron-svg__backwash" filter="url(#neuron-glow)" d="M 365 330 C 310 312, 262 300, 206 286 C 254 255, 303 244, 352 255 C 395 264, 433 272, 460 283"/>
+
+        <path class="neuron-svg__branch" filter="url(#neuron-glow)" d="M 448 315 C 390 282, 336 242, 290 188 C 258 150, 227 124, 186 100"/>
+        <path class="neuron-svg__branch" filter="url(#neuron-glow)" d="M 462 302 C 408 264, 370 223, 336 178 C 320 156, 295 128, 258 94"/>
+        <path class="neuron-svg__branch" filter="url(#neuron-glow)" d="M 476 298 C 432 256, 410 225, 396 188 C 386 160, 368 132, 338 110"/>
+        <path class="neuron-svg__branch" filter="url(#neuron-glow)" d="M 470 334 C 414 326, 370 313, 322 288 C 286 269, 244 246, 192 224"/>
+        <path class="neuron-svg__branch" filter="url(#neuron-glow)" d="M 486 342 C 434 340, 394 349, 352 370 C 317 387, 284 409, 240 432"/>
+        <path class="neuron-svg__branch" filter="url(#neuron-glow)" d="M 470 352 C 432 372, 412 398, 398 428 C 388 450, 373 480, 350 520"/>
+        <path class="neuron-svg__branch" filter="url(#neuron-glow)" d="M 436 346 C 392 366, 352 391, 314 425 C 286 450, 251 483, 210 528"/>
+
+        <path class="neuron-svg__axon" filter="url(#neuron-glow)" d="M 528 340 C 614 352, 702 372, 788 412 C 842 437, 898 462, 947 505"/>
+        <path class="neuron-svg__root" filter="url(#neuron-glow)" d="M 506 340 C 620 352, 742 389, 874 448"/>
+
+        <circle class="neuron-svg__soma" filter="url(#neuron-soma-glow)" cx="500" cy="334" r="74"/>
+        <circle class="neuron-svg__soma-ring" cx="500" cy="334" r="56"/>
+        <circle class="neuron-svg__glow-soft" cx="500" cy="334" r="32" opacity="0.55"/>
+        <circle class="neuron-svg__glow-core" cx="500" cy="334" r="18"/>
+      </svg>
+    `;
   }
 });

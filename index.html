@@ -10,6 +10,25 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body class="site-root">
+  <button class="home-menu-toggle" id="home-menu-toggle" type="button" aria-expanded="false" aria-controls="home-menu" aria-label="Open site menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="home-menu" id="home-menu" aria-label="Site pages">
+    <a href="index.html">Home</a>
+    <a href="pages/brain.html">The Brain</a>
+    <a href="pages/neurons.html">Neurons</a>
+    <a href="pages/neuropharm.html">Neuropharmacology</a>
+    <a href="pages/disorders.html">Disorders</a>
+    <a href="pages/neurotransmitters.html">Neurotransmitters</a>
+    <a href="pages/neurodegenerative.html">Neurodegenerative</a>
+    <a href="pages/genetics.html">Genetics</a>
+    <a href="pages/quizzes.html">Quizzes</a>
+    <a href="pages/about.html">About Me</a>
+  </nav>
+
   <main>
     <section class="hero hero--landing" aria-labelledby="hero-title">
       <div class="container hero-inner">
@@ -50,31 +69,18 @@
     </section>
 
     <section class="network-showcase" aria-labelledby="network-heading">
-      <div class="container network-intro">
+      <div class="container section-heading section-heading--center network-heading-block">
         <h2 id="network-heading">Navigate the field through an interconnected neural map</h2>
         <p class="section-lead">Hover or tap a neuron to preview the topic and open the corresponding page.</p>
       </div>
 
-      <div class="network-stage" id="network-stage" data-neural-network>
-        <svg class="network-lines" id="network-lines" viewBox="0 0 1000 760" preserveAspectRatio="none" aria-hidden="true"></svg>
-        <div class="network-background" id="network-background" aria-hidden="true"></div>
-        <div class="network-nodes" id="network-nodes" aria-label="Neural map of future topic slots"></div>
-      </div>
-
-      <div class="container">
-        <div class="network-detail" id="network-detail" aria-live="polite">
-          <span class="network-detail__eyebrow">Future topic placeholder</span>
-          <h3 id="network-detail-title">Hover a neuron</h3>
-          <p id="network-detail-copy">The network is ready to link into neuroscience topics as the site expands.</p>
-        </div>
-      </div>
+      <div class="network-stage" id="network-stage" data-neural-network aria-hidden="true"></div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <p>&copy; Jer — Jer's Neuroscience Compendium</p>
-      <p class="muted">Designed for clarity, expandability, and scientific accuracy.</p>
     </div>
   </footer>
 
