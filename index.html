@@ -7,80 +7,68 @@
   <meta name="description" content="A personal neuroscience encyclopedia built from university studies, scientific literature, and continued learning." />
   <link rel="stylesheet" href="css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body class="site-root">
   <main>
-    <section class="hero immersive-hero">
+    <section class="hero hero--landing" aria-labelledby="hero-title">
       <div class="container hero-inner">
-        <div class="hero-text">
-          <p class="eyebrow">Neuroscience compendium</p>
-          <h1>Jer's Neuroscience Compendium</h1>
-          <p class="subtitle">A personal reference for neuroscience, neuroanatomy, and pharmacology.</p>
-          <p class="hero-lead">This site brings together core neuroanatomy concepts, key systems, and drug mechanisms in one clean academic resource. Use the topic cards below to move into focused content pages that are organized around the most important subtopics.</p>
+        <h1 id="hero-title">Jer’s Neuroscience Compendium</h1>
+        <p class="hero-subtitle">The Fascinating World of Neuroscience</p>
+        <p class="hero-lead">Welcome to Jer’s Neuroscience Compendium - a personal collection of knowledge exploring the brain, behaviour, and the biological mechanisms that shape who we are. Built from university studies, scientific literature, and continued curiosity, this project is an ongoing journey through the fascinating world of neuroscience.</p>
+      </div>
+    </section>
+
+    <section class="brain-showcase" aria-labelledby="brain-heading">
+      <div class="container brain-shell">
+        <div class="section-heading section-heading--center">
+          <p class="eyebrow">Interactive 3D brain</p>
+          <h2 id="brain-heading">This is your brain</h2>
+          <p class="section-lead">At this very moment, you have billions of neurons communicating throughout your brain. Pretty cool, right? Rotate and inspect the brain from any angle.</p>
         </div>
 
-        <div class="hero-panel">
-          <div class="hero-panel-card">
-            <h2>What you will find</h2>
-            <ul>
-              <li>Clear explanations of cortical regions and major structures</li>
-              <li>Focused pages on neurons, brain organization, and disorders</li>
-              <li>Drug and receptor frameworks for neuropharmacology study</li>
-            </ul>
-          </div>
+        <div class="brain-stage" aria-label="Interactive 3D brain model">
+          <span class="brain-orb brain-orb--one" aria-hidden="true"></span>
+          <span class="brain-orb brain-orb--two" aria-hidden="true"></span>
+          <span class="brain-haze" aria-hidden="true"></span>
+          <model-viewer
+            src="assets/models/3D%20Brain%20Graphic.glb"
+            alt="Interactive 3D brain model"
+            auto-rotate
+            camera-controls
+            touch-action="pan-y"
+            auto-rotate-delay="0"
+            rotation-per-second="9deg"
+            orientation="0deg 0deg 90deg"
+            camera-orbit="285deg 68deg 118%"
+            field-of-view="32deg"
+            disable-zoom
+            shadow-intensity="1"
+            interaction-prompt="none"
+          ></model-viewer>
         </div>
       </div>
     </section>
 
-    <section class="homepage-preview container">
-      <h2>Study Snapshot</h2>
-      <div class="preview-grid">
-        <article class="preview-card">
-          <h3>Interactive Atlas</h3>
-          <p>Brain regions, diagrams, and learning pathways are organized into focused study pages.</p>
-        </article>
-        <article class="preview-card">
-          <h3>Glossary + Key Terms</h3>
-          <p>Core terminology is collected into clean reference sections for quick review.</p>
-        </article>
-        <article class="preview-card">
-          <h3>Quizzes (Coming Soon)</h3>
-          <p>A new quiz hub will eventually provide practice on mechanisms, pathways, and disorders.</p>
-        </article>
+    <section class="network-showcase" aria-labelledby="network-heading">
+      <div class="container network-intro">
+        <p class="eyebrow">Neural navigation</p>
+        <h2 id="network-heading">Navigate the field through an interconnected neural map</h2>
+        <p class="section-lead">Hover or tap a neuron to preview the topic and open the corresponding page.</p>
       </div>
-    </section>
 
-    <section class="categories container">
-      <h2>Explore Topics</h2>
-      <div class="category-grid">
-        <a class="category-card" href="pages/brain.html">
-          <span class="category-icon">🧠</span>
-          <span class="category-title">The Brain</span>
-        </a>
-        <a class="category-card" href="pages/neurons.html">
-          <span class="category-icon">⚡</span>
-          <span class="category-title">Neurons</span>
-        </a>
-        <a class="category-card" href="pages/neuropharm.html">
-          <span class="category-icon">💊</span>
-          <span class="category-title">Neuropharmacology</span>
-        </a>
-        <a class="category-card" href="pages/disorders.html">
-          <span class="category-icon">🧬</span>
-          <span class="category-title">Diseases &amp; Disorders</span>
-        </a>
-        <a class="category-card" href="pages/topics.html">
-          <span class="category-icon">🔬</span>
-          <span class="category-title">Concepts &amp; Research</span>
-        </a>
-        <a class="category-card" href="pages/quizzes.html">
-          <span class="category-icon">✅</span>
-          <span class="category-title">Quizzes</span>
-        </a>
-        <a class="category-card" href="pages/about.html">
-          <span class="category-icon">👤</span>
-          <span class="category-title">About Me</span>
-        </a>
+      <div class="network-stage" id="network-stage" data-neural-network>
+        <svg class="network-lines" id="network-lines" viewBox="0 0 1000 760" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="network-background" id="network-background" aria-hidden="true"></div>
+        <div class="network-nodes" id="network-nodes" aria-label="Neural map of future topic slots"></div>
+      </div>
+
+      <div class="container">
+        <div class="network-detail" id="network-detail" aria-live="polite">
+          <span class="network-detail__eyebrow">Future topic placeholder</span>
+          <h3 id="network-detail-title">Hover a neuron</h3>
+          <p id="network-detail-copy">The network is ready to link into neuroscience topics as the site expands.</p>
+        </div>
       </div>
     </section>
   </main>
