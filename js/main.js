@@ -1,28 +1,65 @@
+if(document.querySelector('.hero--landing')){
+  document.documentElement.classList.add('has-scroll-reveal');
+
+  if('scrollRestoration' in history){
+    history.scrollRestoration = 'manual';
+  }
+
+  const resetPageScroll = () => {
+    const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = 'auto';
+    window.scrollTo(0, 0);
+    document.documentElement.style.scrollBehavior = previousScrollBehavior;
+  };
+
+  resetPageScroll();
+  window.addEventListener('pageshow', resetPageScroll);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   const topicHeader = document.querySelector('[data-topic-header]');
-
-  if(topicHeader){
-    const currentTopic = document.body.dataset.topic;
-    const topicLinks = [
-      { key: 'brain', label: 'Brain', href: 'brain.html' },
-      { key: 'neurons', label: 'Neurons', href: 'neurons.html' },
-      { key: 'neurotransmitters', label: 'Neurotransmitters', href: 'neurotransmitters.html' },
-      { key: 'neuropharmacology', label: 'Neuropharmacology', href: 'neuropharmacology.html' },
-      { key: 'disorders', label: 'Diseases & Disorders', href: 'disorders.html' },
-      { key: 'neurodegeneration', label: 'Neurodegeneration', href: 'neurodegeneration.html' },
-      { key: 'concepts', label: 'Concepts & Research', href: 'concepts.html' },
-      { key: 'genetics', label: 'Genetics', href: 'genetics.html' },
-      { key: 'about', label: 'About', href: 'about.html' }
-    ];
-    const navigation = topicLinks.map((topic) => {
+  const homeTopicNav = document.querySelector('[data-home-topic-nav]');
+  const topicLinks = [
+    { key: 'brain', label: 'Brain', href: 'brain.html' },
+    { key: 'neurons', label: 'Neurons', href: 'neurons.html' },
+    { key: 'neurotransmitters', label: 'Neurotransmitters', href: 'neurotransmitters.html' },
+    { key: 'neuropharmacology', label: 'Neuropharmacology', href: 'neuropharmacology.html' },
+    { key: 'disorders', label: 'Diseases & Disorders', href: 'disorders.html' },
+    { key: 'neurodegeneration', label: 'Neurodegeneration', href: 'neurodegeneration.html' },
+    { key: 'concepts', label: 'Concepts & Research', href: 'concepts.html' },
+    { key: 'genetics', label: 'Genetics', href: 'genetics.html' },
+    { key: 'about', label: 'About', href: 'about.html' }
+  ];
+  const buildTopicNavigation = (hrefPrefix = '', currentTopic = '') =>
+    topicLinks.map((topic) => {
       const isCurrent = topic.key === currentTopic;
       return `
         <a
-          href="${topic.href}"
+          href="${hrefPrefix}${topic.href}"
           ${isCurrent ? 'class="is-current" aria-current="page"' : ''}
         >${topic.label}</a>
       `;
     }).join('');
+
+  if(homeTopicNav){
+    homeTopicNav.innerHTML = `
+      <nav class="topic-nav" aria-label="Neuroscience topics">
+        <div class="topic-nav__inner">
+          ${buildTopicNavigation('pages/')}
+        </div>
+      </nav>
+    `;
+  }
+
+  if(topicHeader){
+    const currentTopic = document.body.dataset.topic;
+    const currentTopicIndex = topicLinks.findIndex(
+      (topic) => topic.key === currentTopic
+    );
+    const nextTopic = topicLinks[
+      (currentTopicIndex + 1 + topicLinks.length) % topicLinks.length
+    ];
+    const navigation = buildTopicNavigation('', currentTopic);
 
     topicHeader.innerHTML = `
       <div class="topic-header__bar">
@@ -30,9 +67,13 @@ document.addEventListener('DOMContentLoaded', function () {
           <span aria-hidden="true">←</span>
           <span>Home</span>
         </a>
-        <a class="topic-brand" href="../index.html">
-          <span class="topic-brand__mark" aria-hidden="true">N</span>
-          <span>Jer's Neuroscience Compendium</span>
+        <a
+          class="topic-home-link topic-next-link"
+          href="${nextTopic.href}"
+          aria-label="Next topic: ${nextTopic.label}"
+        >
+          <span>Next</span>
+          <span aria-hidden="true">→</span>
         </a>
       </div>
       <nav class="topic-nav" aria-label="Neuroscience topics">
@@ -42,8 +83,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   document.querySelectorAll('details').forEach((detail) => {
+    const summary = detail.firstElementChild;
+
     detail.addEventListener('keydown', function (event) {
-      if(event.key === 'Enter' || event.key === ' '){
+      if(
+        event.target === summary &&
+        (event.key === 'Enter' || event.key === ' ')
+      ){
         event.preventDefault();
         detail.open = !detail.open;
       }
@@ -85,6 +131,49 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   initializeBrainStructureMenu();
+
+  const initializeScrollReveals = () => {
+    const revealComponents = Array.from(
+      document.querySelectorAll('[data-scroll-reveal]')
+    );
+    const reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+    const revealImmediately = () => {
+      revealComponents.forEach((component) => {
+        component.classList.add('is-revealed');
+      });
+    };
+
+    if(
+      !revealComponents.length ||
+      reducedMotion ||
+      !('IntersectionObserver' in window)
+    ){
+      revealImmediately();
+      return;
+    }
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if(!entry.isIntersecting){
+          return;
+        }
+
+        entry.target.classList.add('is-revealed');
+        revealObserver.unobserve(entry.target);
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -8% 0px'
+    });
+
+    revealComponents.forEach((component) => {
+      revealObserver.observe(component);
+    });
+  };
+
+  initializeScrollReveals();
 
   const stage = document.getElementById('network-stage');
 

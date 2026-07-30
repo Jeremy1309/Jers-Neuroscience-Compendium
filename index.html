@@ -10,23 +10,24 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body class="site-root">
+  <header class="topic-header topic-header--homepage" data-home-topic-nav></header>
+
   <main>
     <section class="hero hero--landing" aria-labelledby="hero-title">
       <div class="container hero-inner">
-        <h1 id="hero-title"><span>Jer’s Neuroscience</span><span>Compendium</span></h1>
-        <p class="hero-subtitle">The Fascinating World of Neuroscience</p>
-        <p class="hero-lead">Welcome to Jer’s Neuroscience Compendium - a personal collection of knowledge exploring the brain, behaviour, and the biological mechanisms that shape who we are. Built from university studies, scientific literature, and continued curiosity, this project is an ongoing journey through the fascinating world of neuroscience.</p>
+        <h1 id="hero-title"><span>The Fascinating World</span><span>of Neuroscience</span></h1>
+        <p class="hero-lead">Welcome to <strong class="hero-lead__brand">Jer’s Neuroscience Compendium</strong> - a personal collection of knowledge exploring the brain, behaviour, and the biological mechanisms that shape who we are. Built from university studies, scientific literature, and continued curiosity, this project is an ongoing journey through the fascinating world of neuroscience.</p>
       </div>
     </section>
 
     <section class="brain-showcase" aria-labelledby="brain-heading">
       <div class="container brain-shell">
-        <div class="section-heading section-heading--center">
+        <div class="section-heading section-heading--center" data-scroll-reveal>
           <h2 id="brain-heading">This is your brain</h2>
           <p class="section-lead">At this very moment, you have billions of neurons communicating throughout your brain. Pretty cool, right? Rotate and inspect the brain from any angle.</p>
         </div>
 
-        <div class="brain-stage" aria-label="Interactive 3D brain model">
+        <div class="brain-stage" aria-label="Interactive 3D brain model" data-scroll-reveal data-scroll-reveal-delay>
           <span class="brain-orb brain-orb--one" aria-hidden="true"></span>
           <span class="brain-orb brain-orb--two" aria-hidden="true"></span>
           <span class="brain-haze" aria-hidden="true"></span>
@@ -35,6 +36,19 @@
             aria-label="Major brain structures"
             data-brain-structure-menu
           >
+            <details class="brain-hemisphere-control" open>
+              <summary>Hemispheres</summary>
+              <div class="brain-hemisphere-options">
+                <label for="brain-hemisphere-left">
+                  <input id="brain-hemisphere-left" type="checkbox" data-hemisphere-toggle="left" checked />
+                  <span>Left Hemisphere</span>
+                </label>
+                <label for="brain-hemisphere-right">
+                  <input id="brain-hemisphere-right" type="checkbox" data-hemisphere-toggle="right" checked />
+                  <span>Right Hemisphere</span>
+                </label>
+              </div>
+            </details>
             <span class="brain-structure-menu__label">Brain structures</span>
             <button id="brain-structure-cerebral-cortex" class="brain-structure-button" type="button" data-brain-structure="cerebral-cortex" aria-controls="brain-model-viewer" aria-pressed="false">Cerebral Cortex</button>
             <button id="brain-structure-frontal-lobe" class="brain-structure-button" type="button" data-brain-structure="frontal-lobe" aria-controls="brain-model-viewer" aria-pressed="false">Frontal Lobe</button>
@@ -67,21 +81,22 @@
     </section>
 
     <section class="network-showcase" aria-labelledby="network-heading">
-      <div class="container section-heading section-heading--center network-heading-block">
+      <div class="container section-heading section-heading--center network-heading-block" data-scroll-reveal>
         <h2 id="network-heading">These are your neurons</h2>
         <p class="section-lead">Learn about different topics by hovering over and selecting the connected neurons below.</p>
       </div>
 
-      <div class="network-stage" id="network-stage" data-neural-network aria-label="Interactive network of ten connected neurons"></div>
+      <div class="network-stage" id="network-stage" data-neural-network data-scroll-reveal data-scroll-reveal-delay aria-label="Interactive network of ten connected neurons"></div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; Jer — Jer's Neuroscience Compendium</p>
+      <p>&copy; Jer's Neuroscience Compendium</p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script type="module" src="js/brain-visibility.js"></script>
 </body>
 </html>
