@@ -15,7 +15,7 @@
     <header class="topic-hero">
       <p class="topic-hero__eyebrow">Cellular neuroscience</p>
       <h1>Neurons &amp; Neural Signaling</h1>
-      <p class="topic-hero__lede">The fundamental building blocks of the nervous system and the electrical signals that allow them to communicate.</p>
+      <p class="topic-hero__lede">The fundamental building blocks of the nervous system, including neuron structure, action potentials, synapses, and glial support cells.</p>
     </header>
 
     <article class="topic-content">
@@ -23,19 +23,81 @@
         <p class="topic-section__label">01 · Orientation</p>
         <h2>Overview</h2>
         <div class="topic-prose">
-          <p>Purpose: Explain the fundamental building blocks and electrical signaling of the nervous system.</p>
+          <p>Neurons are the fundamental functional units of the nervous system and are responsible for processing, transmitting, and integrating information throughout the brain and body. They communicate using both electrical and chemical signals, allowing the nervous system to perceive sensory information, generate thoughts, form memories, and coordinate behaviour.</p>
+          <p>The adult human brain contains approximately 86 billion neurons, though this number is still debated, and these cells are interconnected by hundreds of trillions of synapses to form highly complex neural networks.</p>
+          <p>Although all neurons share the same basic structure and common purpose of receiving and transmitting information, they are highly specialized according to the functions they perform. Sensory neurons carry incoming information from sensory organs to the brain, motor neurons carry outgoing signals to muscles, interneurons link sensory and motor neurons, and specialized neurons such as pyramidal neurons and Purkinje cells support higher processing and motor coordination.</p>
         </div>
       </section>
 
       <section class="topic-section" id="glossary">
         <p class="topic-section__label">02 · Reference</p>
         <h2>Glossary</h2>
-        <p class="topic-section__intro">Key terms and definitions for neuron structure and signaling.</p>
+        <p class="topic-section__intro">Key terms for neuron anatomy, electrical signaling, neurotransmission, and synaptic communication.</p>
         <dl class="glossary-list">
-          <div><dt>Dendrites</dt><dd class="topic-placeholder">Definition to be added.</dd></div>
-          <div><dt>Soma</dt><dd class="topic-placeholder">Definition to be added.</dd></div>
-          <div><dt>Axon</dt><dd class="topic-placeholder">Definition to be added.</dd></div>
-          <div><dt>Synaptic terminals</dt><dd class="topic-placeholder">Definition to be added.</dd></div>
+          <div id="soma">
+            <dt>Soma</dt>
+            <dd>The central part of a neuron that integrates incoming signals from dendrites and determines whether to generate an action potential.</dd>
+          </div>
+          <div id="membrane">
+            <dt>Cell membrane</dt>
+            <dd>A phospholipid bilayer that surrounds the neuron and regulates movement of substances in and out of the cell.</dd>
+          </div>
+          <div id="nucleus">
+            <dt>Nucleus</dt>
+            <dd>Located inside the soma, it houses the cell's genetic material and regulates protein synthesis and maintenance.</dd>
+          </div>
+          <div id="dendrites">
+            <dt>Dendrites</dt>
+            <dd>Branches that extend off the soma to receive information from other neurons.</dd>
+          </div>
+          <div id="axon">
+            <dt>Axon</dt>
+            <dd>Conducts signals from the neuron to other neurons or target cells.</dd>
+          </div>
+          <div id="axon-hillock">
+            <dt>Axon hillock</dt>
+            <dd>The point at which the axon leaves the soma.</dd>
+          </div>
+          <div id="myelin">
+            <dt>Myelin sheath</dt>
+            <dd>Fatty insulation around axons that allows faster and stronger signals.</dd>
+          </div>
+          <div id="ranvier">
+            <dt>Node of Ranvier</dt>
+            <dd>Gaps along the axon that are not covered with myelin.</dd>
+          </div>
+          <div id="bouton">
+            <dt>Terminal bouton</dt>
+            <dd>The end of the axon near the dendritic spine of other neurons.</dd>
+          </div>
+          <div id="synapse">
+            <dt>Synapse</dt>
+            <dd>The microscopic gap between presynaptic and postsynaptic neurons.</dd>
+          </div>
+          <div id="neurotransmitter">
+            <dt>Neurotransmitter</dt>
+            <dd>Chemical messenger released at the synapse that binds to receptors on a target cell.</dd>
+          </div>
+          <div id="receptor">
+            <dt>Receptor</dt>
+            <dd>A protein on the cell surface or inside the cell that responds to a specific neurotransmitter, hormone, or other molecule.</dd>
+          </div>
+          <div id="presynaptic">
+            <dt>Presynaptic neuron</dt>
+            <dd>The neuron that releases neurotransmitters.</dd>
+          </div>
+          <div id="postsynaptic">
+            <dt>Postsynaptic neuron</dt>
+            <dd>The neuron that receives neurotransmitters.</dd>
+          </div>
+          <div id="vesicle">
+            <dt>Synaptic vesicle</dt>
+            <dd>A small membrane-bound sac that stores neurotransmitters within the presynaptic terminal.</dd>
+          </div>
+          <div id="ion-channel">
+            <dt>Ion channel</dt>
+            <dd>A protein pore that allows specific ions such as Na<sup>+</sup>, K<sup>+</sup>, Ca<sup>2+</sup>, and Cl<sup>-</sup> to cross the membrane.</dd>
+          </div>
         </dl>
       </section>
 
@@ -47,17 +109,27 @@
         </header>
         <div class="subtopic-list">
           <section class="subtopic-section">
-            <h3>Neuron Anatomy</h3>
-            <ul>
-              <li>Dendrites</li>
-              <li>Soma</li>
-              <li>Axon</li>
-              <li>Synaptic terminals</li>
-            </ul>
+            <h3>Action Potentials &amp; Electrical Communication</h3>
+            <p>An action potential is a rapid electrical signal that allows neurons to communicate with one another. It is generated by a temporary change in membrane charge and travels down the axon to the synaptic boutons.</p>
+            <p>Neurons maintain a resting membrane potential of about −70 mV, with the sodium-potassium pump helping keep the inside of the cell negatively charged relative to the outside by moving 3 sodium ions out for every 2 potassium ions brought in.</p>
+            <p>Hyperpolarization makes the membrane more negative and usually occurs through chloride, while depolarization makes it more positive and usually occurs through sodium. Inhibitory postsynaptic potentials cause hyperpolarization, while excitatory postsynaptic potentials cause depolarization.</p>
+            <p>When the membrane reaches the threshold potential of approximately −50 mV, depolarization continues until about +30 mV, at which point an action potential is triggered. The cell then returns to the resting membrane potential, briefly overcompensating to around −80 mV before settling back to −70 mV. After firing, the neuron enters an absolute refractory period, followed by a relative refractory period.</p>
           </section>
           <section class="subtopic-section">
-            <h3>Action Potentials &amp; Electrical Signaling</h3>
-            <p class="topic-placeholder">Introduction and diagrams will be added later.</p>
+            <h3>Neurotransmission, LTP, and Glial Cells</h3>
+            <p>When an action potential reaches the axon terminal, it depolarizes the membrane and opens voltage-gated Ca<sup>2+</sup> channels. The influx of calcium triggers vesicle fusion with the presynaptic membrane through synaptotagmin, leading to neurotransmitter release into the synaptic cleft via exocytosis.</p>
+            <p>The neurotransmitters then bind to receptors on the postsynaptic neuron, producing excitatory or inhibitory effects depending on the receptor and ion channels involved. Before release, neurotransmitters are stored inside vesicles in the presynaptic neuron.</p>
+            <p>Neurons receive many inputs at once, and those inputs are summed through spatial summation across multiple synapses and temporal summation from repeated signals at the same synapse. If the combined input at the axon hillock reaches threshold, the neuron fires an action potential.</p>
+            <p>Long-term potentiation is a long-lasting increase in synaptic strength and is most commonly studied at glutamatergic synapses. Repeated or strong stimulation leads to glutamate release, which activates AMPA receptors and depolarizes the postsynaptic neuron.</p>
+            <p>This depolarization removes the Mg<sup>2+</sup> block from NMDA receptors. When NMDA receptors open, Ca<sup>2+</sup> enters the postsynaptic neuron and activates intracellular signaling pathways. These changes lead to the insertion of additional AMPA receptors and structural synaptic changes, making future glutamate release produce a larger postsynaptic response.</p>
+            <p>Glial cells work alongside neurons to support, protect, and maintain the nervous system. They regulate the environment in which neurons function, maintain homeostasis, protect against injury and infection, and contribute to learning, memory, and repair.</p>
+            <ul>
+              <li><strong>Astrocytes</strong> — the most abundant glial cell in the CNS, supporting neurons, regulating the blood-brain barrier, maintaining ion balance, and removing excess neurotransmitters.</li>
+              <li><strong>Microglia</strong> — the primary immune cells of the CNS, monitoring the brain and clearing damaged cells and debris through phagocytosis.</li>
+              <li><strong>Oligodendrocytes</strong> — CNS cells that produce myelin around axons and allow faster action potential travel through saltatory conduction.</li>
+              <li><strong>Schwann cells</strong> — the PNS equivalent of oligodendrocytes, producing myelin around peripheral axons and helping with nerve repair.</li>
+              <li><strong>Ependymal cells</strong> — cells lining the ventricles that help produce and circulate cerebrospinal fluid.</li>
+            </ul>
           </section>
         </div>
       </section>
