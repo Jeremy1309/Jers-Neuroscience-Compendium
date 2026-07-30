@@ -1,26 +1,69 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About — Jer's Neuroscience Compendium</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <meta name="description" content="About Jer and the Neuroscience Compendium.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header class="site-header"><div class="container header-inner"><a class="brand" href="/">Jer's Neuroscience Compendium</a></div></header>
-  <main class="container">
-    <h1>About Me</h1>
-    <p class="muted">Neuroscience graduate. This compendium is a personal project to organize and explain neuroscience concepts clearly, accurately, and accessibly.</p>
-    <section>
-      <h2>Background</h2>
-      <p>Education: neuroscience degree (add institution and year). Research interests and relevant experience.</p>
-    </section>
-    <section>
-      <h2>Purpose</h2>
-      <p>Explain the motivation behind the compendium and how you plan to expand it (interactive atlas, quizzes, simulations, references).</p>
-    </section>
+<body class="topic-page" data-topic="about">
+  <header class="topic-header" data-topic-header></header>
+
+  <main class="topic-main">
+    <header class="topic-hero">
+      <p class="topic-hero__eyebrow">About the project</p>
+      <h1>About Me</h1>
+      <p class="topic-hero__lede">Neuroscience graduate. This compendium is a personal project to organize and explain neuroscience concepts clearly, accurately, and accessibly.</p>
+    </header>
+
+    <article class="topic-content">
+      <section class="topic-section topic-section--overview" id="overview">
+        <p class="topic-section__label">01 · Orientation</p>
+        <h2>Overview</h2>
+        <div class="topic-prose">
+          <p>This compendium is a personal project to organize and explain neuroscience concepts clearly, accurately, and accessibly.</p>
+        </div>
+      </section>
+
+      <section class="topic-section" id="glossary">
+        <p class="topic-section__label">02 · Reference</p>
+        <h2>Glossary</h2>
+        <p class="topic-section__intro">Project terms used throughout the platform.</p>
+        <dl class="glossary-list">
+          <div>
+            <dt>Compendium</dt>
+            <dd>A growing organized collection of neuroscience knowledge.</dd>
+          </div>
+          <div>
+            <dt>Living resource</dt>
+            <dd>A reference designed to expand as new material is added.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="topic-subtopics" id="subtopics">
+        <header>
+          <p class="topic-section__label">03 · More</p>
+          <h2>Background &amp; Purpose</h2>
+          <p>Information about the creator and the direction of the compendium.</p>
+        </header>
+        <div class="subtopic-list">
+          <section class="subtopic-section">
+            <h3>Background</h3>
+            <p>Education: neuroscience degree (add institution and year). Research interests and relevant experience.</p>
+          </section>
+          <section class="subtopic-section">
+            <h3>Purpose</h3>
+            <p>Explain the motivation behind the compendium and how you plan to expand it through an interactive atlas, quizzes, simulations, and references.</p>
+          </section>
+        </div>
+      </section>
+    </article>
   </main>
-  <footer class="site-footer"><div class="container'><p>&copy; Jer — Jer's Neuroscience Compendium</p></div></footer>
-  <script src="/js/main.js"></script>
+
+  <footer class="site-footer"><div class="container"><p>&copy; Jer — Jer's Neuroscience Compendium</p></div></footer>
+  <script src="../js/main.js"></script>
 </body>
 </html>

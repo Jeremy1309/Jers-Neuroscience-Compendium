@@ -10,25 +10,6 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body class="site-root">
-  <button class="home-menu-toggle" id="home-menu-toggle" type="button" aria-expanded="false" aria-controls="home-menu" aria-label="Open site menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <nav class="home-menu" id="home-menu" aria-label="Site pages">
-    <a href="index.html">Home</a>
-    <a href="pages/brain.html">The Brain</a>
-    <a href="pages/neurons.html">Neurons</a>
-    <a href="pages/neuropharm.html">Neuropharmacology</a>
-    <a href="pages/disorders.html">Disorders</a>
-    <a href="pages/neurotransmitters.html">Neurotransmitters</a>
-    <a href="pages/neurodegenerative.html">Neurodegenerative</a>
-    <a href="pages/genetics.html">Genetics</a>
-    <a href="pages/quizzes.html">Quizzes</a>
-    <a href="pages/about.html">About Me</a>
-  </nav>
-
   <main>
     <section class="hero hero--landing" aria-labelledby="hero-title">
       <div class="container hero-inner">
@@ -49,7 +30,24 @@
           <span class="brain-orb brain-orb--one" aria-hidden="true"></span>
           <span class="brain-orb brain-orb--two" aria-hidden="true"></span>
           <span class="brain-haze" aria-hidden="true"></span>
+          <nav
+            class="brain-structure-menu"
+            aria-label="Major brain structures"
+            data-brain-structure-menu
+          >
+            <span class="brain-structure-menu__label">Brain structures</span>
+            <button id="brain-structure-cerebral-cortex" class="brain-structure-button" type="button" data-brain-structure="cerebral-cortex" aria-controls="brain-model-viewer" aria-pressed="false">Cerebral Cortex</button>
+            <button id="brain-structure-frontal-lobe" class="brain-structure-button" type="button" data-brain-structure="frontal-lobe" aria-controls="brain-model-viewer" aria-pressed="false">Frontal Lobe</button>
+            <button id="brain-structure-parietal-lobe" class="brain-structure-button" type="button" data-brain-structure="parietal-lobe" aria-controls="brain-model-viewer" aria-pressed="false">Parietal Lobe</button>
+            <button id="brain-structure-temporal-lobe" class="brain-structure-button" type="button" data-brain-structure="temporal-lobe" aria-controls="brain-model-viewer" aria-pressed="false">Temporal Lobe</button>
+            <button id="brain-structure-occipital-lobe" class="brain-structure-button" type="button" data-brain-structure="occipital-lobe" aria-controls="brain-model-viewer" aria-pressed="false">Occipital Lobe</button>
+            <button id="brain-structure-cerebellum" class="brain-structure-button" type="button" data-brain-structure="cerebellum" aria-controls="brain-model-viewer" aria-pressed="false">Cerebellum</button>
+            <button id="brain-structure-brainstem" class="brain-structure-button" type="button" data-brain-structure="brainstem" aria-controls="brain-model-viewer" aria-pressed="false">Brainstem</button>
+            <button id="brain-structure-hippocampus" class="brain-structure-button" type="button" data-brain-structure="hippocampus" aria-controls="brain-model-viewer" aria-pressed="false">Hippocampus</button>
+            <button id="brain-structure-amygdala" class="brain-structure-button" type="button" data-brain-structure="amygdala" aria-controls="brain-model-viewer" aria-pressed="false">Amygdala</button>
+          </nav>
           <model-viewer
+            id="brain-model-viewer"
             src="assets/models/3D%20Brain%20Graphic.glb"
             alt="Interactive 3D brain model"
             auto-rotate
@@ -58,7 +56,7 @@
             auto-rotate-delay="0"
             rotation-per-second="9deg"
             orientation="0deg 0deg 90deg"
-            camera-orbit="285deg 68deg 118%"
+            camera-orbit="292deg 70deg 200%"
             field-of-view="32deg"
             disable-zoom
             shadow-intensity="1"
@@ -70,11 +68,11 @@
 
     <section class="network-showcase" aria-labelledby="network-heading">
       <div class="container section-heading section-heading--center network-heading-block">
-        <h2 id="network-heading">Navigate the field through an interconnected neural map</h2>
-        <p class="section-lead">Hover or tap a neuron to preview the topic and open the corresponding page.</p>
+        <h2 id="network-heading">These are your neurons</h2>
+        <p class="section-lead">Learn about different topics by hovering over and selecting the connected neurons below.</p>
       </div>
 
-      <div class="network-stage" id="network-stage" data-neural-network aria-hidden="true"></div>
+      <div class="network-stage" id="network-stage" data-neural-network aria-label="Interactive network of ten connected neurons"></div>
     </section>
   </main>
 

@@ -1,84 +1,101 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Brain — Jer's Neuroscience Compendium</title>
-  <meta name="description" content="The Brain: organization, lobes, and regions." />
-  <link rel="stylesheet" href="/css/styles.css">
+  <meta name="description" content="The brain: organization, cortical lobes, regions, and nervous-system structure.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/">Jer's Neuroscience Compendium</a>
-      <button id="nav-toggle" class="nav-toggle" aria-expanded="false">Menu</button>
-      <nav id="main-nav" class="main-nav" aria-label="Primary">
-        <ul>
-          <li><a href="/pages/brain.html">The Brain</a></li>
-          <li><a href="/pages/neurons.html">Neurons</a></li>
-          <li><a href="/pages/disorders.html">Diseases &amp; Disorders</a></li>
-          <li><a href="/pages/neuropharm.html">Neuropharmacology</a></li>
-          <li><a href="/pages/topics.html">Additional Topics</a></li>
-          <li><a href="/pages/about.html">About Me</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<body class="topic-page" data-topic="brain">
+  <header class="topic-header" data-topic-header></header>
 
-  <main class="container">
-    <h1>The Brain</h1>
-    <p class="muted">1.1) Overview
-The brain is the control centre of the nervous system and is the most complex organ in the human body. It continuously receives information from both the external environment and the body itself, processes this information, and coordinates appropriate responses. 
+  <main class="topic-main">
+    <header class="topic-hero">
+      <p class="topic-hero__eyebrow">Systems neuroscience</p>
+      <h1>The Brain</h1>
+      <p class="topic-hero__lede">An organized guide to the brain's structure, specialized regions, and place within the wider nervous system.</p>
+    </header>
 
-Although the brain weighs only approximately 2.6 - 3.1 lb (about 2% of total body weight), it contains an estimated 86 billion neurons connected by hundreds of trillions of synapses. Together, these cells form an intricate network capable of processing enormous amounts of information every second.
+    <article class="topic-content">
+      <section class="topic-section topic-section--overview" id="overview">
+        <p class="topic-section__label">01 · Orientation</p>
+        <h2>Overview</h2>
+        <div class="topic-prose">
+          <p>The brain is the control centre of the nervous system and is the most complex organ in the human body. It continuously receives information from both the external environment and the body itself, processes this information, and coordinates appropriate responses.</p>
+          <p>Although the brain weighs only approximately 2.6–3.1 lb (about 2% of total body weight), it contains an estimated 86 billion neurons connected by hundreds of trillions of synapses. Together, these cells form an intricate network capable of processing enormous amounts of information every second.</p>
+          <p>Rather than functioning as a single uniform structure, the brain is organized into numerous specialized regions and interconnected networks. Different areas are responsible for specific functions, such as processing sensory information, controlling movement, regulating emotions, forming memories, and making decisions. Despite individual brain regions having specialized roles, they rarely work in isolation; instead, complex behaviours and cognitive processes emerge through communication between many different areas of the brain.</p>
+          <p>Advances in neuroscience over the past century have dramatically improved our understanding of the brain. However, many aspects of this topic remain poorly understood, making it one of the most active and exciting areas of scientific research.</p>
+        </div>
+      </section>
 
-Rather than functioning as a single uniform structure, the brain is organized into numerous specialized regions and interconnected networks. Different areas are responsible for specific functions, such as processing sensory information, controlling movement, regulating emotions, forming memories, and making decisions. Despite individual brain regions having specialized roles, they rarely work in isolation; instead, complex behaviours and cognitive processes emerge through communication between many different areas of the brain.
+      <section class="topic-section" id="glossary">
+        <p class="topic-section__label">02 · Reference</p>
+        <h2>Glossary</h2>
+        <p class="topic-section__intro">Core organizational terms used throughout this section.</p>
+        <dl class="glossary-list">
+          <div id="cns">
+            <dt>Central nervous system</dt>
+            <dd>The brain and spinal cord.</dd>
+          </div>
+          <div id="pns">
+            <dt>Peripheral nervous system</dt>
+            <dd>Nerves and ganglia outside the central nervous system.</dd>
+          </div>
+          <div id="ans">
+            <dt>Autonomic nervous system</dt>
+            <dd>The sympathetic and parasympathetic branches.</dd>
+          </div>
+        </dl>
+      </section>
 
-Advances in neuroscience over the past century have dramatically improved our understanding of the brain. However, many aspects of this topic remain poorly understood, making it one of the most active and exciting areas of scientific research!
-</p>
+      <section class="topic-subtopics" id="subtopics">
+        <header>
+          <p class="topic-section__label">03 · Explore</p>
+          <h2>Subtopics</h2>
+          <p>Explore the brain from broad organization to individual cortical and subcortical regions.</p>
+        </header>
+        <div class="subtopic-list">
+          <section class="subtopic-section" id="cortical-lobes">
+            <h3>The Four Cortical Lobes</h3>
+            <ul>
+              <li id="frontal-lobe"><strong>Frontal lobe</strong> — executive functions, planning, and motor control.</li>
+              <li id="parietal-lobe"><strong>Parietal lobe</strong> — somatosensory processing and spatial reasoning.</li>
+              <li id="temporal-lobe"><strong>Temporal lobe</strong> — auditory processing, memory, and language.</li>
+              <li id="occipital-lobe"><strong>Occipital lobe</strong> — vision.</li>
+            </ul>
+          </section>
 
-    <section>
-      <h2 id="overview">Overview of the nervous system</h2>
-      <p>Summary and orientation. Use the interactive brain on the homepage to jump to specific regions and return here for in-depth articles.</p>
-      <ul>
-        <li id="cns"><strong>Central nervous system</strong> — brain and spinal cord.</li>
-        <li id="pns"><strong>Peripheral nervous system</strong> — nerves and ganglia outside the CNS.</li>
-        <li id="ans"><strong>Autonomic nervous system</strong> — sympathetic and parasympathetic branches.</li>
-      </ul>
-    </section>
+          <section class="subtopic-section" id="brain-regions">
+            <h3>Important Brain Regions</h3>
+            <ul>
+              <li id="hippocampus"><strong>Hippocampus</strong> — memory formation.</li>
+              <li id="amygdala"><strong>Amygdala</strong> — emotion and fear processing.</li>
+              <li id="prefrontal"><strong>Prefrontal cortex</strong> — higher cognition and planning.</li>
+              <li id="basal-ganglia"><strong>Basal ganglia</strong> — motor control and habit learning.</li>
+              <li id="thalamus"><strong>Thalamus</strong> — sensory relay.</li>
+              <li id="hypothalamus"><strong>Hypothalamus</strong> — homeostasis and endocrine control.</li>
+              <li id="brainstem"><strong>Brainstem</strong> — vital functions and arousal.</li>
+              <li id="cerebellum"><strong>Cerebellum</strong> — coordination and motor learning.</li>
+            </ul>
+          </section>
 
-    <section>
-      <h2 id="cortical-lobes">Cortical lobes</h2>
-      <ul>
-        <li id="frontal-lobe"><strong>Frontal lobe</strong> — executive functions, planning, motor control.</li>
-        <li id="parietal-lobe"><strong>Parietal lobe</strong> — somatosensory processing and spatial reasoning.</li>
-        <li id="temporal-lobe"><strong>Temporal lobe</strong> — auditory processing, memory, language.</li>
-        <li id="occipital-lobe"><strong>Occipital lobe</strong> — vision.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 id="brain-regions">Brain regions</h2>
-      <ul>
-        <li id="hippocampus"><strong>Hippocampus</strong> — memory formation.</li>
-        <li id="amygdala"><strong>Amygdala</strong> — emotion and fear processing.</li>
-        <li id="prefrontal"><strong>Prefrontal cortex</strong> — higher cognition and planning.</li>
-        <li id="basal-ganglia"><strong>Basal ganglia</strong> — motor control and habit learning.</li>
-        <li id="thalamus"><strong>Thalamus</strong> — sensory relay.</li>
-        <li id="hypothalamus"><strong>Hypothalamus</strong> — homeostasis and endocrine control.</li>
-        <li id="brainstem"><strong>Brainstem</strong> — vital functions and arousal.</li>
-        <li id="cerebellum"><strong>Cerebellum</strong> — coordination and motor learning.</li>
-      </ul>
-    </section>
-
+          <section class="subtopic-section" id="nervous-system">
+            <h3>Breakdown of the Nervous System</h3>
+            <p>Summary and orientation. Use the interactive brain on the homepage to return to this guide for in-depth material.</p>
+            <ul>
+              <li><strong>Central nervous system</strong> — brain and spinal cord.</li>
+              <li><strong>Peripheral nervous system</strong> — nerves and ganglia outside the CNS.</li>
+              <li><strong>Autonomic nervous system</strong> — sympathetic and parasympathetic branches.</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+    </article>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; Jer — Jer's Neuroscience Compendium</p>
-    </div>
-  </footer>
-
-  <script src="/js/main.js"></script>
+  <footer class="site-footer"><div class="container"><p>&copy; Jer — Jer's Neuroscience Compendium</p></div></footer>
+  <script src="../js/main.js"></script>
 </body>
 </html>
