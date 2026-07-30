@@ -1,9 +1,12 @@
-import { brainHemispheres } from './brain-regions.js';
+import { brainHemispheres, getBrainRegionMeshNames } from './brain-regions.js';
 
 const hemisphereVisibilityState = {
   left: true,
   right: true
 };
+
+const regionOpacity = 0.15;
+const corticalRegionKeys = ['frontalLobe', 'parietalLobe', 'temporalLobe', 'occipitalLobe'];
 
 const getModelScene = (brainViewer) => {
   const sceneSymbol = Object.getOwnPropertySymbols(brainViewer)
@@ -26,14 +29,86 @@ const initializeHemisphereVisibility = async () => {
 
   let modelScene = null;
   const hemisphereObjects = new Map();
+  const meshObjects = [];
+  let selectedRegionKey = null;
+
+  const cloneMaterialIfNeeded = (mesh) => {
+    if(mesh.userData.opacityMaterialCloned){
+      return;
+    }
+
+    if(Array.isArray(mesh.material)){
+      mesh.material = mesh.material.map((material) => material.clone());
+    } else if(mesh.material){
+      mesh.material = mesh.material.clone();
+    }
+
+    mesh.userData.opacityMaterialCloned = true;
+  };
+
+  const setMeshOpacity = (mesh, opacity) => {
+    if(!mesh || !mesh.material){
+      return;
+    }
+
+    cloneMaterialIfNeeded(mesh);
+
+    const applyOpacity = (material) => {
+      material.transparent = opacity < 1;
+      material.opacity = opacity;
+      material.depthWrite = opacity >= 1;
+      material.needsUpdate = true;
+    };
+
+    if(Array.isArray(mesh.material)){
+      mesh.material.forEach(applyOpacity);
+    } else {
+      applyOpacity(mesh.material);
+    }
+  };
+
+  const getSelectedRegionMeshNames = (regionKey) => {
+    if(!regionKey){
+      return new Set();
+    }
+
+    if(regionKey === 'cerebral-cortex'){
+      return new Set(corticalRegionKeys.flatMap((key) => getBrainRegionMeshNames(key)));
+    }
+
+    return new Set(getBrainRegionMeshNames(regionKey));
+  };
+
+  const applyRegionOpacity = () => {
+    if(!meshObjects.length){
+      return;
+    }
+
+    const selectedMeshNames = getSelectedRegionMeshNames(selectedRegionKey);
+    const hasSelection = selectedMeshNames.size > 0;
+
+    meshObjects.forEach((mesh) => {
+      const opacity = !hasSelection || selectedMeshNames.has(mesh.name)
+        ? 1
+        : regionOpacity;
+      setMeshOpacity(mesh, opacity);
+    });
+  };
 
   const cacheHemisphereObjects = () => {
     modelScene = getModelScene(brainViewer);
     hemisphereObjects.clear();
+    meshObjects.length = 0;
 
     if(!modelScene){
       return false;
     }
+
+    modelScene.traverse((object) => {
+      if(object.isMesh){
+        meshObjects.push(object);
+      }
+    });
 
     Object.entries(brainHemispheres).forEach(([hemisphere, config]) => {
       const hemisphereObject = modelScene.getObjectByName(config.objectName);
@@ -83,6 +158,8 @@ const initializeHemisphereVisibility = async () => {
       .forEach(([hemisphere, isVisible]) => {
         setHemisphereVisibility(hemisphere, isVisible);
       });
+
+    applyRegionOpacity();
   };
 
   hemisphereInputs.forEach((input) => {
@@ -99,6 +176,14 @@ const initializeHemisphereVisibility = async () => {
   });
 
   brainViewer.addEventListener('load', applyHemisphereVisibility);
+
+  brainViewer.addEventListener('brainstructureselect', (event) => {
+    const selectedStructure = event.detail?.structure;
+
+    selectedRegionKey = selectedStructure || null;
+
+    applyRegionOpacity();
+  });
 
   if(brainViewer.loaded){
     applyHemisphereVisibility();

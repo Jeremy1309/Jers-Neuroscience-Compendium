@@ -107,20 +107,31 @@ document.addEventListener('DOMContentLoaded', function () {
     const structureButtons = Array.from(
       structureMenu.querySelectorAll('[data-brain-structure]')
     );
+    let activeStructureKey = null;
 
-    const selectBrainStructure = (selectedButton) => {
+    const syncButtonState = (selectedStructureKey) => {
       structureButtons.forEach((button) => {
         button.setAttribute(
           'aria-pressed',
-          button === selectedButton ? 'true' : 'false'
+          button.dataset.brainStructure === selectedStructureKey ? 'true' : 'false'
         );
       });
+    };
+
+    const selectBrainStructure = (selectedButton) => {
+      const selectedStructureKey = selectedButton.dataset.brainStructure;
+      const nextStructureKey = activeStructureKey === selectedStructureKey
+        ? null
+        : selectedStructureKey;
+
+      activeStructureKey = nextStructureKey;
+      syncButtonState(nextStructureKey);
 
       brainViewer.dispatchEvent(new CustomEvent('brainstructureselect', {
         bubbles: true,
         detail: {
-          structure: selectedButton.dataset.brainStructure,
-          buttonId: selectedButton.id
+          structure: nextStructureKey,
+          buttonId: nextStructureKey ? selectedButton.id : null
         }
       }));
     };
