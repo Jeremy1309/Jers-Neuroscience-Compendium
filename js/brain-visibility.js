@@ -1,4 +1,8 @@
-import { brainHemispheres, getBrainRegionMeshNames } from './brain-regions.js';
+import {
+  brainHemispheres,
+  brainRegionInformation,
+  getBrainRegionMeshNames
+} from './brain-regions.js';
 
 const hemisphereVisibilityState = {
   left: true,
@@ -20,6 +24,9 @@ const initializeHemisphereVisibility = async () => {
   const hemisphereInputs = Array.from(
     document.querySelectorAll('[data-hemisphere-toggle]')
   );
+  const regionInfo = document.querySelector('[data-brain-region-info]');
+  const regionInfoTitle = regionInfo?.querySelector('[data-brain-region-title]');
+  const regionInfoOverview = regionInfo?.querySelector('[data-brain-region-overview]');
 
   if(!brainViewer || !hemisphereInputs.length){
     return;
@@ -93,6 +100,25 @@ const initializeHemisphereVisibility = async () => {
         : regionOpacity;
       setMeshOpacity(mesh, opacity);
     });
+  };
+
+  const updateRegionInformation = (regionKey) => {
+    if(!regionInfo || !regionInfoTitle || !regionInfoOverview){
+      return;
+    }
+
+    const information = brainRegionInformation[regionKey];
+
+    if(!information){
+      regionInfo.hidden = true;
+      regionInfoTitle.textContent = '';
+      regionInfoOverview.textContent = '';
+      return;
+    }
+
+    regionInfoTitle.textContent = information.title;
+    regionInfoOverview.textContent = information.overview;
+    regionInfo.hidden = false;
   };
 
   const cacheHemisphereObjects = () => {
@@ -183,6 +209,7 @@ const initializeHemisphereVisibility = async () => {
     selectedRegionKey = selectedStructure || null;
 
     applyRegionOpacity();
+    updateRegionInformation(selectedRegionKey);
   });
 
   if(brainViewer.loaded){

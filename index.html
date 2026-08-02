@@ -6,7 +6,7 @@
   <title>Jer's Neuroscience Compendium</title>
   <meta name="description" content="A personal neuroscience encyclopedia built from university studies, scientific literature, and continued learning." />
   <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body class="site-root">
@@ -31,13 +31,35 @@
           <span class="brain-orb brain-orb--one" aria-hidden="true"></span>
           <span class="brain-orb brain-orb--two" aria-hidden="true"></span>
           <span class="brain-haze" aria-hidden="true"></span>
+          <div class="brain-model-status" data-brain-model-status role="status" aria-live="polite">
+            <span class="brain-model-status__symbol" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <div class="brain-model-status__copy">
+              <strong data-brain-model-status-title>Preparing the atlas</strong>
+              <span data-brain-model-status-message>Loading anatomical structures&hellip;</span>
+            </div>
+            <span
+              class="brain-model-progress"
+              role="progressbar"
+              aria-label="Loading the 3D brain atlas"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+              data-brain-model-progress
+            >
+              <span data-brain-model-progress-fill></span>
+            </span>
+          </div>
           <nav
             class="brain-structure-menu"
             aria-label="Major brain structures"
             data-brain-structure-menu
           >
-            <details class="brain-hemisphere-control" open>
-              <summary>Hemispheres</summary>
+            <section class="brain-hemisphere-control" aria-labelledby="brain-hemisphere-heading">
+              <h3 id="brain-hemisphere-heading" class="brain-hemisphere-control__title">Hemispheres</h3>
               <div class="brain-hemisphere-options">
                 <label for="brain-hemisphere-left">
                   <input id="brain-hemisphere-left" type="checkbox" data-hemisphere-toggle="left" checked />
@@ -48,7 +70,7 @@
                   <span>Right Hemisphere</span>
                 </label>
               </div>
-            </details>
+            </section>
             <span class="brain-structure-menu__label">Brain structures</span>
             <button id="brain-structure-cerebral-cortex" class="brain-structure-button" type="button" data-brain-structure="cerebral-cortex" aria-controls="brain-model-viewer" aria-pressed="false">Cerebral Cortex</button>
             <button id="brain-structure-frontal-lobe" class="brain-structure-button" type="button" data-brain-structure="frontal-lobe" aria-controls="brain-model-viewer" aria-pressed="false">Frontal Lobe</button>
@@ -60,6 +82,18 @@
             <button id="brain-structure-hippocampus" class="brain-structure-button" type="button" data-brain-structure="hippocampus" aria-controls="brain-model-viewer" aria-pressed="false">Hippocampus</button>
             <button id="brain-structure-amygdala" class="brain-structure-button" type="button" data-brain-structure="amygdala" aria-controls="brain-model-viewer" aria-pressed="false">Amygdala</button>
           </nav>
+          <aside
+            id="brain-region-info"
+            class="brain-region-info"
+            data-brain-region-info
+            aria-live="polite"
+            aria-atomic="true"
+            hidden
+          >
+            <p class="brain-region-info__eyebrow">Selected region</p>
+            <h3 class="brain-region-info__title" data-brain-region-title></h3>
+            <p class="brain-region-info__overview" data-brain-region-overview></p>
+          </aside>
           <model-viewer
             id="brain-model-viewer"
             src="assets/models/3D%20Brain%20Graphic.glb"
@@ -80,13 +114,48 @@
       </div>
     </section>
 
-    <section class="network-showcase" aria-labelledby="network-heading">
-      <div class="container section-heading section-heading--center network-heading-block" data-scroll-reveal>
-        <h2 id="network-heading">These are your neurons</h2>
-        <p class="section-lead">Learn about different topics by hovering over and selecting the connected neurons below.</p>
+    <section class="chapter-showcase" aria-labelledby="chapter-heading">
+      <div class="container section-heading section-heading--center chapter-heading-block" data-scroll-reveal>
+        <h2 id="chapter-heading">Choose a chapter</h2>
+        <p class="section-lead">Browse the index and choose a chapter to learn more about the topic.</p>
       </div>
 
-      <div class="network-stage" id="network-stage" data-neural-network data-scroll-reveal data-scroll-reveal-delay aria-label="Interactive network of ten connected neurons"></div>
+      <div class="container" data-scroll-reveal data-scroll-reveal-delay>
+        <div class="chapter-index" data-chapter-selector>
+          <article
+            id="chapter-preview"
+            class="chapter-preview"
+            role="tabpanel"
+            aria-labelledby="chapter-tab-brain"
+            aria-live="polite"
+          >
+            <span class="chapter-preview__binding" aria-hidden="true"></span>
+            <div class="chapter-preview__folio" aria-hidden="true">
+              <span>Jer&rsquo;s Neuroscience Compendium</span>
+              <span data-chapter-number>Chapter 01</span>
+            </div>
+            <div class="chapter-preview__content" data-chapter-content>
+              <p class="chapter-preview__eyebrow">Chapter preview</p>
+              <h3 data-chapter-title>The Brain</h3>
+              <p data-chapter-description>The Brain section explores the organization and function of the nervous system&rsquo;s central structure, including major lobes, deep brain regions, and functional networks.</p>
+              <a class="chapter-preview__link" href="pages/brain.html" data-chapter-link>Learn More!</a>
+            </div>
+            <div class="chapter-preview__page-number" aria-hidden="true">01</div>
+          </article>
+
+          <div class="chapter-tabs" role="tablist" aria-label="Compendium chapters" aria-orientation="vertical">
+            <button id="chapter-tab-brain" class="chapter-tab is-selected" type="button" role="tab" aria-selected="true" aria-controls="chapter-preview" tabindex="0" data-chapter-tab="brain"><span>Brain</span></button>
+            <button id="chapter-tab-neurons" class="chapter-tab" type="button" role="tab" aria-selected="false" aria-controls="chapter-preview" tabindex="-1" data-chapter-tab="neurons"><span>Neurons</span></button>
+            <button id="chapter-tab-neurotransmitters" class="chapter-tab" type="button" role="tab" aria-selected="false" aria-controls="chapter-preview" tabindex="-1" data-chapter-tab="neurotransmitters"><span>Neurotransmitters</span></button>
+            <button id="chapter-tab-neuropharmacology" class="chapter-tab" type="button" role="tab" aria-selected="false" aria-controls="chapter-preview" tabindex="-1" data-chapter-tab="neuropharmacology"><span>Neuropharmacology</span></button>
+            <button id="chapter-tab-disorders" class="chapter-tab" type="button" role="tab" aria-selected="false" aria-controls="chapter-preview" tabindex="-1" data-chapter-tab="disorders"><span>Disorders</span></button>
+            <button id="chapter-tab-neurodegeneration" class="chapter-tab" type="button" role="tab" aria-selected="false" aria-controls="chapter-preview" tabindex="-1" data-chapter-tab="neurodegeneration"><span>Neurodegeneration</span></button>
+            <button id="chapter-tab-concepts" class="chapter-tab" type="button" role="tab" aria-selected="false" aria-controls="chapter-preview" tabindex="-1" data-chapter-tab="concepts"><span>Research</span></button>
+            <button id="chapter-tab-genetics" class="chapter-tab" type="button" role="tab" aria-selected="false" aria-controls="chapter-preview" tabindex="-1" data-chapter-tab="genetics"><span>Genetics</span></button>
+            <button id="chapter-tab-about" class="chapter-tab" type="button" role="tab" aria-selected="false" aria-controls="chapter-preview" tabindex="-1" data-chapter-tab="about"><span>About</span></button>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 

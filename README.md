@@ -1,19 +1,42 @@
 # Jer's Neuroscience Compendium
 
-This repository is now organized around an immersive homepage with an interactive brain feature and modular topic pages. The goal is to provide a readable, expandable personal neuroscience textbook and atlas.
+Jer’s Neuroscience Compendium is a personal, evolving neuroscience knowledge platform. It is designed to feel like a modern interactive textbook: approachable enough to explore casually, but structured to support detailed scientific explanations, terminology, references, and future learning tools.
 
-How this update is organized:
-- index.html — redesigned immersive homepage with interactive SVG brain placeholder and category cards
-- css/styles.css — updated styles for the immersive homepage and global layout
-- js/main.js — updated JS for brain interactivity and site behaviour
-- pages/ — topic pages (brain, neurons, neuropharm, disorders, topics, about)
-- templates/article.html — reusable article layout
+## Current experience
 
-Next steps you can ask me to do:
-- Add more detailed article pages (I can scaffold individual topic articles such as hippocampus, frontal lobe, action potentials, etc.)
-- Replace the placeholder SVG with a detailed SVG brain or an interactive atlas (I can import an SVG and map regions)
-- Add citations and reference styling for academic articles
-- Enable GitHub Pages and publish the site
+- An immersive homepage introducing the compendium
+- An interactive 3D brain atlas with rotation and anatomical structure controls
+- Left and right hemisphere visibility controls for viewing deeper structures
+- Anatomical highlighting and short educational summaries for mapped regions
+- A textbook-inspired chapter index linking to the major topic pages
+- A reusable long-form layout for overviews, glossaries, and subtopics
+- Cyclical Home and Next navigation across all major chapters
 
-Notes:
-- The SVG used on the homepage is simplified for now. It includes data-region attributes that the JS uses to show tooltips and link to pages. This makes it easy to replace the SVG later with a higher-fidelity vector map and keep the interactivity hooks.
+## Main chapters
+
+- The Brain
+- Neurons
+- Neurotransmitters
+- Neuropharmacology
+- Diseases & Disorders
+- Neurodegenerative Diseases
+- Concepts & Research
+- Genetics & Molecular Neuroscience
+- About Me
+
+## Project structure
+
+- `index.html` contains the homepage, 3D atlas interface, and chapter selector.
+- `css/styles.css` contains the shared visual system for the homepage and topic pages.
+- `js/main.js` manages shared navigation, homepage transitions, atlas controls, and the chapter selector.
+- `js/brain-regions.js` maps educational brain regions to named meshes in the GLB model.
+- `js/brain-visibility.js` manages hemisphere visibility and anatomical highlighting.
+- `pages/` contains the major neuroscience chapters.
+- `templates/article.html` provides a starting structure for future long-form articles.
+- `assets/models/3D Brain Graphic.glb` is the anatomical model used by the atlas.
+
+## Direction
+
+The project will continue to grow through deeper chapter content, scientific references, richer atlas interactions, and educational tools such as quizzes or simulations. The emphasis is on maintaining a coherent reading experience and making complex neuroscience topics easier to navigate and understand.
+
+This is a static HTML, CSS, and JavaScript project with no required build step. Because the atlas uses JavaScript modules and a local GLB file, it should be viewed through a local web server rather than opened directly from the filesystem.

@@ -180,6 +180,53 @@ export const brainRegionKeyByControl = Object.freeze({
   'basal-ganglia': 'basalGanglia'
 });
 
+export const brainRegionInformation = Object.freeze({
+  'cerebral-cortex': Object.freeze({
+    title: 'Cerebral Cortex',
+    overview: 'The brain\u2019s folded outer layer supports perception, voluntary movement, language, memory, and complex thought.'
+  }),
+  'frontal-lobe': Object.freeze({
+    title: 'Frontal Lobe',
+    overview: 'Guides planning, decision-making, personality, voluntary movement, speech production, and impulse control.'
+  }),
+  'parietal-lobe': Object.freeze({
+    title: 'Parietal Lobe',
+    overview: 'Combines touch and body-sense information to support spatial awareness, attention, and perception of the body.'
+  }),
+  'temporal-lobe': Object.freeze({
+    title: 'Temporal Lobe',
+    overview: 'Supports hearing, language comprehension, memory, and recognition of objects, faces, and meaningful experiences.'
+  }),
+  'occipital-lobe': Object.freeze({
+    title: 'Occipital Lobe',
+    overview: 'The brain\u2019s primary visual region interprets shape, colour, motion, depth, and other features of sight.'
+  }),
+  cerebellum: Object.freeze({
+    title: 'Cerebellum',
+    overview: 'Fine-tunes movement, balance, posture, and motor learning so actions remain smooth, accurate, and well timed.'
+  }),
+  brainstem: Object.freeze({
+    title: 'Brainstem',
+    overview: 'Connects the brain with the spinal cord and regulates breathing, heart rate, alertness, and sleep.'
+  }),
+  hippocampus: Object.freeze({
+    title: 'Hippocampus',
+    overview: 'Forms and organizes new memories while supporting learning and navigation through physical environments.'
+  }),
+  amygdala: Object.freeze({
+    title: 'Amygdala',
+    overview: 'Evaluates emotional significance and possible threats, contributing to fear learning, emotional memory, and social behaviour.'
+  }),
+  thalamus: Object.freeze({
+    title: 'Thalamus',
+    overview: 'Relays sensory and motor information to the cortex and contributes to attention, alertness, and sleep.'
+  }),
+  'basal-ganglia': Object.freeze({
+    title: 'Basal Ganglia',
+    overview: 'Helps select and regulate movement, habits, and reward-driven behaviour while suppressing competing actions.'
+  })
+});
+
 export const getBrainRegionMeshNames = (regionKey) => {
   const canonicalKey = brainRegions[regionKey]
     ? regionKey
