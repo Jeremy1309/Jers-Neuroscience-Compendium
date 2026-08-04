@@ -292,10 +292,11 @@ a{color:inherit}
   margin:0 0 clamp(18px, 2.4vw, 26px);
   color:#173653;
   font-family:'Merriweather', Georgia, 'Times New Roman', serif;
-  font-size:clamp(2.4rem, 5.5vw, 4.8rem);
+  font-size:clamp(1.8rem, 3.8vw, 3.4rem);
   font-weight:400;
-  line-height:0.98;
-  letter-spacing:-0.045em;
+  line-height:1.08;
+  letter-spacing:-0.035em;
+  text-wrap:balance;
 }
 
 .chapter-preview__content > p:not(.chapter-preview__eyebrow){
@@ -981,6 +982,35 @@ model-viewer{
 .topic-prose > :last-child{margin-bottom:0}
 .topic-prose p{margin:0 0 1.2em}
 
+.about-main{
+  width:min(760px, calc(100% - 40px));
+}
+
+.about-copy h1{
+  margin:0;
+  font-size:clamp(3rem, 7vw, 5.6rem);
+  line-height:0.98;
+  letter-spacing:-0.06em;
+}
+
+.about-copy__body{
+  margin-top:clamp(38px, 6vw, 64px);
+  color:#344b61;
+  font-size:1.04rem;
+  line-height:1.9;
+}
+
+.about-copy__body p{
+  margin:0 0 1.45em;
+}
+
+.about-copy__intro{
+  color:#20394f;
+  font-family:'Merriweather', serif;
+  font-size:clamp(1.18rem, 2vw, 1.42rem);
+  line-height:1.75;
+}
+
 .topic-prose ul,
 .subtopic-section ul{
   margin:18px 0 0;
@@ -996,27 +1026,56 @@ model-viewer{
 
 .glossary-list{
   display:grid;
-  grid-template-columns:repeat(2, minmax(0, 1fr));
-  column-gap:clamp(32px, 6vw, 72px);
-  margin:34px 0 0;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  column-gap:clamp(24px, 4vw, 44px);
+  margin:24px 0 0;
 }
 
 .glossary-list > div{
-  padding:20px 0 22px;
+  position:relative;
+  padding:12px 0 13px 18px;
   border-top:1px solid rgba(70, 120, 171, 0.15);
+}
+
+.glossary-list > div::before{
+  content:"";
+  position:absolute;
+  top:17px;
+  left:1px;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:linear-gradient(135deg, #69c5eb, #737fd4);
+  box-shadow:0 0 0 3px rgba(105, 181, 225, 0.09);
 }
 
 .glossary-list dt{
   margin:0;
   color:#173652;
+  font-size:0.9rem;
   font-weight:800;
-  line-height:1.4;
+  line-height:1.35;
 }
 
 .glossary-list dd{
-  margin:7px 0 0;
+  margin:4px 0 0;
   color:var(--topic-muted);
-  line-height:1.7;
+  font-size:0.875rem;
+  line-height:1.55;
+}
+
+#glossary{
+  padding-top:26px;
+}
+
+#glossary h2{
+  font-size:clamp(1.8rem, 3vw, 2.65rem);
+}
+
+#glossary .topic-section__intro{
+  margin-top:10px;
+  font-size:0.94rem;
+  line-height:1.65;
 }
 
 .topic-subtopics > header{
@@ -1106,6 +1165,7 @@ model-viewer{
 @media (max-width: 900px){
   .hero-inner h1{white-space:normal; max-width:100%}
   .brain-stage{border-radius:30px}
+  .glossary-list{grid-template-columns:repeat(2, minmax(0, 1fr))}
 }
 
 @media (max-width: 700px){
