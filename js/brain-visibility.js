@@ -10,7 +10,13 @@ const hemisphereVisibilityState = {
 };
 
 const regionOpacity = 0.15;
-const corticalRegionKeys = ['frontalLobe', 'parietalLobe', 'temporalLobe', 'occipitalLobe'];
+const corticalRegionKeys = [
+  'frontalLobe',
+  'parietalLobe',
+  'temporalLobe',
+  'occipitalLobe',
+  'cerebralCortexAdditional'
+];
 
 const getModelScene = (brainViewer) => {
   const sceneSymbol = Object.getOwnPropertySymbols(brainViewer)

@@ -27,10 +27,23 @@ export const brainHemispheres = Object.freeze({
 });
 
 export const brainRegions = Object.freeze({
-  frontalLobe: bilateral(
-    'Allen_anterior_intermediate_orbital_gyrus',
+  corpusCallosum: bilateral(
+    'Allen_corpus_callosum'
+  ),
+
+  cerebralCortexAdditional: bilateral(
+    'Allen_cingulate_gyrus_caudal_posterior_part',
     'Allen_cingulate_gyrus_rostral_anterior_part',
     'Allen_frontal_agranular_insular_cortex_area_Fl',
+    'Allen_limen_insula',
+    'Allen_long_insular_gyri',
+    'Allen_short_insular_gyri',
+    'Allen_subcallosal_gyrus_parolfactory_gyrus',
+    'Allen_temporal_agranular_insular_cortex_area_Tl'
+  ),
+
+  frontalLobe: bilateral(
+    'Allen_anterior_intermediate_orbital_gyrus',
     'Allen_frontal_operculum',
     'Allen_frontal_pole',
     'Allen_frontomarginal_gyrus',
@@ -45,7 +58,6 @@ export const brainRegions = Object.freeze({
     'Allen_posterior_intermediate_orbital_gyrus',
     'Allen_precentral_gyrus',
     'Allen_rostral_gyrus',
-    'Allen_subcallosal_gyrus_parolfactory_gyrus',
     'Allen_superior_frontal_gyrus'
   ),
 
@@ -73,7 +85,6 @@ export const brainRegions = Object.freeze({
     'Allen_planum_temporale',
     'Allen_posterior_parahippocampal_gyrus',
     'Allen_superior_temporal_gyrus',
-    'Allen_temporal_agranular_insular_cortex_area_Tl',
     'Allen_temporal_pole',
     'Allen_transverse_temporal_gyrus_Heschls_gyrus'
   ),
@@ -113,7 +124,6 @@ export const brainRegions = Object.freeze({
   ),
 
   hippocampus: bilateral(
-    'Allen_amygdalohippocampal_area',
     'Allen_body_of_hippocampus',
     'Allen_head_of_hippocampus',
     'Allen_tail_of_hippocampus'
@@ -168,6 +178,7 @@ export const brainRegions = Object.freeze({
 export const brainRegionKeys = Object.freeze(Object.keys(brainRegions));
 
 export const brainRegionKeyByControl = Object.freeze({
+  'corpus-callosum': 'corpusCallosum',
   'frontal-lobe': 'frontalLobe',
   'parietal-lobe': 'parietalLobe',
   'temporal-lobe': 'temporalLobe',
@@ -184,6 +195,10 @@ export const brainRegionInformation = Object.freeze({
   'cerebral-cortex': Object.freeze({
     title: 'Cerebral Cortex',
     overview: 'The brain\u2019s folded outer layer supports perception, voluntary movement, language, memory, and complex thought.'
+  }),
+  'corpus-callosum': Object.freeze({
+    title: 'Corpus Callosum',
+    overview: 'A broad band of white-matter fibres that connects the left and right cerebral hemispheres, allowing sensory, motor, and cognitive information to pass between them.'
   }),
   'frontal-lobe': Object.freeze({
     title: 'Frontal Lobe',
@@ -223,7 +238,7 @@ export const brainRegionInformation = Object.freeze({
   }),
   'basal-ganglia': Object.freeze({
     title: 'Basal Ganglia',
-    overview: 'Helps select and regulate movement, habits, and reward-driven behaviour while suppressing competing actions.'
+    overview: 'A group of deep brain nuclei that helps initiate and regulate movement, supports habit learning and reward processing, and suppresses competing actions.'
   })
 });
 

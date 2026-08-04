@@ -937,9 +937,9 @@ model-viewer{
 
 .topic-section--overview{
   position:relative;
-  padding:clamp(32px, 5vw, 54px);
+  padding:clamp(24px, 3.5vw, 36px);
   border-top:0;
-  border-radius:32px;
+  border-radius:26px;
   overflow:hidden;
   background:
     radial-gradient(circle at 90% 10%, rgba(108, 196, 245, 0.16), transparent 34%),
@@ -953,6 +953,28 @@ model-viewer{
   width:3px;
   background:linear-gradient(180deg, #72c9ef, #607fda);
 }
+
+.topic-section--overview .topic-section__label{
+  margin-bottom:10px;
+}
+
+.topic-section--overview h2{
+  font-size:clamp(1.8rem, 3vw, 2.65rem);
+}
+
+.topic-section--overview .topic-prose{
+  display:block;
+  max-width:none;
+  margin-top:18px;
+  font-size:0.93rem;
+  line-height:1.6;
+}
+
+.topic-section--overview .topic-prose p{
+  margin:0 0 0.78em;
+}
+
+.topic-section--overview .topic-prose p:last-child{margin-bottom:0}
 
 .topic-section h2,
 .topic-subtopics > header h2{
@@ -1104,6 +1126,38 @@ model-viewer{
   margin:16px 0 0;
   color:#526a80;
   line-height:1.82;
+}
+
+.topic-page[data-topic="brain"] .subtopic-section p{
+  max-width:none;
+}
+
+.brain-topic-figure{
+  width:min(100%, 900px);
+  margin:clamp(24px, 4vw, 38px) 0 0;
+  padding:clamp(10px, 1.8vw, 16px);
+  border-radius:22px;
+  background:rgba(255,255,255,0.5);
+  box-shadow:0 18px 48px rgba(54, 105, 155, 0.1);
+}
+
+.brain-topic-figure--compact{
+  width:min(100%, 520px);
+}
+
+.brain-topic-figure img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:14px;
+  background:#fff;
+}
+
+.brain-topic-figure figcaption{
+  margin:10px 4px 2px;
+  color:#6a8095;
+  font-size:0.78rem;
+  line-height:1.5;
 }
 
 .topic-placeholder{
@@ -1269,8 +1323,8 @@ model-viewer{
   .topic-hero{margin-bottom:52px}
   .topic-hero h1{font-size:clamp(2.8rem, 15vw, 4.4rem)}
   .topic-section--overview{
-    padding:30px 24px 34px;
-    border-radius:24px;
+    padding:24px 22px 26px;
+    border-radius:22px;
   }
   .glossary-list{grid-template-columns:1fr}
 }
