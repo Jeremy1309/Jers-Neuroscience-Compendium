@@ -1122,14 +1122,10 @@ model-viewer{
 }
 
 .subtopic-section p{
-  max-width:74ch;
+  max-width:none;
   margin:16px 0 0;
   color:#526a80;
   line-height:1.82;
-}
-
-.topic-page[data-topic="brain"] .subtopic-section p{
-  max-width:none;
 }
 
 .brain-topic-figure{
