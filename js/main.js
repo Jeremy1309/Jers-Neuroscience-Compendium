@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const topicLinks = [
     {
       key: 'brain',
-      label: 'Brain',
+      label: 'The Brain',
       chapterTitle: 'The Brain',
       href: 'brain.html',
       description: 'The Brain section explores the organization and function of the nervous system\u2019s central structure, including major lobes, deep brain regions, and functional networks.'
@@ -42,6 +42,20 @@ document.addEventListener('DOMContentLoaded', function () {
       description: 'Meet the chemical messengers that allow neurons to communicate, and learn how their release, receptors, and removal shape brain activity.'
     },
     {
+      key: 'disorders',
+      label: 'Neurological & Psychiatric Disorders',
+      chapterTitle: 'Neurological & Psychiatric Disorders',
+      href: 'disorders.html',
+      description: 'Examine conditions that affect the brain and nervous system, with an emphasis on their biology, symptoms, diagnosis, and clinical impact.'
+    },
+    {
+      key: 'neurodegeneration',
+      label: 'Neurodegenerative Diseases',
+      chapterTitle: 'Neurodegenerative Diseases',
+      href: 'neurodegeneration.html',
+      description: 'Study disorders involving progressive loss of neurons, including the cellular changes and affected circuits behind cognitive and movement symptoms.'
+    },
+    {
       key: 'neuropharmacology',
       label: 'Neuropharmacology',
       chapterTitle: 'Neuropharmacology',
@@ -49,32 +63,18 @@ document.addEventListener('DOMContentLoaded', function () {
       description: 'Discover how medicines and other compounds influence neural signalling, behaviour, symptoms, and the treatment of neurological conditions.'
     },
     {
-      key: 'disorders',
-      label: 'Diseases & Disorders',
-      chapterTitle: 'Diseases & Disorders',
-      href: 'disorders.html',
-      description: 'Examine conditions that affect the brain and nervous system, with an emphasis on their biology, symptoms, diagnosis, and clinical impact.'
-    },
-    {
-      key: 'neurodegeneration',
-      label: 'Neurodegeneration',
-      chapterTitle: 'Neurodegenerative Diseases',
-      href: 'neurodegeneration.html',
-      description: 'Study disorders involving progressive loss of neurons, including the cellular changes and affected circuits behind cognitive and movement symptoms.'
+      key: 'genetics',
+      label: 'Molecular Neuroscience',
+      chapterTitle: 'Molecular Neuroscience',
+      href: 'genetics.html',
+      description: 'Explore how genes, proteins, and molecular pathways influence neural development, brain function, variation, and disease risk.'
     },
     {
       key: 'concepts',
-      label: 'Concepts & Research',
-      chapterTitle: 'Concepts & Research',
+      label: 'Associated Topics',
+      chapterTitle: 'Associated Topics',
       href: 'concepts.html',
       description: 'Build a foundation in the ideas, methods, experiments, and emerging questions that guide modern neuroscience research.'
-    },
-    {
-      key: 'genetics',
-      label: 'Genetics',
-      chapterTitle: 'Genetics & Molecular Neuroscience',
-      href: 'genetics.html',
-      description: 'Explore how genes, proteins, and molecular pathways influence neural development, brain function, variation, and disease risk.'
     },
     {
       key: 'about',

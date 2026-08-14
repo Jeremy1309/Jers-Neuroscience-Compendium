@@ -845,9 +845,11 @@ model-viewer{
 .topic-nav::-webkit-scrollbar{display:none}
 
 .topic-nav__inner{
+  width:min(1400px, calc(100% - 40px));
   min-height:50px;
   display:flex;
   align-items:center;
+  justify-content:center;
   gap:5px;
   white-space:nowrap;
 }
@@ -859,6 +861,7 @@ model-viewer{
   color:#63768a;
   font-size:0.78rem;
   font-weight:700;
+  white-space:nowrap;
   transition:color 0.2s ease, background-color 0.2s ease;
 }
 
@@ -910,6 +913,14 @@ model-viewer{
   font-size:clamp(3rem, 7vw, 6.25rem);
   line-height:0.96;
   letter-spacing:-0.065em;
+}
+
+.topic-page[data-topic="disorders"] .topic-hero{
+  max-width:1100px;
+}
+
+.topic-page[data-topic="disorders"] .topic-hero h1{
+  max-width:22ch;
 }
 
 .topic-hero__lede{
@@ -1143,6 +1154,12 @@ model-viewer{
   width:min(100%, 520px);
 }
 
+.brain-topic-figure--centered,
+.topic-figure--centered{
+  margin-right:auto;
+  margin-left:auto;
+}
+
 .brain-topic-figure img,
 .topic-figure img{
   width:100%;
@@ -1152,12 +1169,22 @@ model-viewer{
   background:#fff;
 }
 
-.brain-topic-figure figcaption,
-.topic-figure figcaption{
-  margin:10px 4px 2px;
-  color:#6a8095;
-  font-size:0.78rem;
-  line-height:1.5;
+.glial-cell-layout{
+  display:grid;
+  grid-template-columns:minmax(0, 1.35fr) minmax(280px, 420px);
+  gap:clamp(28px, 4vw, 52px);
+  align-items:start;
+  margin-top:24px;
+}
+
+.glial-cell-layout ul{
+  min-width:0;
+  margin:0;
+}
+
+.glial-cell-layout__figure{
+  width:100%;
+  margin:0;
 }
 
 .topic-placeholder{
@@ -1216,10 +1243,25 @@ model-viewer{
   }
 }
 
+@media (min-width: 701px) and (max-width: 1200px){
+  .topic-nav__inner{
+    min-height:50px;
+    flex-wrap:wrap;
+    padding:8px 0;
+    white-space:normal;
+  }
+}
+
 @media (max-width: 900px){
   .hero-inner h1{white-space:normal; max-width:100%}
   .brain-stage{border-radius:30px}
   .glossary-list{grid-template-columns:repeat(2, minmax(0, 1fr))}
+  .glial-cell-layout{grid-template-columns:1fr}
+  .glial-cell-layout__figure{
+    width:min(100%, 520px);
+    margin-right:auto;
+    margin-left:auto;
+  }
 }
 
 @media (max-width: 700px){
@@ -1317,7 +1359,12 @@ model-viewer{
   }
 
   .topic-header__bar{min-height:60px}
-  .topic-nav__inner{gap:2px}
+  .topic-nav__inner{
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+    gap:2px;
+    white-space:nowrap;
+  }
   .topic-nav a{padding:8px 10px}
   .topic-main{padding-top:52px}
   .topic-hero{margin-bottom:52px}
