@@ -1169,6 +1169,25 @@ model-viewer{
   background:#fff;
 }
 
+.topic-float-group{
+  display:flow-root;
+  margin-top:16px;
+}
+
+.topic-float-group > p:first-of-type{
+  margin-top:0;
+}
+
+.topic-figure--float-right{
+  float:right;
+  width:min(38%, 380px);
+  margin:0 0 24px clamp(24px, 4vw, 44px);
+}
+
+.topic-figure--portrait{
+  width:min(30%, 280px);
+}
+
 .glial-cell-layout{
   display:grid;
   grid-template-columns:minmax(0, 1.35fr) minmax(280px, 420px);
@@ -1261,6 +1280,12 @@ model-viewer{
     width:min(100%, 520px);
     margin-right:auto;
     margin-left:auto;
+  }
+  .topic-figure--float-right,
+  .topic-figure--portrait{
+    float:none;
+    width:min(100%, 520px);
+    margin:24px auto;
   }
 }
 
