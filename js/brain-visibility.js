@@ -41,7 +41,7 @@ const initializeHemisphereVisibility = async () => {
   await customElements.whenDefined('model-viewer');
 
   let modelScene = null;
-  const hemisphereObjects = new Map();
+  const hemisphereMeshGroups = new Map();
   const meshObjects = [];
   let selectedRegionKey = null;
 
@@ -127,9 +127,9 @@ const initializeHemisphereVisibility = async () => {
     regionInfo.hidden = false;
   };
 
-  const cacheHemisphereObjects = () => {
+  const cacheHemisphereMeshes = () => {
     modelScene = getModelScene(brainViewer);
-    hemisphereObjects.clear();
+    hemisphereMeshGroups.clear();
     meshObjects.length = 0;
 
     if(!modelScene){
@@ -143,30 +143,34 @@ const initializeHemisphereVisibility = async () => {
     });
 
     Object.entries(brainHemispheres).forEach(([hemisphere, config]) => {
-      const hemisphereObject = modelScene.getObjectByName(config.objectName);
+      const hemisphereMeshes = meshObjects.filter(
+        (mesh) => mesh.name.endsWith(config.meshSuffix)
+      );
 
-      if(hemisphereObject){
-        hemisphereObjects.set(hemisphere, hemisphereObject);
+      if(hemisphereMeshes.length){
+        hemisphereMeshGroups.set(hemisphere, hemisphereMeshes);
       }
     });
 
-    return hemisphereObjects.size === Object.keys(brainHemispheres).length;
+    return hemisphereMeshGroups.size === Object.keys(brainHemispheres).length;
   };
 
   const setHemisphereVisibility = (hemisphere, isVisible) => {
     hemisphereVisibilityState[hemisphere] = isVisible;
 
-    if(!hemisphereObjects.size){
-      cacheHemisphereObjects();
+    if(!hemisphereMeshGroups.size){
+      cacheHemisphereMeshes();
     }
 
-    const hemisphereObject = hemisphereObjects.get(hemisphere);
+    const hemisphereMeshes = hemisphereMeshGroups.get(hemisphere);
 
-    if(!hemisphereObject){
+    if(!hemisphereMeshes){
       return;
     }
 
-    hemisphereObject.visible = isVisible;
+    hemisphereMeshes.forEach((mesh) => {
+      mesh.visible = isVisible;
+    });
 
     brainViewer.dispatchEvent(new CustomEvent(
       'brainhemispherevisibilitychange',
@@ -182,7 +186,7 @@ const initializeHemisphereVisibility = async () => {
   };
 
   const applyHemisphereVisibility = () => {
-    if(!cacheHemisphereObjects()){
+    if(!cacheHemisphereMeshes()){
       return;
     }
 

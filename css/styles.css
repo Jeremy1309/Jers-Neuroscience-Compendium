@@ -1139,6 +1139,168 @@ model-viewer{
   line-height:1.82;
 }
 
+.pharmacology-category > p{
+  max-width:82ch;
+}
+
+.pharmacology-categories{
+  margin-top:0;
+}
+
+.drug-topic-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:24px;
+}
+
+.drug-topic-button{
+  flex:1 1 148px;
+  max-width:210px;
+  min-height:48px;
+  padding:11px 16px;
+  border:1px solid rgba(75, 128, 177, 0.2);
+  border-radius:13px;
+  background:rgba(255,255,255,0.56);
+  box-shadow:0 7px 18px rgba(49, 99, 145, 0.07);
+  color:#294860;
+  font:inherit;
+  font-size:0.9rem;
+  font-weight:700;
+  line-height:1.3;
+  text-align:center;
+  cursor:pointer;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.drug-topic-button:hover{
+  border-color:rgba(81, 143, 193, 0.38);
+  background:rgba(247,252,255,0.92);
+  box-shadow:0 10px 24px rgba(49, 99, 145, 0.11);
+  transform:translateY(-2px);
+}
+
+.drug-topic-button:focus-visible{
+  outline:3px solid rgba(83, 159, 210, 0.28);
+  outline-offset:3px;
+}
+
+.drug-topic-button.is-active{
+  border-color:rgba(66, 132, 185, 0.48);
+  background:linear-gradient(135deg, rgba(212, 240, 250, 0.94), rgba(224, 229, 252, 0.9));
+  box-shadow:
+    0 11px 25px rgba(49, 99, 145, 0.14),
+    inset 0 0 0 1px rgba(255,255,255,0.68);
+  color:#123d5f;
+  transform:translateY(-2px);
+}
+
+.drug-topic-panel{
+  display:grid;
+  grid-template-rows:0fr;
+  margin-top:0;
+  opacity:0;
+  transition:
+    grid-template-rows 360ms ease,
+    margin-top 360ms ease,
+    opacity 220ms ease;
+}
+
+.drug-topic-panel.is-open{
+  grid-template-rows:1fr;
+  margin-top:18px;
+  opacity:1;
+}
+
+.drug-topic-panel__inner{
+  min-height:0;
+  overflow:hidden;
+  visibility:hidden;
+  padding:0 clamp(20px, 3vw, 32px);
+  border:0 solid transparent;
+  border-radius:20px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(113, 193, 225, 0.12), transparent 32%),
+    rgba(247, 251, 255, 0.72);
+  transition:
+    padding 360ms ease,
+    border-width 360ms ease,
+    visibility 0s linear 360ms;
+}
+
+.drug-topic-panel.is-open .drug-topic-panel__inner{
+  visibility:visible;
+  padding:clamp(24px, 3vw, 32px);
+  border-width:1px;
+  border-color:rgba(74, 128, 177, 0.16);
+  transition-delay:0s;
+}
+
+.drug-topic-panel.is-refreshing .drug-topic-panel__inner{
+  animation:drug-panel-content-in 280ms ease both;
+}
+
+.drug-topic-panel__heading{
+  padding-bottom:18px;
+  border-bottom:1px solid rgba(74, 128, 177, 0.14);
+}
+
+.drug-topic-panel__eyebrow{
+  margin:0 0 7px;
+  color:var(--topic-accent);
+  font-size:0.67rem;
+  font-weight:800;
+  letter-spacing:0.16em;
+  line-height:1.3;
+  text-transform:uppercase;
+}
+
+.drug-topic-panel h4{
+  margin:0;
+  color:#153c5b;
+  font-size:clamp(1.45rem, 2.6vw, 2rem);
+  line-height:1.15;
+  letter-spacing:-0.03em;
+}
+
+.drug-topic-panel__sections section{
+  padding:18px 0;
+  border-bottom:1px solid rgba(74, 128, 177, 0.11);
+}
+
+.drug-topic-panel__sections section:last-child{
+  padding-bottom:0;
+  border-bottom:0;
+}
+
+.drug-topic-panel h5{
+  margin:0;
+  color:#234761;
+  font-size:0.92rem;
+  line-height:1.45;
+}
+
+.drug-topic-panel__sections p{
+  margin:6px 0 0;
+  color:#60758a;
+  font-size:0.9rem;
+  line-height:1.65;
+}
+
+.drug-topic-panel__sections p + p{
+  margin-top:12px;
+}
+
+@keyframes drug-panel-content-in{
+  from{opacity:0; transform:translateY(5px)}
+  to{opacity:1; transform:translateY(0)}
+}
+
 .brain-topic-figure,
 .topic-figure{
   width:min(100%, 900px);
@@ -1399,6 +1561,13 @@ model-viewer{
     border-radius:22px;
   }
   .glossary-list{grid-template-columns:1fr}
+  .drug-topic-button{
+    flex-basis:calc(50% - 5px);
+    max-width:none;
+  }
+  .drug-topic-panel.is-open .drug-topic-panel__inner{
+    padding:22px 18px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce){
@@ -1424,4 +1593,8 @@ model-viewer{
   .chapter-preview__content.is-turning{animation:none}
   .chapter-tab,
   .chapter-preview__link{transition:none}
+  .drug-topic-button,
+  .drug-topic-panel,
+  .drug-topic-panel__inner{transition:none}
+  .drug-topic-panel.is-refreshing .drug-topic-panel__inner{animation:none}
 }

@@ -18,11 +18,13 @@ export const brainModelMetadata = Object.freeze({
 export const brainHemispheres = Object.freeze({
   left: Object.freeze({
     label: 'Left Hemisphere',
-    objectName: 'Allen_brain_Hemisphere_L'
+    objectName: 'Allen_brain_Hemisphere_R',
+    meshSuffix: '_R'
   }),
   right: Object.freeze({
     label: 'Right Hemisphere',
-    objectName: 'Allen_brain_Hemisphere_R'
+    objectName: 'Allen_brain_Hemisphere_L',
+    meshSuffix: '_L'
   })
 });
 
