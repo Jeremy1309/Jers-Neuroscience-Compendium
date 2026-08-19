@@ -18,7 +18,7 @@ const psychostimulantTopics = [
         <p>Cocaine can also reduce appetite and fatigue and promote wakefulness. As its acute effects wear off, fatigue, low mood, irritability, and reduced motivation may occur. Repeated exposure can produce tolerance, dependence, and substance use disorder.</p>
       `,
       pharmacokinetics: `
-        <p>Cocaine is rapidly metabolized, primarily in the liver and blood, into metabolites including benzoylecgonine. Its elimination half-life is commonly estimated at approximately 0.7&ndash;1.5 hours, although route of administration, dose, and individual physiology can alter its time course.</p>
+        <p>Cocaine is cleared mainly by ester hydrolysis. Hepatic carboxylesterase 1 and non-enzymatic hydrolysis form benzoylecgonine, while plasma butyrylcholinesterase and hepatic carboxylesterase 2 form ecgonine methyl ester. A smaller CYP3A4-mediated pathway forms norcocaine. When cocaine and ethanol are present together, carboxylesterase 1 can form the active metabolite cocaethylene, which prolongs stimulant exposure and adds cardiovascular toxicity. Cocaine's elimination half-life is commonly approximately 0.7&ndash;1.5 hours, although its metabolites remain detectable much longer.</p>
         <p>Medically, cocaine has limited use as a topical local anaesthetic in certain ear, nose, and throat procedures because it blocks sodium channels and causes local vasoconstriction. Non-medical exposure carries substantial cardiovascular, neurological, and dependence-related risks.</p>
         <p><strong>Powdered cocaine</strong> may be insufflated and absorbed through the nasal mucosa. <strong>Crack cocaine</strong> is a processed, rock-like form that can be smoked, producing a faster onset and shorter-lived peak effect.</p>
       `
@@ -32,16 +32,16 @@ const psychostimulantTopics = [
         <p>Amphetamine is a synthetic psychostimulant that increases activity within the central nervous system, particularly through its effects on dopamine and norepinephrine signalling. It can increase alertness, attention, energy, and wakefulness while reducing fatigue and appetite.</p>
       `,
       mechanism: `
-        <p>Amphetamine enters presynaptic neurons primarily through dopamine and norepinephrine transporters (DAT and NET). Inside the neuron, it disrupts the normal storage and handling of monoamines, including through interactions with vesicular monoamine transporter 2 (VMAT2).</p>
-        <p>This promotes the movement of dopamine and norepinephrine out of storage vesicles and into the cytoplasm while altering transporter activity so that these neurotransmitters are released into the synaptic cleft. At higher concentrations, amphetamine can also affect serotonin signalling and inhibit monoamine oxidase to a lesser extent.</p>
+        <p>Amphetamine is a transportable substrate for dopamine and norepinephrine transporters (DAT and NET), which carry it into presynaptic neurons. It then enters synaptic vesicles through vesicular monoamine transporter 2 (VMAT2), dissipates the vesicular proton gradient, and redistributes dopamine and norepinephrine from vesicles into the cytoplasm.</p>
+        <p>Amphetamine also activates intracellular trace amine-associated receptor 1 (TAAR1). TAAR1-linked PKA and PKC signalling alters DAT and NET phosphorylation and trafficking, reducing normal reuptake and promoting reverse transport of cytoplasmic monoamines into the synaptic cleft. At higher concentrations, amphetamine also affects serotonin transport and weakly inhibits monoamine oxidase.</p>
       `,
       effects: `
         <p>Like cocaine, amphetamines are sympathomimetics. They can increase alertness, attention, energy, motivation, and wakefulness while reducing appetite and fatigue. Dopamine activity in reward-related circuits can contribute to euphoria and reinforcement, while sympathetic activation can elevate heart rate, blood pressure, and body temperature.</p>
         <p>Amphetamines are also used to treat attention-deficit/hyperactivity disorder (ADHD). At therapeutic doses, increased dopamine and norepinephrine signalling in circuits involved in attention, executive function, and impulse control can improve attention and reduce impulsivity and hyperactivity.</p>
       `,
       pharmacokinetics: `
-        <p>Amphetamine can be administered orally, absorbed through the gastrointestinal tract, distributed throughout the body, and transported across the blood-brain barrier. It is metabolized primarily in the liver and eliminated largely through the kidneys.</p>
-        <p>Its relatively long duration of action compared with cocaine allows more sustained stimulant effects. Amphetamine is used medically to treat ADHD and narcolepsy. Excessive exposure can produce anxiety, agitation, insomnia, and other adverse effects, while repeated use can lead to tolerance and dependence.</p>
+        <p>Oral amphetamine is well absorbed and crosses the blood-brain barrier. Hepatic metabolism includes CYP2D6-mediated formation of 4-hydroxyamphetamine, but a substantial fraction of unchanged drug and metabolites is eliminated in urine. Urinary pH strongly affects clearance: acidic urine increases ion trapping and renal elimination, whereas alkaline urine can markedly prolong exposure. Depending on the formulation and enantiomer, terminal half-lives are commonly around 10&ndash;14 hours.</p>
+        <p>Immediate- and extended-release formulations are used for ADHD, and some products are used for narcolepsy. Clinically important risks include appetite and sleep disturbance, increased heart rate and blood pressure, agitation, psychosis or mania at excessive exposure, and misuse, tolerance, physical dependence, and stimulant use disorder.</p>
       `
     }
   },
@@ -53,15 +53,15 @@ const psychostimulantTopics = [
         <p>Methamphetamine is a synthetic psychostimulant closely related to amphetamine. Structurally, it is amphetamine with an additional methyl group attached to its nitrogen atom. This modification increases lipid solubility, allowing it to cross the blood-brain barrier readily and enter the brain efficiently.</p>
       `,
       mechanism: `
-        <p>Like amphetamine, methamphetamine enters presynaptic neurons through dopamine and norepinephrine transporters (DAT and NET) and alters the normal storage and transport of monoamines. It interacts with VMAT2, promoting the movement of dopamine and norepinephrine out of synaptic vesicles and into the cytoplasm.</p>
-        <p>It also alters DAT and NET function, promoting the release of these neurotransmitters into the synaptic cleft. The resulting increase in extracellular dopamine and norepinephrine strongly stimulates their associated neural circuits.</p>
+        <p>Methamphetamine is carried into presynaptic neurons by dopamine and norepinephrine transporters (DAT and NET) and enters synaptic vesicles through VMAT2. By weakening the vesicular proton gradient, it redistributes dopamine and norepinephrine from vesicles into the cytoplasm.</p>
+        <p>It also activates intracellular TAAR1, engaging kinase pathways that inhibit normal DAT and NET uptake, alter transporter trafficking, and promote reverse transport of cytoplasmic monoamines into the synaptic cleft. Methamphetamine additionally acts at SERT at higher concentrations. The combined vesicular displacement, transporter reversal, and reuptake inhibition produces large increases in extracellular dopamine and norepinephrine.</p>
       `,
       effects: `
         <p>Methamphetamine can produce increased alertness, energy, wakefulness, attention, and euphoria, along with reduced appetite and fatigue. Its strong effects on dopamine reward circuits contribute to its high reinforcing potential. Increased sympathetic activity can elevate heart rate, blood pressure, and body temperature.</p>
       `,
       pharmacokinetics: `
-        <p>Methamphetamine is well absorbed and readily crosses the blood-brain barrier because of its high lipid solubility. It is metabolized primarily in the liver and eliminated mainly through the kidneys.</p>
-        <p>Its effects generally last considerably longer than those of cocaine, with a typical elimination half-life of roughly 9&ndash;12 hours, although this varies between people and circumstances. Methamphetamine has limited medical use in some jurisdictions, but therapeutic use is much more restricted than that of amphetamine. Repeated exposure can produce tolerance, dependence, substance use disorder, and significant cardiovascular and neurological risks.</p>
+        <p>Methamphetamine is well absorbed and readily crosses the blood-brain barrier because its added methyl group increases lipid solubility. Hepatic metabolism includes CYP2D6-mediated hydroxylation and N-demethylation, with amphetamine formed as an active metabolite. Methamphetamine and its metabolites are excreted mainly in urine; as with amphetamine, acidic urine accelerates renal clearance and alkaline urine slows it.</p>
+        <p>Its terminal half-life is commonly about 9&ndash;12 hours, so stimulant and sleep-disrupting effects can persist much longer than those of cocaine. Prescription methamphetamine has very restricted use for ADHD in the United States. Major risks include hyperthermia, hypertension, arrhythmia, stroke, agitation or psychosis, dental and nutritional harm with chronic misuse, tolerance, dependence, and stimulant use disorder.</p>
       `
     }
   },
@@ -81,8 +81,8 @@ const psychostimulantTopics = [
         <p>Common adverse effects can include decreased appetite, difficulty sleeping, increased heart rate, and elevated blood pressure.</p>
       `,
       pharmacokinetics: `
-        <p>Methylphenidate is available in immediate-release and extended-release formulations, allowing its effects to be maintained for different durations. It is metabolized primarily through de-esterification and its metabolites are eliminated mainly through the kidneys.</p>
-        <p>Its principal medical uses are the treatment of ADHD and narcolepsy. Use requires clinical monitoring because dosing, duration, adverse effects, and misuse risk vary between formulations and individuals.</p>
+        <p>Methylphenidate is available in immediate-release and multiple extended-release formulations, which differ substantially in onset and duration. Carboxylesterase 1 rapidly de-esterifies it to largely inactive ritalinic acid; very little unchanged methylphenidate is recovered in urine, whereas ritalinic acid and related metabolites are eliminated mainly by the kidneys. Immediate-release methylphenidate has a plasma half-life of roughly 2&ndash;3 hours.</p>
+        <p>Its principal medical uses are ADHD and narcolepsy. Common risks include reduced appetite, insomnia, increased heart rate or blood pressure, and growth suppression that warrants monitoring in children. It is a controlled stimulant with misuse and dependence potential, and exposure can vary if an extended-release product is crushed or otherwise used outside its intended formulation.</p>
       `
     }
   },
@@ -102,8 +102,8 @@ const psychostimulantTopics = [
         <p>After its effects subside, temporary fatigue, low mood, or altered sleep may occur as neurotransmitter systems recover.</p>
       `,
       pharmacokinetics: `
-        <p>MDMA is generally well absorbed when taken orally and is metabolized primarily by the liver, with metabolites eliminated through the kidneys. Its effects typically last several hours.</p>
-        <p>Risks include elevated body temperature, cardiovascular stress, dehydration or electrolyte disturbances, and dangerous interactions with other substances that increase serotonin signalling. Repeated exposure may also produce tolerance and other longer-term effects.</p>
+        <p>Oral MDMA is absorbed over the first several hours and has an elimination half-life of roughly 7&ndash;9 hours. CYP2D6 and CYP1A2 contribute to O-demethylenation, while N-demethylation forms the active metabolite MDA; conjugated metabolites are eliminated in urine. MDMA also inhibits CYP2D6 during exposure, producing non-linear pharmacokinetics: a modest dose increase or repeated dosing can cause a disproportionately large rise in plasma concentration.</p>
+        <p>MDMA-assisted therapy has been investigated for post-traumatic stress disorder, but MDMA does not have an established routine medical indication in Canada or the United States. Acute risks include hyperthermia, hypertension, tachycardia, serotonin toxicity when combined with serotonergic drugs, and hyponatremia caused by increased vasopressin together with excessive water intake. Repeated dosing extends exposure and increases toxicity rather than simply restoring the initial effect.</p>
       `
     }
   },
@@ -123,7 +123,7 @@ const psychostimulantTopics = [
         <p>Excessive consumption can cause restlessness, anxiety, insomnia, and tremors.</p>
       `,
       pharmacokinetics: `
-        <p>Caffeine is rapidly absorbed through the gastrointestinal tract and readily crosses the blood-brain barrier. It is metabolized primarily in the liver, particularly by CYP1A2, and its metabolites are eliminated through the kidneys. Its effects typically persist for several hours.</p>
+        <p>Caffeine is rapidly and almost completely absorbed through the gastrointestinal tract and readily crosses the blood-brain barrier. CYP1A2 performs most hepatic metabolism, producing paraxanthine as the principal metabolite and smaller amounts of theobromine and theophylline; these metabolites are further processed and eliminated in urine. A typical adult half-life is about 4&ndash;6 hours, but pregnancy, liver disease, oral contraceptives, CYP1A2-inhibiting drugs, and smoking status can substantially alter clearance.</p>
         <p>Regular use can produce tolerance and physical dependence. Abrupt reduction after sustained use can cause withdrawal symptoms such as headache, fatigue, and irritability.</p>
       `
     }
@@ -146,7 +146,8 @@ const opioidTopics = [
         <p>Morphine produces analgesia (pain relief), sedation, and feelings of relaxation or euphoria. It can also cause respiratory depression, drowsiness, nausea, constipation, and slowed gastrointestinal activity. Repeated exposure can produce tolerance and physical dependence, while excessive doses can cause severe respiratory depression and potentially fatal overdose.</p>
       `,
       pharmacokinetics: `
-        <p>Morphine can be administered through several routes and is metabolized primarily in the liver, with its metabolites eliminated mainly through the kidneys. It is used medically for moderate to severe acute and chronic pain, including pain associated with surgery and serious illness. Its major risks include respiratory depression, tolerance, dependence, and opioid use disorder.</p>
+        <p>Morphine can be given orally, intravenously, subcutaneously, intramuscularly, rectally, or into the spinal fluid. Hepatic UGT2B7 glucuronidates most morphine to morphine-3-glucuronide (M3G) and morphine-6-glucuronide (M6G). M6G is an active &mu;-opioid agonist that contributes to analgesia and respiratory depression, whereas M3G is not analgesic and may contribute to neuroexcitation at high concentrations. Morphine and its glucuronides are eliminated mainly by the kidneys, so active M6G can accumulate when renal function is impaired.</p>
+        <p>Morphine is used for moderate to severe acute and chronic pain, including perioperative and palliative pain. Major risks are dose-dependent respiratory depression, constipation, sedation, tolerance, physical dependence, and opioid use disorder; alcohol, benzodiazepines, and other CNS depressants markedly increase overdose risk.</p>
       `
     }
   },
@@ -165,7 +166,8 @@ const opioidTopics = [
         <p>Heroin can produce intense euphoria, relaxation, sedation, and pain relief. It can also cause drowsiness, nausea, constipation, and respiratory depression. Because of its rapid entry into the brain and strong reinforcing effects, repeated use can quickly lead to tolerance and physical dependence.</p>
       `,
       pharmacokinetics: `
-        <p>Heroin is rapidly converted to active metabolites, with 6-MAM being an important intermediate before conversion to morphine. Its rapid onset contributes to its strong reinforcing effects. Unlike morphine, heroin has no accepted routine medical use in Canada or the United States. Its major risk is respiratory depression, particularly when combined with other CNS depressants, and overdose can be fatal. Naloxone can rapidly reverse opioid-induced respiratory depression.</p>
+        <p>Heroin itself has a plasma half-life of only a few minutes because tissue and plasma esterases rapidly remove one acetyl group to form active 6-MAM and then morphine. Morphine is subsequently converted mainly to M3G and active M6G and eliminated through the kidneys. The rapid rise in brain concentration after injection or inhalation contributes strongly to heroin's reinforcing effects.</p>
+        <p>Heroin has no accepted routine medical use in Canada or the United States, although pharmaceutical diamorphine is used in limited medical settings in some countries. Its principal acute danger is fatal respiratory depression, especially with fentanyl contamination or concurrent alcohol, benzodiazepines, or other depressants. Naloxone can reverse the opioid effect, but repeat dosing and emergency monitoring may be needed.</p>
       `
     }
   },
@@ -185,8 +187,8 @@ const opioidTopics = [
         <p>Codeine can produce pain relief, sedation, relaxation, and euphoria, as well as drowsiness, nausea, constipation, and respiratory depression. Because its effects depend partly on conversion to morphine, individuals can experience different effects depending on their CYP2D6 activity. Repeated use can produce tolerance, physical dependence, and opioid use disorder.</p>
       `,
       pharmacokinetics: `
-        <p>Codeine is generally administered orally and metabolized in the liver, with CYP2D6 converting a portion into morphine. The resulting metabolites are primarily eliminated through the kidneys.</p>
-        <p>It is used medically for pain and cough, although its use varies by country and age group because of safety concerns. Excessive exposure can cause dangerous respiratory depression, particularly when combined with other CNS depressants.</p>
+        <p>Oral codeine is metabolized by three principal hepatic routes: UGT2B7 forms codeine-6-glucuronide, CYP3A4 forms norcodeine, and CYP2D6 converts a smaller fraction to morphine. Morphine is then glucuronidated to M3G and active M6G, and the metabolites are eliminated mainly in urine. CYP2D6 poor metabolizers may receive little analgesia, whereas ultrarapid metabolizers can generate morphine quickly enough to cause toxicity at standard doses.</p>
+        <p>Codeine is used for pain and, in some jurisdictions and formulations, cough suppression. Because of unpredictable CYP2D6 conversion, it is contraindicated in several paediatric and breastfeeding situations and requires particular caution with CYP2D6-altering drugs. Excessive exposure and combinations with alcohol, benzodiazepines, or other CNS depressants can cause fatal respiratory depression.</p>
       `
     }
   },
@@ -205,8 +207,8 @@ const opioidTopics = [
         <p>Fentanyl produces powerful analgesia, sedation, relaxation, and euphoria, while also causing respiratory depression, drowsiness, nausea, and constipation. Its effects on the brainstem respiratory centers can significantly reduce the drive to breathe.</p>
       `,
       pharmacokinetics: `
-        <p>Fentanyl is highly lipid-soluble, allowing it to cross the blood-brain barrier rapidly. It is metabolized primarily in the liver, largely through CYP3A4, and its metabolites are eliminated mainly through the kidneys. Illicitly manufactured fentanyl is also a major contributor to opioid-related overdoses because it can be mixed into other drugs without the user's knowledge.</p>
-        <p>Because fentanyl is highly potent, the difference between an effective dose and a dangerous dose can be relatively small, making accidental overdose a major risk. Carfentanil produces similar opioid effects but is far more potent, making exposure particularly dangerous.Naloxone can reverse fentanyl's opioid effects, although multiple doses may sometimes be required.</p>
+        <p>Fentanyl is highly lipid-soluble, crosses the blood-brain barrier rapidly, and redistributes into muscle and fat after intravenous administration. CYP3A4 converts it mainly to inactive norfentanyl, followed by urinary excretion. Its time course depends strongly on formulation: intravenous fentanyl acts within minutes, whereas transdermal patches form a skin depot and can continue releasing fentanyl after removal. Strong CYP3A4 inhibitors can increase exposure, particularly with repeated or sustained delivery.</p>
+        <p>Fentanyl is used for anaesthesia and severe pain, while illicitly manufactured fentanyl is a major driver of opioid poisoning because tiny, unevenly distributed quantities may be present in other drugs. Its high potency and rapid respiratory depression create a narrow safety margin. Naloxone can reverse fentanyl, but repeated doses and continued observation may be necessary. Carfentanil is substantially more potent and makes unintentional exposure especially dangerous.</p>
       `
     }
   },
@@ -224,7 +226,8 @@ const opioidTopics = [
         <p>Oxycodone produces pain relief, sedation, relaxation, and euphoria, along with possible drowsiness, nausea, constipation, and respiratory depression. Its effects on reward circuits contribute to its reinforcing properties. Repeated exposure can produce tolerance, physical dependence, and opioid use disorder.</p>
       `,
       pharmacokinetics: `
-        <p>Oxycodone is well absorbed when taken orally and is metabolized primarily in the liver, with metabolites eliminated through the kidneys. Extended-release formulations such as OxyContin are designed to release the drug over a longer period. It is an effective prescription analgesic, but excessive exposure can cause dangerous respiratory depression and overdose.</p>
+        <p>Oxycodone is well absorbed orally. CYP3A4/5 performs most metabolism to noroxycodone, while CYP2D6 forms the more potent metabolite oxymorphone; the parent drug remains a major contributor to the clinical effect. Immediate-release oxycodone has a half-life of roughly 3 hours, while extended-release products average about 4.5 hours and prolong absorption. Oxycodone and its metabolites are eliminated mainly in urine.</p>
+        <p>It is prescribed for moderate to severe pain. Strong CYP3A inhibitors can raise oxycodone concentrations and respiratory-depression risk, while CYP3A inducers can lower exposure or precipitate withdrawal in a dependent patient. Crushing an extended-release tablet can defeat controlled release and deliver a potentially fatal dose. Other major risks include constipation, sedation, tolerance, physical dependence, and opioid use disorder.</p>
       `
     }
   },
@@ -236,14 +239,14 @@ const opioidTopics = [
         <p>Methadone is a synthetic opioid used primarily for pain management and the treatment of opioid use disorder. Unlike shorter-acting opioids, methadone has a relatively long duration of action, making it useful for preventing withdrawal symptoms and reducing opioid cravings.</p>
       `,
       mechanism: `
-        <p>Methadone acts primarily as a &mu;-opioid receptor agonist, producing analgesia and reducing opioid withdrawal symptoms. It also acts as an NMDA receptor antagonist and affects serotonin and norepinephrine signaling, although its opioid-receptor activity is primarily responsible for its major clinical effects.</p>
+        <p>Methadone is administered as a mixture of two stereoisomers. R-methadone is the stronger &mu;-opioid receptor agonist and is chiefly responsible for analgesia and suppression of opioid withdrawal. Both isomers can antagonize NMDA receptors, and S-methadone more strongly inhibits serotonin and norepinephrine transporters. These non-opioid actions may contribute to analgesia in some neuropathic-pain states, but sustained &mu;-receptor activation remains the principal clinical mechanism.</p>
       `,
       effects: `
         <p>Methadone can produce analgesia, sedation, relaxation, and euphoria, although its effects differ depending on dose, tolerance, and whether it is being used therapeutically. In opioid-use-disorder treatment, maintaining stable opioid receptor activation can reduce withdrawal symptoms and cravings without producing the rapid fluctuations associated with shorter-acting opioids.</p>
       `,
       pharmacokinetics: `
-        <p>Methadone is well absorbed orally and has a long and variable half-life, allowing once-daily dosing in many treatment settings. its long duration makes it useful for opioid-use-disorder treatment, but it also means that the drug can accumulate with repeated dosing.</p>
-        <p>In opioid-use-disorder treatment, it is administered at a dose and schedule designed to maintain stable opioid receptor activation, suppressing withdrawal and cravings without producing the rapid, intense euphoria associated with shorter-acting opioids.</p>
+        <p>Methadone is well absorbed orally, extensively distributed into tissues, and N-demethylated mainly by CYP2B6, with contributions from CYP3A4, CYP2C19, CYP2C9, and CYP2D6. Its elimination half-life is unusually variable&mdash;commonly about 8&ndash;59 hours&mdash;and is often much longer than its analgesic effect. Repeated daily dosing can therefore accumulate for several days before reaching steady state.</p>
+        <p>This long time course supports once-daily maintenance treatment for opioid use disorder, where stable receptor occupancy suppresses withdrawal and craving. It also creates delayed respiratory-depression risk during dose initiation or escalation. Methadone can block cardiac hERG potassium channels and prolong the QT interval, so high doses, electrolyte abnormalities, and interacting drugs increase torsades-de-pointes risk. CYP inducers or inhibitors can also precipitate withdrawal or toxicity by changing exposure.</p>
       `
     }
   },
@@ -262,7 +265,8 @@ const opioidTopics = [
         <p>Naloxone can rapidly reverse respiratory depression, sedation, and other opioid effects. Because it blocks opioid receptors rather than activating them, it does not produce typical opioid effects.</p>
       `,
       pharmacokinetics: `
-        <p>Naloxone has a relatively short duration of action compared with some opioids, meaning additional doses may sometimes be required, particularly with long-lasting or highly potent opioids such as fentanyl. It is commonly administered as a nasal spray (Narcan) or by injection.</p>
+        <p>Naloxone undergoes rapid hepatic glucuronidation, principally to naloxone-3-glucuronide. Its plasma half-life is approximately 1&ndash;2 hours, depending on route and formulation, and it is commonly given intranasally or by injection. Because many opioids remain active longer than naloxone, respiratory depression can recur after an initial response; repeat doses, emergency medical care, and continued observation are therefore essential.</p>
+        <p>Naloxone has no effect when opioid agonists are absent, but in an opioid-dependent person it can precipitate abrupt withdrawal, including agitation, vomiting, pain, and sympathetic activation. This is uncomfortable and can be medically complicated, but it does not outweigh the need to reverse life-threatening respiratory depression.</p>
       `
     }
   }
@@ -278,8 +282,8 @@ const cannabisTopics = [
         <p>The endocannabinoid system is a signaling system throughout the brain and body that helps regulate mood, appetite, memory, pain, stress, and other physiological processes. It consists primarily of cannabinoid receptors, naturally occurring endocannabinoids, and the enzymes that produce and break them down.</p>
       `,
       mechanism: `
-        <p>The two main cannabinoid receptors are CB1 and CB2. CB1 receptors are especially abundant in the CNS, while CB2 receptors are more prominent in immune tissues. The body's main endocannabinoids include anandamide and 2-AG, which are produced on demand and generally act as retrograde messengers: they travel from the postsynaptic neuron back to the presynaptic terminal and reduce neurotransmitter release.</p>
-        <p>By regulating neurotransmitter release, the endocannabinoid system can influence pain perception, appetite, mood, memory, stress responses, and reward. Its effects depend heavily on which receptors and neural circuits are activated.</p>
+        <p>The two principal cannabinoid receptors are CB1 and CB2. CB1 is abundant on presynaptic terminals throughout the CNS, whereas CB2 is expressed most prominently in immune cells and also occurs in some neural and glial populations. Both are Gi/o-coupled receptors: activation inhibits adenylyl cyclase, suppresses presynaptic voltage-gated calcium channels, and can activate potassium channels, making vesicular neurotransmitter release less likely.</p>
+        <p>The main endocannabinoids, anandamide and 2-arachidonoylglycerol (2-AG), are synthesized on demand from membrane lipids rather than stored in synaptic vesicles. They commonly travel backward from an activated postsynaptic neuron to presynaptic CB1 receptors. Anandamide is degraded mainly by fatty-acid amide hydrolase (FAAH), while 2-AG is degraded mainly by monoacylglycerol lipase (MAGL). This short-range feedback can reduce GABA or glutamate release, depending on which terminal expresses CB1.</p>
         <p><strong>Simple Breakdown:</strong></p>
         <ul>
           <li>Normally, inhibitory neurotransmitters limit the activity of dopamine neurons, reducing dopamine release.</li>
@@ -300,13 +304,15 @@ const cannabisTopics = [
         <p>THC is the primary intoxicating cannabinoid in cannabis and is responsible for many of its characteristic psychoactive effects. It partially mimics the body's endogenous cannabinoids by activating cannabinoid receptors, particularly CB1 receptors in the brain.</p>
       `,
       mechanism: `
-        <p>THC acts primarily as a partial agonist at CB1 and CB2 receptors. CB1 receptors are commonly located on presynaptic terminals, where their activation reduces neurotransmitter release. In some reward circuits, THC activates CB1 receptors on GABAergic inhibitory terminals, reducing GABA release and thereby disinhibiting dopamine neurons, increasing dopamine signaling and contributing to reward and euphoria.</p>
+        <p>THC is a partial agonist at CB1 and CB2 receptors, with its intoxicating effects mediated mainly by CB1 receptors in the brain. Presynaptic CB1 receptors couple to Gi/o proteins, reducing adenylyl-cyclase activity and calcium entry while increasing potassium conductance. This suppresses vesicular release of GABA or glutamate according to the terminal and circuit involved.</p>
+        <p>In VTA reward circuitry, CB1 activation on selected GABAergic terminals can reduce inhibitory input to dopamine neurons, disinhibiting them and increasing dopamine signalling in the nucleus accumbens. CB1-mediated disruption of hippocampal and cortical transmitter release contributes to impaired short-term memory and attention, while effects in basal-ganglia and cerebellar circuits contribute to altered coordination.</p>
       `,
       effects: `
         <p>THC can produce euphoria, relaxation, altered perception, increased appetite, impaired short-term memory, and changes in attention and coordination. It can also produce anxiety or paranoia in some individuals, particularly at higher exposures.</p>
       `,
       pharmacokinetics: `
-        <p>THC is highly lipid-soluble and can accumulate in fatty tissues, contributing to its relatively long persistence in the body. It is metabolized primarily in the liver and produces active and inactive metabolites. Cannabis containing THC has medical applications including pain management, nausea, appetite stimulation, and certain neurological conditions.</p>
+        <p>THC's time course depends strongly on route. Inhalation produces effects within minutes, whereas oral THC has slower and more variable absorption and undergoes substantial first-pass metabolism. CYP2C9 and CYP3A4 convert THC to active 11-hydroxy-THC and then to largely inactive 11-nor-9-carboxy-THC. THC is highly lipid-soluble and redistributes into fatty tissues, so metabolites can remain detectable long after intoxication has resolved; oral dronabinol has a terminal half-life of roughly 25&ndash;36 hours.</p>
+        <p>Prescription cannabinoid products have specific indications, including chemotherapy-associated nausea and vomiting and appetite loss associated with AIDS; cannabis-based products are also used in some jurisdictions for pain or spasticity. Acute risks include impaired driving, anxiety or panic, tachycardia, and psychosis in susceptible individuals. CYP2C9 or CYP3A4 inhibitors can increase exposure.</p>
         <p><strong>NOTE:</strong> Despite widespread belief, regular exposure to THC can lead to tolerance, physical dependence, and cannabis use disorder (CUD). Although cannabis has a lower addiction potential than many substances such as opioids, a subset of people who use cannabis develop problematic use characterized by difficulty controlling consumption despite negative consequences.</p>
       `
     }
@@ -319,16 +325,16 @@ const cannabisTopics = [
         <p>CBD is a major cannabinoid found in cannabis but, unlike THC, it is not strongly intoxicating and does not produce the typical cannabis "high." It has a complex pharmacological profile involving multiple receptors and signaling systems.</p>
       `,
       mechanism: `
-        <p>CBD does not act as a strong agonist at CB1 or CB2 receptors like THC. Instead, it can modulate cannabinoid signaling and interact with numerous other molecular targets, including serotonin receptors and ion channels. Its precise mechanisms vary depending on the biological system and effect being studied.</p>
-        <p>Proposed targets include 5-HT1A serotonin receptors and TRPV1 ion channels, along with indirect effects on endocannabinoid signaling. No single mechanism currently explains all of CBD's reported effects.</p>
+        <p>CBD has low affinity for the orthosteric binding sites of CB1 and CB2 and does not activate them like THC. Laboratory studies indicate that it can act as a negative allosteric modulator of CB1, reducing the efficacy or potency of CB1 agonists, but the clinical importance of this effect remains uncertain. CBD also modulates TRPV1 ion channels, 5-HT1A signalling, adenosine transport, and several other targets in experimental systems.</p>
+        <p>For its approved antiseizure use, the precise mechanism remains unknown and does not appear to depend on direct CB1 or CB2 activation. Proposed anticonvulsant mechanisms include changes in intracellular calcium handling and neuronal excitability through targets such as TRPV1 and GPR55, but no single pathway has been established as the complete human mechanism.</p>
       `,
       effects: `
         <p>CBD does not typically produce the strong euphoria or perceptual changes associated with THC. It has been investigated for effects on anxiety, pain, inflammation, and seizure activity, although its effects vary substantially depending on the condition and dose.</p>
         <p>Clinical evidence is strongest for antiseizure effects in specific epilepsy syndromes; evidence for other proposed uses remains more variable and should not be treated as equivalent to an approved indication.</p>
       `,
       pharmacokinetics: `
-        <p>CBD is absorbed through several routes and is extensively metabolized in the liver, where it can affect the activity of certain drug-metabolizing enzymes. A purified form of CBD is medically used for certain epilepsy disorders. CBD is generally well tolerated, but can cause side effects such as drowsiness, gastrointestinal effects, and drug interactions, particularly at higher doses.</p>
-        <p>Prescription cannabidiol is used for seizures associated with Lennox-Gastaut syndrome, Dravet syndrome, and tuberous sclerosis complex. Important risks include sedation, diarrhea, reduced appetite, liver-enzyme elevations, and interactions with medications metabolized through pathways including CYP2C19. Product formulation, dose, route of administration, and food intake can substantially affect exposure.</p>
+        <p>Oral CBD has variable bioavailability and a high-fat meal can markedly increase exposure. CYP2C19 and CYP3A4, together with UGT1A7, UGT1A9, and UGT2B7, form metabolites including active 7-hydroxy-CBD and inactive 7-carboxy-CBD. After repeated prescription dosing, terminal half-life is approximately 56&ndash;61 hours, and most drug-related material is excreted in faeces.</p>
+        <p>Purified prescription cannabidiol is used for seizures associated with Lennox-Gastaut syndrome, Dravet syndrome, and tuberous sclerosis complex. CBD inhibits several metabolic pathways, including CYP2C19, and can increase exposure to the active clobazam metabolite N-desmethylclobazam. Important risks include somnolence, diarrhoea, reduced appetite, and dose-related liver-enzyme elevations, especially with valproate; liver tests and interacting medications require clinical monitoring.</p>
       `
     }
   }
@@ -352,8 +358,9 @@ const psychedelicTopics = [
         <p>Physical effects can include dilated pupils, increased heart rate and blood pressure, mild increases in body temperature, nausea, tremor, and reduced appetite. The psychological response is strongly influenced by dose and context, and impaired judgment during an intense experience can increase the risk of accidents or unsafe behaviour.</p>
       `,
       pharmacokinetics: `
-        <p>LSD is absorbed primarily through the gastrointestinal tract and readily crosses the blood-brain barrier. It has a relatively long duration of action, with effects commonly lasting 8-12 hours or longer depending on the dose and individual. LSD produces little physical dependence, although tolerance develops rapidly with repeated exposure. Its major risks are psychological, including acute anxiety, panic, impaired judgment, and rare persistent perceptual disturbances.</p>
-        <p>After oral administration, effects commonly begin within approximately 30-60 minutes, peak during the first several hours, and then gradually decline. Controlled studies show that duration increases with dose and can vary substantially between individuals. LSD is metabolized into several compounds and eliminated gradually even as its subjective effects diminish.</p>
+        <p>Oral LSD is absorbed through the gastrointestinal tract, reaches peak plasma concentration in roughly 1.5 hours, and readily crosses the blood-brain barrier. Its plasma half-life is commonly about 3&ndash;4 hours, yet receptor kinetics and downstream neural effects allow the experience to last approximately 8&ndash;12 hours or longer. LSD produces little physical dependence, although tolerance develops rapidly with repeated exposure.</p>
+        <p>After oral administration, effects commonly begin within approximately 30&ndash;60 minutes, peak during the first several hours, and then gradually decline. Controlled studies show that duration increases with dose and can vary substantially between individuals.</p>
+        <p>CYP2D6 contributes to LSD clearance, while CYP1A2, CYP2C9, CYP2E1, and CYP3A4 contribute to formation of metabolites including nor-LSD and 2-oxo-3-hydroxy-LSD, the major human metabolite. CYP2D6 poor metabolizers can have substantially greater and longer exposure, although the clinical importance of many individual metabolic pathways remains under study.</p>
         <p>LSD is being investigated in controlled clinical research for possible applications in conditions including anxiety, depression, and substance use disorders, but these uses remain investigational. Rare but important risks include prolonged psychological distress, the precipitation or worsening of psychotic or manic symptoms in susceptible individuals, and hallucinogen-persisting perception disorder.</p>
       `
     }
@@ -421,7 +428,7 @@ const psychedelicTopics = [
         <p>Possible physical effects include increased heart rate or blood pressure, tremor, nausea, vomiting, loss of coordination, and temporary reductions in responsiveness to the environment. Its abrupt onset can leave little time to adjust to the experience.</p>
       `,
       pharmacokinetics: `
-        <p>5-MeO-DMT is rapidly absorbed and crosses the blood-brain barrier, producing a relatively rapid onset and shorter duration than LSD or psilocybin. It is metabolized primarily through enzymes including MAO-A and other pathways. Its intense and rapid effects can produce significant psychological distress or impaired judgment, and combining serotonergic substances can increase pharmacological risks.</p>
+        <p>5-MeO-DMT is rapidly absorbed and crosses the blood-brain barrier, producing a much faster onset and shorter duration than LSD or psilocybin. MAO-A performs the principal oxidative deamination pathway, while CYP2D6 O-demethylates a smaller fraction to the active metabolite bufotenine.</p>
         <p>When vaporized, effects can begin within seconds and the main experience often resolves within approximately 30 minutes. MAO-A normally converts much of the compound into inactive 5-methoxyindoleacetic acid. A smaller CYP2D6-mediated pathway converts 5-MeO-DMT into bufotenine, an active metabolite with stronger 5-HT2A affinity.</p>
         <p>MAO inhibitors can substantially increase and prolong 5-MeO-DMT exposure while shifting more metabolism toward bufotenine. This makes combinations with MAO inhibitors or other serotonergic drugs particularly concerning because of the risk of severe toxicity, including serotonin toxicity. Clinical uses remain investigational.</p>
       `
@@ -444,8 +451,8 @@ const psychedelicTopics = [
         <p>Human studies also report stimulant-like effects and temporary increases in heart rate and blood pressure. Nausea, dizziness, restlessness, and impaired coordination can occur, and the response becomes less predictable as exposure increases.</p>
       `,
       pharmacokinetics: `
-        <p>2C-B is generally active when taken orally and has a duration of several hours. It is metabolized primarily in the liver and eliminated through the body's normal metabolic and excretory pathways. It has relatively low physical dependence potential, but its effects can be unpredictable and may impair judgment and coordination.</p>
-        <p>Available human studies show measurable cardiovascular and subjective effects beginning around the first hour and persisting for several hours, but its complete metabolic and elimination profile remains incompletely resolved. This uncertainty is important because products sold as 2C-B may also contain other substances or different concentrations than expected. It has no established routine medical use.</p>
+        <p>Oral 2C-B usually begins producing measurable subjective and cardiovascular effects within the first hour and acts for several hours. A controlled human study estimated a plasma elimination half-life of approximately 1.3 hours, although the relationship between plasma clearance and the full subjective duration still requires further study.</p>
+        <p>Human-hepatocyte research identifies oxidative deamination as a major phase-I pathway, producing alcohol, aldehyde, and carboxylic-acid metabolites, with additional O-demethylation. The enzymes responsible for the complete human pathway and the clinical activity of individual metabolites remain incompletely resolved. 2C-B has no established medical use; major risks include acute anxiety, hypertension, tachycardia, impaired judgement, and uncertain dose or identity in unregulated products.</p>
       `
     }
   },
@@ -501,14 +508,15 @@ const depressantTopics = [
         <p>Benzodiazepines are a class of CNS depressant and anxiolytic drugs commonly used to treat anxiety, insomnia, seizures, muscle spasms, and acute agitation. Well-known examples include alprazolam (Xanax), diazepam (Valium), and lorazepam (Ativan).</p>
       `,
       mechanism: `
-        <p>Benzodiazepines are positive allosteric modulators (binds to a receptor at a different site than the normal neurotransmitter and makes the receptor respond more strongly) of GABA-A receptors. They bind to a site on the GABA-A receptor between specific receptor subunits, separate from the site where GABA binds.</p>
-        <p>When GABA binds to the receptor, the receptor opens its chloride (Cl<sup>−</sup>) channel. Benzodiazepines increase the frequency of channel opening, allowing more Cl<sup>−</sup> to enter the postsynaptic neuron. This makes the neuron less likely to reach the threshold required to generate an action potential, strengthening inhibitory signaling. In the amygdala and other limbic circuits, increased GABAergic inhibition reduces neuronal activity associated with fear and anxiety, while effects in cortical and motor circuits contribute to sedation and impaired coordination.</p>
+        <p>Benzodiazepines are positive allosteric modulators of GABA-A receptors. Classical benzodiazepines bind at the interface between an &alpha;1-, &alpha;2-, &alpha;3-, or &alpha;5-containing subunit and the &gamma;2 subunit, separate from the GABA-binding sites. They do not efficiently open the channel alone; instead, they increase the receptor's response when GABA is present.</p>
+        <p>In the presence of GABA, benzodiazepines increase the frequency of chloride-channel opening, allowing more Cl<sup>&minus;</sup> to enter the postsynaptic neuron and strengthening inhibition. Receptors containing &alpha;1 subunits contribute strongly to sedation and amnesia, while &alpha;2- and &alpha;3-containing receptors are important for anxiolysis and muscle relaxation. Increased inhibition in amygdala and limbic circuits reduces fear-related activity, while cortical, hippocampal, cerebellar, and motor-circuit effects contribute to sedation, amnesia, and impaired coordination.</p>
       `,
       effects: `
         <p>Increased GABA-A signaling can produce reduced anxiety, sedation, muscle relaxation, impaired coordination, slowed reaction time, and anterograde amnesia. The intensity depends on the drug, dose, and individual's tolerance.</p>
       `,
       pharmacokinetics: `
-        <p>Benzodiazepines are generally well absorbed and readily cross the blood-brain barrier because of their lipid solubility. They are metabolized primarily in the liver, although the specific metabolic pathways and half-lives vary considerably between drugs. Some, such as diazepam, form active metabolites that prolong their effects. Benzodiazepines are used medically for anxiety disorders, seizures, insomnia, muscle spasms, and acute agitation. Repeated exposure can produce tolerance and physical dependence. Abrupt discontinuation after prolonged use can cause severe withdrawal, including seizures, because the nervous system has adapted to chronic enhancement of GABAergic inhibition. Combining benzodiazepines with opioids or alcohol can produce dangerous levels of CNS and respiratory depression.</p>
+        <p>Benzodiazepine time courses differ substantially. Diazepam is oxidized by CYP2C19 and CYP3A4 to active desmethyldiazepam, temazepam, and oxazepam; diazepam's terminal half-life can reach roughly 48 hours, and desmethyldiazepam can persist for up to about 100 hours. By contrast, lorazepam, oxazepam, and temazepam undergo direct glucuronidation and have no long-lived oxidative active metabolites. These differences matter in older adults, liver disease, and drug interactions.</p>
+        <p>Specific agents are used for anxiety, seizures, insomnia, muscle spasm, procedural sedation, and acute agitation. Repeated exposure can produce tolerance and physical dependence, and abrupt cessation after prolonged use can cause severe withdrawal, delirium, or seizures. Combining benzodiazepines with opioids, alcohol, or other sedatives greatly increases respiratory-depression and overdose risk.</p>
       `
     }
   },
@@ -520,13 +528,14 @@ const depressantTopics = [
         <p>Barbiturates are an older class of CNS depressants that were historically used as sedatives, anxiolytics, anesthetics, and anticonvulsants. Most have been replaced by safer medications, although some remain medically useful.</p>
       `,
       mechanism: `
-        <p>Barbiturates act primarily on GABA-A receptors, but differently from benzodiazepines. They bind to distinct sites on the receptor and increase the duration for which its chloride channel remains open when GABA activates it. Greater Cl<sup>−</sup> influx hyperpolarizes neurons and makes them less likely to generate action potentials. At sufficiently high concentrations, barbiturates can also directly activate GABA-A receptors without GABA, producing much more profound CNS depression. This ability contributes to their narrow therapeutic window and greater overdose risk compared with benzodiazepines.</p>
+        <p>Barbiturates bind to transmembrane sites on GABA-A receptors that are distinct from the benzodiazepine site. At clinical concentrations they prolong the duration of GABA-evoked chloride-channel opening; at higher concentrations they can directly gate the channel even without GABA. Greater Cl<sup>&minus;</sup> influx hyperpolarizes neurons and suppresses action-potential firing. Some barbiturates also reduce excitatory AMPA/kainate glutamate signalling, adding to CNS depression and anticonvulsant activity.</p>
       `,
       effects: `
         <p>Increased GABAergic inhibition throughout the CNS can produce sedation, relaxation, reduced anxiety, impaired coordination, drowsiness, and impaired cognition. As CNS depression increases, barbiturates can produce anesthesia, unconsciousness, and suppression of brainstem circuits controlling respiration and cardiovascular function.</p>
       `,
       pharmacokinetics: `
-        <p>Barbiturates differ substantially in their onset, duration, lipid solubility, metabolism, and half-life. Highly lipid-soluble barbiturates rapidly cross the blood-brain barrier, producing rapid CNS effects. They are metabolized primarily by hepatic enzymes, with some inducing liver enzymes that increase the metabolism of other drugs. Some barbiturates remain useful for epilepsy and anesthesia. Their major risks include respiratory depression, overdose, tolerance, physical dependence, and severe withdrawal. Their relatively narrow therapeutic window makes excessive dosing particularly dangerous.</p>
+        <p>Barbiturates differ markedly by lipid solubility and clearance. Highly lipid-soluble anaesthetic agents such as thiopental enter the brain within seconds and wear off initially through redistribution into muscle and fat. Phenobarbital is much longer acting, with an adult half-life of roughly 53&ndash;118 hours; it is metabolized by hepatic microsomal enzymes, but about 25&ndash;50% is excreted unchanged in urine.</p>
+        <p>Phenobarbital remains useful for selected seizure disorders, while other barbiturates have limited anaesthetic or specialist uses. Phenobarbital induces CYP and glucuronidation enzymes, lowering exposure to drugs such as hormonal contraceptives, anticoagulants, and some antiseizure medicines. The class has a narrow therapeutic window and can cause fatal respiratory and cardiovascular depression, especially with alcohol, opioids, or benzodiazepines; tolerance, dependence, and dangerous withdrawal also occur.</p>
       `
     }
   },
