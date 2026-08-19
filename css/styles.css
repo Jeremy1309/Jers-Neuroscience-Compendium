@@ -1140,11 +1140,107 @@ model-viewer{
 }
 
 .pharmacology-category > p{
-  max-width:82ch;
+  max-width:none;
+}
+
+.topic-page[data-topic="neuropharmacology"]{
+  --pharmacology-copy:#526a80;
+}
+
+.topic-page[data-topic="neuropharmacology"] .topic-prose,
+.topic-page[data-topic="neuropharmacology"] .topic-section__intro,
+.topic-page[data-topic="neuropharmacology"] .glossary-list dd,
+.topic-page[data-topic="neuropharmacology"] .pharmacology-category > p,
+.topic-page[data-topic="neuropharmacology"] .pharmacology-category li,
+.topic-page[data-topic="neuropharmacology"] .drug-topic-panel__sections p{
+  color:var(--pharmacology-copy);
+}
+
+.topic-page[data-topic="neuropharmacology"] strong{
+  color:inherit;
+  font-weight:700;
 }
 
 .pharmacology-categories{
   margin-top:0;
+}
+
+.pharmacology-heading-preview{
+  position:relative;
+  z-index:5;
+  width:max-content;
+  max-width:100%;
+}
+
+.pharmacology-image-trigger{
+  margin:0;
+  padding:0 0 2px;
+  border:0;
+  border-bottom:1px dashed rgba(57, 116, 163, 0.42);
+  background:none;
+  color:inherit;
+  font:inherit;
+  letter-spacing:inherit;
+  cursor:zoom-in;
+}
+
+.pharmacology-image-trigger:hover,
+.pharmacology-image-trigger:focus{
+  color:var(--topic-accent);
+  border-bottom-color:var(--topic-accent);
+}
+
+.pharmacology-image-trigger:focus-visible{
+  outline:3px solid rgba(83, 159, 210, 0.24);
+  outline-offset:4px;
+  border-radius:4px;
+}
+
+.pharmacology-image-preview{
+  position:absolute;
+  top:calc(100% + 14px);
+  left:0;
+  width:min(712px, calc(100vw - 48px));
+  padding:10px;
+  border:1px solid rgba(68, 121, 169, 0.18);
+  border-radius:18px;
+  visibility:hidden;
+  opacity:0;
+  background:rgba(247, 252, 255, 0.97);
+  box-shadow:0 24px 56px rgba(31, 72, 111, 0.2);
+  line-height:0;
+  pointer-events:none;
+  transform:translateY(8px) scale(0.985);
+  transform-origin:top left;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    visibility 0s linear 180ms;
+}
+
+.pharmacology-image-preview img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:11px;
+}
+
+.pharmacology-image-trigger:hover + .pharmacology-image-preview,
+.pharmacology-image-trigger:focus + .pharmacology-image-preview{
+  visibility:visible;
+  opacity:1;
+  transform:translateY(0) scale(1);
+  transition-delay:0s;
+}
+
+.opioid-receptor-list{
+  margin-top:12px;
+  font-size:0.88rem;
+}
+
+.subtopic-section .opioid-receptor-list li{
+  margin:0.36rem 0;
+  line-height:1.55;
 }
 
 .drug-topic-row{
@@ -1294,6 +1390,24 @@ model-viewer{
 
 .drug-topic-panel__sections p + p{
   margin-top:12px;
+}
+
+.drug-topic-panel__figure{
+  margin:20px auto 0;
+  text-align:center;
+}
+
+.drug-topic-panel__figure img{
+  display:block;
+  width:100%;
+  height:auto;
+  margin:0 auto;
+  border-radius:14px;
+  box-shadow:0 12px 30px rgba(42, 85, 125, 0.12);
+}
+
+.drug-topic-panel__figure--wide{
+  max-width:980px;
 }
 
 @keyframes drug-panel-content-in{
@@ -1597,4 +1711,5 @@ model-viewer{
   .drug-topic-panel,
   .drug-topic-panel__inner{transition:none}
   .drug-topic-panel.is-refreshing .drug-topic-panel__inner{animation:none}
+  .pharmacology-image-preview{transition:none}
 }

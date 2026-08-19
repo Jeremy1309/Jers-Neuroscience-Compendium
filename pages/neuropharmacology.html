@@ -79,6 +79,10 @@
             <dt>Drug metabolism</dt>
             <dd>Enzymatic modification of a drug, often making it less active or easier for the body to eliminate.</dd>
           </div>
+          <div id="prodrug">
+            <dt>Prodrug</dt>
+            <dd>A compound administered in an inactive or less active form that is converted within the body into an active drug.</dd>
+          </div>
           <div id="pharmacokinetics">
             <dt>Pharmacokinetics</dt>
             <dd>What the body does to a drug through absorption, distribution, metabolism, and excretion, shaping how quickly it reaches its target and how long it remains active.</dd>
@@ -101,44 +105,52 @@
           </section>
 
           <section class="subtopic-section pharmacology-category" id="opioids" data-pharmacology-category="opioids">
-            <h3>6.4 Opioids</h3>
-            <p>Opioids act within receptor systems involved in pain, reward, stress, respiration, and other physiological functions. Natural, semi-synthetic, and synthetic compounds can have substantially different potencies and pharmacokinetic profiles.</p>
+            <h3 class="pharmacology-heading-preview">
+              6.4
+              <button class="pharmacology-image-trigger" type="button" aria-describedby="opioid-classification-preview">Opioids</button>
+              <span class="pharmacology-image-preview" id="opioid-classification-preview" role="tooltip">
+                <img src="../assets/images/opioid-classification.jpg" alt="Classification of natural, semi-synthetic, synthetic, and endogenous opioids">
+              </span>
+            </h3>
+            <p>Drugs that act primarily on <strong>opioid receptors</strong> throughout the nervous system and body, particularly in circuits involved in pain, reward, and emotional processing. Opioids typically work by <strong>inhibiting the inhibition</strong> of VTA dopamine neurons (double negative!), which leads to euphoria</p>
+            <p>There are currently four opioid receptors that we know of; each one has a unique distribution throughout the CNS, suggesting they modulate specific physiological effects:</p>
+            <ul class="opioid-receptor-list">
+              <li><strong>m-opioid receptor (MOR):</strong> Highest affinity for morphine and opioids of misuse. The distribution of m-opioid receptors suggests it plays a role in analgesia, feeding, reward &amp; positive reinforcement, respiration, nausea and vomiting.</li>
+              <li><strong>d-opioid receptor (DOR):</strong> The d-opioid receptor has a similar distribution to m-receptors, however not as prevalent. Involved in modulating olfaction, motor integration, reinforcement and cognitive functions.</li>
+              <li><strong>k-opioid receptor (KOR):</strong> known for producing effects that are quite different from those of other opioid receptors. It is thought these receptors regulate pain perception, gut motility, dysphoria and neuroendocrine function.</li>
+              <li><strong>Nociceptin/orphanin FQ receptor (NOP-R):</strong> Widely distributed throughout the CNS and PNS. The distribution of NOP-R suggests a role in analgesia, feeding, learning, and neuroendocrine regulation. Has been shown to reduce pain threshold, in contrast to opioids. Endogenous opioids do not bind NOP-R</li>
+            </ul>
             <div class="drug-topic-row" data-drug-topic-row aria-label="Opioid topics"></div>
             <div class="drug-topic-panel" data-drug-topic-panel aria-hidden="true"></div>
           </section>
 
-          <section class="subtopic-section pharmacology-category" id="psychedelics" data-pharmacology-category="psychedelics">
-            <h3>6.5 Psychedelics</h3>
-            <p>Psychedelics are a diverse group of compounds that can alter perception, cognition, emotion, and sense of self. Their mechanisms, potency, duration, and physiological effects vary across chemical classes.</p>
-            <div class="drug-topic-row" data-drug-topic-row aria-label="Psychedelic topics"></div>
-            <div class="drug-topic-panel" data-drug-topic-panel aria-hidden="true"></div>
-          </section>
-
           <section class="subtopic-section pharmacology-category" id="cannabis" data-pharmacology-category="cannabis">
-            <h3>6.6 Cannabis</h3>
+            <h3>6.5 Cannabis</h3>
             <p>Cannabis-derived compounds interact with the endocannabinoid system, which helps regulate neurotransmitter release across many neural circuits. Individual cannabinoids differ in their targets, psychoactive effects, and therapeutic applications.</p>
             <div class="drug-topic-row" data-drug-topic-row aria-label="Cannabis topics"></div>
             <div class="drug-topic-panel" data-drug-topic-panel aria-hidden="true"></div>
           </section>
 
+          <section class="subtopic-section pharmacology-category" id="psychedelics" data-pharmacology-category="psychedelics">
+            <h3>6.6 Psychedelics</h3>
+            <p>Psychedelics are psychoactive substances that produce profound changes in perception, cognition, mood, and consciousness, often without producing toxic delirium. Their mechanisms, potency, duration, and physiological and psychological effects vary depending on their chemical structures, although many classic psychedelics produce their effects primarily through serotonin 5-HT2A receptors.</p>
+            <p>LSD, psilocybin, DMT, 5-MeO-DMT, and 2C-B are serotonergic psychedelics with distinct receptor profiles. Salvinorin A, the active compound in <em>Salvia divinorum</em>, is an important exception because it acts through kappa-opioid receptors rather than 5-HT2A receptors.</p>
+            <div class="drug-topic-row" data-drug-topic-row aria-label="Psychedelic topics"></div>
+            <div class="drug-topic-panel" data-drug-topic-panel aria-hidden="true"></div>
+          </section>
+
           <section class="subtopic-section pharmacology-category" id="depressants-anxiolytics" data-pharmacology-category="depressants-anxiolytics">
             <h3>6.7 Depressants &amp; Anxiolytics</h3>
-            <p>Depressants and anxiolytics reduce activity in selected neural systems, with effects that may include sedation, reduced anxiety, muscle relaxation, or sleep promotion. Their mechanisms and safety profiles differ considerably between drug classes.</p>
+            <p>Depressants are substances that reduce activity within the central nervous system, often producing relaxation, sedation, reduced anxiety, and impaired coordination. Anxiolytics are drugs specifically used to reduce anxiety, although many also produce sedative effects. They include substances with diverse mechanisms, such as alcohol, benzodiazepines, barbiturates, GHB, Z-drugs, and pregabalin.</p>
             <div class="drug-topic-row" data-drug-topic-row aria-label="Depressant and anxiolytic topics"></div>
             <div class="drug-topic-panel" data-drug-topic-panel aria-hidden="true"></div>
           </section>
 
           <section class="subtopic-section pharmacology-category" id="antidepressants" data-pharmacology-category="antidepressants">
             <h3>6.8 Antidepressants</h3>
-            <p>Antidepressants are medication classes used to influence mood-related neural signalling over time. They differ in their molecular targets, clinical uses, onset of benefit, side-effect profiles, and interactions.</p>
+            <p>Antidepressants are medications primarily used to treat depression and other mood disorders, and are also used for conditions such as anxiety disorders, obsessive-compulsive disorder, and certain forms of chronic pain. They act on neurotransmitter systems involved in mood, emotion, cognition, and stress, with different classes targeting serotonin, norepinephrine, dopamine, or combinations of these systems.</p>
+            <p>Their transporters, enzymes, and receptors are affected soon after administration, but clinical improvement usually depends on slower adaptations in autoreceptor feedback, neuronal firing, gene expression, synaptic plasticity, and the activity of prefrontal, limbic, and stress-regulation circuits.</p>
             <div class="drug-topic-row" data-drug-topic-row aria-label="Antidepressant topics"></div>
-            <div class="drug-topic-panel" data-drug-topic-panel aria-hidden="true"></div>
-          </section>
-
-          <section class="subtopic-section pharmacology-category" id="antipsychotics" data-pharmacology-category="antipsychotics">
-            <h3>6.9 Antipsychotics</h3>
-            <p>Antipsychotics modify neurotransmitter signalling associated with psychosis and related symptoms. Typical and atypical classes are distinguished by their receptor profiles, therapeutic effects, and patterns of adverse effects.</p>
-            <div class="drug-topic-row" data-drug-topic-row aria-label="Antipsychotic topics"></div>
             <div class="drug-topic-panel" data-drug-topic-panel aria-hidden="true"></div>
           </section>
         </div>

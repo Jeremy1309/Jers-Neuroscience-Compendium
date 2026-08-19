@@ -32,7 +32,6 @@ Jer’s Neuroscience Compendium is a personal, evolving neuroscience knowledge p
 - `js/brain-regions.js` maps educational brain regions to named meshes in the GLB model.
 - `js/brain-visibility.js` manages hemisphere visibility and anatomical highlighting.
 - `pages/` contains the major neuroscience chapters.
-- `templates/article.html` provides a starting structure for future long-form articles.
 - `assets/models/3D Brain Graphic.glb` is the anatomical model used by the atlas.
 
 ## Direction
