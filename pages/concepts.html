@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Associated Topics &mdash; Jer's Neuroscience Compendium</title>
-  <meta name="description" content="Foundational neuroscience concepts, research methods, and evidence.">
+  <meta name="description" content="Explore autonomic control, stress, language, consciousness, sleep, pain, reward, learning, and other systems-level neuroscience topics.">
   <link rel="stylesheet" href="../css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -81,6 +81,50 @@
             <dt>Memory consolidation</dt>
             <dd>The processes through which newly acquired information becomes a more stable memory.</dd>
           </div>
+          <div id="central-autonomic-network">
+            <dt>Central autonomic network</dt>
+            <dd>A distributed set of brainstem, hypothalamic, limbic, and cortical regions that integrates bodily signals and coordinates autonomic output.</dd>
+          </div>
+          <div id="baroreflex">
+            <dt>Baroreflex</dt>
+            <dd>A rapid feedback reflex that adjusts heart rate and vascular tone when arterial blood pressure changes.</dd>
+          </div>
+          <div id="allostasis">
+            <dt>Allostasis</dt>
+            <dd>The process of maintaining stability by adjusting physiology and behaviour in anticipation of, or response to, changing demands.</dd>
+          </div>
+          <div id="direct-pathway">
+            <dt>Direct pathway</dt>
+            <dd>A basal-ganglia pathway that reduces inhibitory output from GPi and SNr, helping disinhibit selected thalamic or brainstem targets.</dd>
+          </div>
+          <div id="hyperdirect-pathway">
+            <dt>Hyperdirect pathway</dt>
+            <dd>A fast route from cortex through the subthalamic nucleus to basal-ganglia output nuclei that can rapidly interrupt or delay an action.</dd>
+          </div>
+          <div id="aphasia">
+            <dt>Aphasia</dt>
+            <dd>An acquired impairment of language caused by injury or disease affecting the brain's language network.</dd>
+          </div>
+          <div id="lateralization">
+            <dt>Lateralization</dt>
+            <dd>A relative specialization of one cerebral hemisphere for part of a function; it does not imply that the function is confined to that hemisphere.</dd>
+          </div>
+          <div id="homeostatic-sleep-pressure">
+            <dt>Homeostatic sleep pressure</dt>
+            <dd>A sleep-promoting drive that generally accumulates during wakefulness and declines during sleep.</dd>
+          </div>
+          <div id="central-sensitization">
+            <dt>Central sensitization</dt>
+            <dd>Increased responsiveness of nociceptive neurons in the central nervous system that can amplify pain and contribute to allodynia or hyperalgesia.</dd>
+          </div>
+          <div id="reward-prediction-error">
+            <dt>Reward-prediction error</dt>
+            <dd>The difference between an obtained and an expected outcome, used by learning systems to update future predictions and choices.</dd>
+          </div>
+          <div id="reconsolidation">
+            <dt>Reconsolidation</dt>
+            <dd>The restabilization process that can follow memory retrieval, sometimes allowing an existing memory to be updated.</dd>
+          </div>
         </dl>
       </section>
 
@@ -93,64 +137,164 @@
         <div class="subtopic-list">
           <section class="subtopic-section" id="autonomic-nervous-system-topic">
             <h3>8.3 Autonomic Nervous System</h3>
-            <p>This section will explore how sympathetic, parasympathetic, and enteric pathways regulate organs and maintain internal physiological stability.</p>
+            <p>The autonomic nervous system (ANS) continuously adjusts cardiac muscle, smooth muscle, glands, and visceral organs to keep internal conditions compatible with behaviour. It operates through feedback: sensory pathways report changes such as blood pressure, gut distension, temperature, and blood chemistry, while motor pathways alter organ function. Although many autonomic processes occur without conscious control, breathing, emotion, attention, and learned context can modify them.</p>
+            <ul class="mechanism-list">
+              <li><strong>Sympathetic division:</strong> preganglionic neurons arise mainly from the thoracic and upper lumbar spinal cord. Their relatively short axons synapse in paravertebral or prevertebral ganglia, supporting organ-specific responses such as increasing cardiac output and mobilizing fuel.</li>
+              <li><strong>Parasympathetic division:</strong> preganglionic neurons arise in the brainstem and sacral spinal cord. Long preganglionic axons usually synapse near or within the target organ, precisely regulating heart rate, digestion, secretion, urination, and pupil diameter.</li>
+              <li><strong>Enteric nervous system:</strong> neurons and glia within the gastrointestinal wall sense local conditions and organize motility, secretion, and blood flow. These circuits can generate local reflexes while sympathetic and parasympathetic pathways modify their activity.</li>
+              <li><strong>Adrenal medulla:</strong> preganglionic sympathetic fibres directly stimulate chromaffin cells, which release epinephrine and norepinephrine into the circulation and extend the sympathetic response throughout the body.</li>
+            </ul>
+            <p>Every autonomic preganglionic neuron releases acetylcholine onto nicotinic receptors in an autonomic ganglion or, for adrenal-medullary fibres, onto chromaffin cells. Most parasympathetic postganglionic neurons then release acetylcholine onto muscarinic receptors, whereas most sympathetic postganglionic neurons release norepinephrine onto adrenergic receptors. Important exceptions include sympathetic cholinergic fibres supplying sweat glands.</p>
+            <p>A distributed <strong>central autonomic network</strong> coordinates this output. The nucleus of the solitary tract receives visceral information and communicates with the parabrachial complex, hypothalamus, periaqueductal grey, amygdala, insula, and cingulate and prefrontal cortices. These regions connect bodily state with emotion, motivation, and action.</p>
+            <div class="subtopic-section__note"><strong>Beyond “fight or flight”:</strong> sympathetic and parasympathetic pathways are not whole-body on/off switches. Their activity is organ-specific, and the two divisions can alternate, act independently, or become active together.</div>
           </section>
 
           <section class="subtopic-section" id="heart-neural-control">
             <h3>8.4 Heart &amp; Neural Control</h3>
-            <p>This section will examine how autonomic pathways, brainstem circuits, baroreceptors, and intrinsic cardiac mechanisms regulate heart rate and cardiovascular function.</p>
+            <p>The heartbeat originates within the heart rather than in the brain. Pacemaker cells in the sinoatrial node spontaneously depolarize, and the conduction system distributes each impulse through the atria, atrioventricular node, His&ndash;Purkinje system, and ventricles. Neural signals adjust this intrinsic rhythm to match rest, exercise, posture, temperature, emotion, and metabolic demand.</p>
+            <ul class="mechanism-list">
+              <li><strong>Sympathetic control:</strong> cardiac sympathetic fibres release norepinephrine, which acts mainly at &beta;<sub>1</sub>-adrenergic receptors. Increased cAMP-dependent signalling accelerates sinoatrial pacemaking, speeds atrioventricular conduction, and increases cardiac contraction and relaxation.</li>
+              <li><strong>Parasympathetic control:</strong> vagal fibres from medullary nuclei synapse in ganglia on or near the heart. Acetylcholine acting at M<sub>2</sub> muscarinic receptors lowers cAMP and activates potassium conductances, slowing the sinoatrial node and atrioventricular conduction.</li>
+            </ul>
+            <p>The <strong>arterial baroreflex</strong> stabilizes blood pressure from beat to beat. A rise in pressure stretches receptors in the carotid sinus and aortic arch. Signals travel through cranial nerves IX and X to the nucleus of the solitary tract (NTS). The NTS activates vagal cardiac neurons and excites the caudal ventrolateral medulla, whose inhibitory neurons restrain the sympathoexcitatory rostral ventrolateral medulla. Heart rate, contractility, and vascular resistance consequently fall. When pressure falls, this balance shifts toward sympathetic support of pressure.</p>
+            <p>Cardiac control is therefore a nested feedback system, not a one-way command from brain to heart. Sensory neurons report mechanical and chemical conditions, intrinsic cardiac ganglia perform local integration, and brainstem reflexes are adjusted by respiration, exercise, hypothalamic state, and forebrain activity.</p>
+            <div class="subtopic-section__note"><strong>Interpreting heart-rate variability:</strong> HRV can provide useful information about cardiac regulation, but no single value is a pure measure of stress or overall sympathetic&ndash;parasympathetic balance. Breathing, posture, age, medication, and recording conditions all affect it.</div>
           </section>
 
           <section class="subtopic-section" id="stress-hpa-axis">
             <h3>8.5 Stress &amp; the HPA Axis</h3>
-            <p>The hypothalamic-pituitary-adrenal axis translates a perceived stressor into a coordinated hormonal response:</p>
-            <ol>
-              <li>The hypothalamus releases corticotropin-releasing hormone (CRH) into the portal circulation serving the anterior pituitary.</li>
-              <li>CRH stimulates the anterior pituitary to release adrenocorticotropic hormone (ACTH) into the general circulation.</li>
-              <li>ACTH stimulates the adrenal cortex to release cortisol.</li>
-            </ol>
-            <p>Cortisol helps mobilize energy and adjust body systems to meet a challenge. The duration and regulation of this response are important because prolonged activation can affect cognition, mood, immune activity, sleep, and metabolism.</p>
+            <p>A stress response is a coordinated attempt to meet a real or anticipated challenge. Rapid autonomic and sympathoadrenal signals change heart rate, vigilance, and fuel availability within seconds. The hypothalamic&ndash;pituitary&ndash;adrenal (HPA) axis develops more slowly and extends the response through hormonal signalling.</p>
+
+            <div class="concept-explorer" data-concept-explorer style="--concept-steps:5">
+              <div class="concept-explorer__header">
+                <h4>Follow the HPA stress pathway</h4>
+                <p>Select a stage to trace the signal from appraisal to hormonal feedback.</p>
+              </div>
+              <div class="concept-explorer__tabs" role="tablist" aria-label="Stages of the HPA axis">
+                <button class="concept-explorer__tab" id="hpa-tab-appraisal" type="button" role="tab" aria-selected="true" aria-controls="hpa-panel-appraisal">1 · Appraisal</button>
+                <button class="concept-explorer__tab" id="hpa-tab-pvn" type="button" role="tab" aria-selected="false" aria-controls="hpa-panel-pvn" tabindex="-1">2 · PVN</button>
+                <button class="concept-explorer__tab" id="hpa-tab-pituitary" type="button" role="tab" aria-selected="false" aria-controls="hpa-panel-pituitary" tabindex="-1">3 · Pituitary</button>
+                <button class="concept-explorer__tab" id="hpa-tab-adrenal" type="button" role="tab" aria-selected="false" aria-controls="hpa-panel-adrenal" tabindex="-1">4 · Adrenal</button>
+                <button class="concept-explorer__tab" id="hpa-tab-feedback" type="button" role="tab" aria-selected="false" aria-controls="hpa-panel-feedback" tabindex="-1">5 · Feedback</button>
+              </div>
+              <div class="concept-explorer__panels">
+                <section class="concept-explorer__panel" id="hpa-panel-appraisal" role="tabpanel" aria-labelledby="hpa-tab-appraisal">
+                  <h5>Challenge detection and appraisal</h5>
+                  <p>Brainstem and hypothalamic sensors detect physiological disruption, while amygdala, hippocampal, and prefrontal networks evaluate learned, anticipated, and contextual threats. These routes converge indirectly on stress-responsive hypothalamic neurons.</p>
+                </section>
+                <section class="concept-explorer__panel" id="hpa-panel-pvn" role="tabpanel" aria-labelledby="hpa-tab-pvn">
+                  <h5>Hypothalamic signal</h5>
+                  <p>Parvocellular neurons in the paraventricular nucleus release corticotropin-releasing hormone (CRH), often with arginine vasopressin, into portal blood supplying the anterior pituitary.</p>
+                </section>
+                <section class="concept-explorer__panel" id="hpa-panel-pituitary" role="tabpanel" aria-labelledby="hpa-tab-pituitary">
+                  <h5>Pituitary relay</h5>
+                  <p>CRH and vasopressin stimulate corticotroph cells. These cells process pro-opiomelanocortin and release adrenocorticotropic hormone (ACTH) into the systemic circulation.</p>
+                </section>
+                <section class="concept-explorer__panel" id="hpa-panel-adrenal" role="tabpanel" aria-labelledby="hpa-tab-adrenal">
+                  <h5>Adrenal cortisol release</h5>
+                  <p>ACTH acts on melanocortin 2 receptors in the adrenal cortex, especially the zona fasciculata, stimulating steroid synthesis and cortisol release in humans.</p>
+                </section>
+                <section class="concept-explorer__panel" id="hpa-panel-feedback" role="tabpanel" aria-labelledby="hpa-tab-feedback">
+                  <h5>Response and negative feedback</h5>
+                  <p>Cortisol acts through mineralocorticoid and glucocorticoid receptors to alter metabolism, immunity, attention, and memory. Feedback at pituitary, hypothalamic, and forebrain levels helps limit and terminate the response.</p>
+                </section>
+              </div>
+            </div>
+
+            <p>HPA activity is not limited to emergencies. Cortisol is released in ultradian pulses nested within a circadian rhythm, usually rising before waking and varying with time of day, sleep, meals, illness, medication, and prior experience. A parallel sympathetic&ndash;adrenal&ndash;medullary response releases catecholamines much faster than the HPA axis.</p>
+            <p>The hippocampus and medial prefrontal cortex often help restrain HPA output through indirect pathways, whereas amygdala and extended-amygdala circuits can facilitate responses to relevant threats; the effect depends on the stressor and context. Acute activation can be adaptive by mobilizing energy and prioritizing immediate demands. Repeated, prolonged, or poorly terminated activation can contribute to <strong>allostatic load</strong>, affecting neural plasticity, sleep, metabolism, cardiovascular function, and immunity.</p>
+            <div class="subtopic-section__note"><strong>Cortisol is not simply “bad”:</strong> it is essential to normal physiology and follows strong daily and pulsatile rhythms. One isolated measurement rarely describes HPA function or a person's stress state adequately.</div>
           </section>
 
           <section class="subtopic-section" id="basal-ganglia-circuits">
             <h3>8.6 Basal Ganglia Circuits</h3>
-            <p>The cortico-striato-thalamo-cortical loop connects regions of the cerebral cortex with the striatum, pallidal structures, and thalamus before returning information to cortex. The circuit helps regulate action selection, habits, motivation, and cognitive control.</p>
-            <p>In simplified terms, the direct pathway facilitates selected cortical activity by reducing inhibitory output to the thalamus, while the indirect pathway counterbalances that activity and helps suppress competing responses. Changes in CSTC signalling are studied in relation to conditions including obsessive-compulsive disorder.</p>
+            <p>The basal ganglia are interconnected subcortical nuclei that help select, scale, and reinforce actions. Their major structures include the striatum, globus pallidus, subthalamic nucleus, substantia nigra, and ventral pallidum. Motor, oculomotor, associative, and limbic territories participate in partly parallel cortico&ndash;basal ganglia&ndash;thalamo&ndash;cortical loops, linking the system to movement, habits, motivation, and cognitive control.</p>
+            <p>The internal globus pallidus (GPi) and substantia nigra pars reticulata (SNr) normally exert tonic GABAergic inhibition over thalamic and brainstem targets. Three simplified pathways regulate that output:</p>
+            <ul class="mechanism-list">
+              <li><strong>Direct pathway:</strong> cortex &rarr; striatal D<sub>1</sub>-type projection neuron &rarr; inhibition of GPi/SNr &rarr; disinhibition of selected thalamic or brainstem targets.</li>
+              <li><strong>Indirect pathway:</strong> cortex &rarr; striatal D<sub>2</sub>-type projection neuron &rarr; inhibition of external globus pallidus &rarr; disinhibition of subthalamic nucleus &rarr; excitation of GPi/SNr.</li>
+              <li><strong>Hyperdirect pathway:</strong> cortex &rarr; subthalamic nucleus &rarr; GPi/SNr, providing a rapid route for broadly interrupting or delaying output while competing actions are evaluated.</li>
+              <li><strong>Dopamine modulation:</strong> substantia nigra pars compacta dopamine changes excitability and corticostriatal plasticity. In the classic model, D<sub>1</sub> signalling supports the direct pathway while D<sub>2</sub> signalling restrains the indirect pathway.</li>
+            </ul>
+            <p>The familiar “direct equals go, indirect equals stop” account is a useful starting point, but both populations can be active during movement. Their timing and action-specific ensembles may help promote one response while constraining competitors. Parkinson's disease, Huntington's disease, compulsive behaviour, and other disorders alter firing patterns, oscillations, synchrony, and plasticity as well as average firing rate.</p>
+            <div class="subtopic-section__note"><strong>Model, not switchboard:</strong> basal-ganglia pathways overlap, interact, and contain many cell subtypes. The classic circuit diagram is a framework for understanding selection and suppression, not a literal one-pathway-per-action system.</div>
           </section>
 
           <section class="subtopic-section" id="language">
             <h3>8.7 Language</h3>
-            <p>Broca's area is classically associated with speech production, while Wernicke's area is classically associated with language comprehension. Modern neuroscience treats language as a distributed network, so these regions are important nodes rather than isolated language centres.</p>
+            <p>Language depends on a distributed network rather than two isolated centres. Posterior superior and middle temporal regions analyse speech sounds and access lexical and semantic information; inferior frontal, premotor, and insular regions contribute to selection, sequencing, articulation, and sentence-level processing. Inferior parietal cortex, basal ganglia, cerebellum, and domain-general attention and working-memory systems join this network according to the task.</p>
+            <p>A useful modern framework divides speech processing into two interacting streams. A largely bilateral <strong>ventral stream</strong> maps sounds onto words, concepts, and meaning through temporal-lobe and ventral frontal connections. A more strongly left-lateralized <strong>dorsal stream</strong> maps heard speech onto articulatory and phonological representations through posterior temporal and parietal regions, premotor and inferior frontal cortex, and white-matter pathways including the arcuate and superior longitudinal fasciculi.</p>
+            <p>Comprehension and production are interdependent. Speakers use auditory and somatosensory feedback to correct articulation, while listeners use context and linguistic predictions to interpret noisy or ambiguous input. Reading additionally recruits ventral occipitotemporal regions that become tuned to familiar written forms. The right hemisphere contributes to prosody, discourse, emotional tone, metaphor, and broad contextual interpretation.</p>
+            <p>Classic terms such as Broca's aphasia and Wernicke's aphasia remain clinically useful, but lesion location and symptoms do not map one-to-one. Aphasia can arise from damage to cortical nodes, connecting white matter, or the blood supply supporting an extended network. Recovery reflects residual tissue, reconnection, learning, and recruitment within both hemispheres rather than transfer to one replacement “language centre.”</p>
           </section>
 
           <section class="subtopic-section" id="brain-lateralization">
             <h3>8.8 Brain Lateralization</h3>
-            <p>This section will explore how some functions are distributed asymmetrically between the cerebral hemispheres while remaining coordinated through interhemispheric connections.</p>
+            <p>The cerebral hemispheres are anatomically similar but not functionally identical. Many sensory and motor pathways are predominantly contralateral, and some higher functions show a consistent hemispheric bias. Lateralization is normally graded and task-dependent: a network can favour one hemisphere without being confined to it.</p>
+            <ul class="mechanism-list">
+              <li><strong>Language and praxis:</strong> these are left-dominant in most people. Approximately 90&ndash;96% of right-handed people and about 70% of left-handed people show left-hemisphere language dominance, making handedness an imperfect predictor.</li>
+              <li><strong>Spatial attention and prosody:</strong> spatial reorienting, vigilance, emotional prosody, and aspects of face processing often show a right-hemisphere bias. Right ventral frontoparietal injury is especially likely to produce severe left hemispatial neglect.</li>
+              <li><strong>Sensorimotor control:</strong> much of the motor and somatosensory system is organized contralaterally, so each hemisphere primarily controls and receives information from the opposite side of the body.</li>
+              <li><strong>Interhemispheric coordination:</strong> the corpus callosum and smaller commissures allow specialized networks to exchange information. Intact everyday cognition normally depends on this rapid cooperation.</li>
+            </ul>
+            <p>Split-brain studies demonstrate that each hemisphere can perform some computations independently when major callosal connections are severed, but they do not support popular “two personality types” claims. Large-scale imaging finds local asymmetries without evidence that healthy people globally rely on one entire hemisphere.</p>
+            <div class="subtopic-section__note"><strong>Left-brained versus right-brained is a myth:</strong> lateralization varies with development, experience, brain injury, and the exact task. It describes relative specialization within cooperating networks, not fixed logical or creative personality categories.</div>
           </section>
 
           <section class="subtopic-section" id="consciousness">
             <h3>8.9 Consciousness</h3>
-            <p>This section will introduce neural systems associated with wakefulness, awareness, attention, and the integration of conscious experience.</p>
+            <p>Neuroscience commonly separates the <strong>level or state</strong> of consciousness from its <strong>contents</strong>. Level concerns wakefulness and the capacity for experience; contents are the perceptions, thoughts, emotions, or memories present at a moment. Behavioural responsiveness is an imperfect proxy: dreaming can occur with little responsiveness, while a person with locked-in syndrome may be fully conscious but unable to move or speak.</p>
+            <p>Wakefulness depends on interacting arousal systems in the upper brainstem, hypothalamus, basal forebrain, and central thalamus. Cholinergic, noradrenergic, serotonergic, dopaminergic, histaminergic, and orexinergic populations help maintain cortical activation and stable behavioural state. Conscious contents additionally depend on organized cortical and thalamocortical activity. No single nucleus or cortical point serves as a universal “consciousness centre.”</p>
+            <ul class="mechanism-list">
+              <li><strong>Global neuronal workspace:</strong> emphasizes amplification and broad availability of selected information across long-range cortical networks.</li>
+              <li><strong>Recurrent processing:</strong> emphasizes feedback interactions within and between sensory regions rather than only a forward sweep of activity.</li>
+              <li><strong>Higher-order theories:</strong> propose that a representation becomes conscious when the system represents itself as being in that state.</li>
+              <li><strong>Integrated information theory:</strong> relates consciousness to a system's irreducible causal organization and makes distinctive predictions about integration and cortical involvement.</li>
+            </ul>
+            <p>Attention, working memory, decision-making, and verbal report often accompany conscious perception but are not identical to it. Researchers therefore combine reports with no-report paradigms, intracranial recordings, neuroimaging, anaesthesia, sleep, brain injury, and perturbational methods such as TMS&ndash;EEG. A large preregistered 2025 comparison found results consistent with some predictions of both global-workspace and integrated-information accounts while challenging key claims of each.</p>
+            <div class="subtopic-section__note"><strong>An open scientific problem:</strong> the field has increasingly precise neural correlates and testable models, but no settled theory explaining which neural processes are sufficient for subjective experience.</div>
           </section>
 
           <section class="subtopic-section" id="sleep-circadian-rhythms">
             <h3>8.10 Sleep &amp; Circadian Rhythms</h3>
-            <p>This section will examine sleep stages, sleep-regulating circuits, circadian timing, and the interaction between homeostatic sleep pressure and the biological clock.</p>
+            <p>Sleep is an actively generated brain state with repeating non-rapid-eye-movement (NREM) and rapid-eye-movement (REM) periods. NREM progresses through N1, N2, and N3: N2 contains sleep spindles and K-complexes, while N3 is dominated by synchronized slow waves. REM combines wake-like cortical activity with rapid eye movements and strong skeletal-muscle atonia. Across a typical night, deeper NREM sleep is concentrated earlier and REM periods become longer toward morning.</p>
+            <p>The <strong>two-process model</strong> describes sleep timing as an interaction between homeostatic pressure and the circadian clock. Process S builds during wakefulness and dissipates during sleep; EEG slow-wave activity is one indicator of its strength. Process C is an approximately 24-hour signal that can promote wakefulness even after many hours awake and permit sleep at the appropriate biological time.</p>
+            <p>The suprachiasmatic nucleus (SCN) is the principal circadian pacemaker. Melanopsin-containing retinal ganglion cells convey environmental light through the retinohypothalamic tract, resetting molecular clocks based on CLOCK&ndash;BMAL1 and PER&ndash;CRY feedback loops. SCN output coordinates sleep timing, body temperature, hormonal rhythms, feeding, and peripheral clocks. Melatonin is a darkness signal controlled by this system rather than the sole cause of sleep.</p>
+            <ul class="mechanism-list">
+              <li><strong>Sleep-promoting network:</strong> GABA- and galanin-releasing neurons in ventrolateral and median preoptic regions inhibit wake-promoting systems.</li>
+              <li><strong>Wake-promoting network:</strong> cholinergic and monoaminergic nuclei activate the thalamus and cortex. Orexin neurons stabilize wakefulness; their loss causes narcolepsy with unstable state boundaries.</li>
+              <li><strong>NREM coordination:</strong> cortical slow oscillations, thalamic spindles, and hippocampal sharp-wave ripples are temporally coordinated during memory processing.</li>
+              <li><strong>REM generation:</strong> pontine and medullary circuits generate cortical activation, eye movements, and motor atonia while monoaminergic activity remains low.</li>
+            </ul>
+            <p>Sleep supports memory, metabolic and immune regulation, emotion, and synaptic function rather than serving one single purpose. Circadian misalignment and insufficient sleep overlap, but they are biologically distinct: a person can sleep for too little time, sleep at the wrong biological time, or experience both.</p>
           </section>
 
           <section class="subtopic-section" id="pain">
             <h3>8.11 Pain</h3>
-            <p>This section will explore nociception, ascending and descending pain pathways, sensory and emotional dimensions of pain, and mechanisms that modify pain perception.</p>
+            <p><strong>Nociception</strong> is the neural detection and processing of potentially tissue-damaging events; <strong>pain</strong> is an unpleasant sensory and emotional experience. Nociceptive activity can occur without conscious pain, and pain can occur without continuing tissue damage. This distinction does not make pain imaginary&mdash;it reflects that pain is produced by interacting sensory, emotional, cognitive, and bodily-control systems.</p>
+            <p>Peripheral nociceptors express channels sensitive to intense mechanical force, temperature, inflammatory chemicals, or tissue acidity. Thinly myelinated A&delta; fibres commonly carry faster, sharper signals, while unmyelinated C fibres carry slower, diffuse signals. Their cell bodies lie in dorsal-root or cranial sensory ganglia, and their central terminals release glutamate and neuropeptides in the spinal or trigeminal dorsal horn. Projection neurons cross the midline and ascend through the anterolateral system toward thalamic, parabrachial, and reticular targets.</p>
+            <p>Ascending signals enter several networks. Somatosensory regions help identify location and physical features; insular and cingulate regions contribute to interoceptive and affective dimensions; amygdala, hippocampus, prefrontal cortex, and brainstem systems influence threat, context, expectation, and action. These regions also perform many non-pain functions, so there is no single anatomically exclusive “pain centre.”</p>
+            <p>Pain transmission is adjustable at every level. Local dorsal-horn interneurons can gate afferent signals, and descending pathways from cortex and limbic structures through the periaqueductal grey, rostroventromedial medulla, and locus coeruleus can inhibit or facilitate nociception using endogenous opioids, serotonin, norepinephrine, GABA, and other transmitters.</p>
+            <p>Injury can produce <strong>peripheral sensitization</strong> at nociceptor endings. Persistent input, NMDA-dependent plasticity, reduced inhibition, altered descending control, and neuroimmune signalling can also produce <strong>central sensitization</strong>, contributing to hyperalgesia and allodynia. Nociceptive, neuropathic, and nociplastic mechanisms can coexist, which helps explain why chronic pain often requires multimodal treatment.</p>
           </section>
 
           <section class="subtopic-section" id="reward-motivation">
             <h3>8.12 Reward &amp; Motivation</h3>
-            <p>This section will examine reinforcement, prediction, salience, effort, and the neural circuits that guide goal-directed and habitual behaviour.</p>
+            <p>Reward is not a single sensation or brain location. Researchers distinguish <strong>liking</strong>, the hedonic impact of an outcome; <strong>wanting</strong>, the incentive motivation to pursue it; and <strong>learning</strong>, the updating of predictions and actions. These components interact but can dissociate. Dopamine is especially important for learning, cue-triggered motivation, effort, and behavioural activation, but it is not simply a chemical form of pleasure.</p>
+            <p>Reward-guided behaviour recruits a distributed circuit. Dopamine neurons in the ventral tegmental area and substantia nigra project to ventral and dorsal striatum and prefrontal cortex. The nucleus accumbens helps translate motivational value into approach and effort; orbitofrontal and ventromedial prefrontal regions represent outcome value; anterior cingulate networks contribute to effort and control; the amygdala learns cue significance; and the hippocampus supplies context and relational memory.</p>
+            <p>Many dopamine neurons emit a <strong>reward-prediction-error</strong> signal. An unexpected reward produces a phasic increase; after learning, the response shifts toward a cue that predicts the reward; and omission of an expected reward produces a decrease around the expected time. This difference between obtained and predicted outcome can modify corticostriatal synapses and update future choice. Dopamine neurons are heterogeneous, however, and some signals also reflect movement, novelty, salience, or aversive events.</p>
+            <p>Goal-directed actions are selected partly according to expected outcomes and are sensitive to changes in an outcome's value. With repetition, some behaviour becomes more dependent on stimulus&ndash;response habits. Dorsomedial striatal and prefrontal circuits are associated with goal-directed control, while dorsolateral striatal circuits contribute to habits, although the systems cooperate.</p>
+            <div class="subtopic-section__note"><strong>Addiction is not “too much dopamine”:</strong> it involves durable learning, sensitized cue-triggered wanting, stress and habit circuits, and impaired control despite changing consequences. Pleasure, motivation, and reinforcement are related but separable processes.</div>
           </section>
 
           <section class="subtopic-section" id="learning-memory">
             <h3>8.13 Learning &amp; Memory</h3>
-            <p>This section will introduce major forms of learning and memory, the neural systems that support them, and the cellular mechanisms involved in encoding and consolidation.</p>
+            <p>Learning is an experience-dependent change in knowledge or behaviour; memory is the capacity to retain and later use that change. Memory is not one faculty. Working memory depends on coordinated prefrontal, parietal, and sensory networks; episodic and semantic memory initially depend on the hippocampus and adjacent medial-temporal cortices; skills and habits recruit corticostriatal circuits; emotional learning strongly involves the amygdala; and cerebellar circuits support forms of motor learning and conditioned timing.</p>
+            <p>The hippocampus rapidly binds distributed features of an event into a relational representation. Influential circuit models propose that the dentate gyrus helps separate similar input patterns, recurrent CA3 networks help complete a stored pattern from partial cues, and CA1 compares and routes hippocampal output. These are useful computational descriptions rather than exclusive functions of each subfield.</p>
+            <p>At the cellular level, learning changes synaptic efficacy. In a common form of hippocampal long-term potentiation, coincident glutamate release and postsynaptic depolarization relieve the Mg<sup>2+</sup> block of NMDA receptors. Ca<sup>2+</sup> entry activates kinases such as CaMKII, increasing AMPA-receptor function and promoting structural change. Different patterns of Ca<sup>2+</sup> signalling can instead recruit phosphatases and long-term depression. LTP and LTD are experimental models of memory-related plasticity, but a memory is not equivalent to one strengthened synapse.</p>
+            <p>New memories undergo rapid <strong>synaptic consolidation</strong> involving gene expression, protein synthesis, and structural stabilization. Over longer timescales, repeated hippocampal&ndash;cortical interaction helps reorganize memory across distributed networks. During quiet wake and NREM sleep, hippocampal sharp-wave ripples can replay recent activity in coordination with cortical slow oscillations and thalamic spindles.</p>
+            <p>Retrieval is constructive rather than a perfect playback. Under conditions such as prediction error, reactivation can destabilize a memory and require <strong>reconsolidation</strong>, allowing some updating. Extinction usually creates new inhibitory learning rather than erasing the original association, explaining why an extinguished response can return. Forgetting and interference can also be adaptive by reducing outdated or competing information.</p>
+            <div class="subtopic-section__note"><strong>No single memory location:</strong> the neurons recruited during encoding, storage, and retrieval form distributed and changing ensembles. Different memory systems cooperate or compete depending on the task.</div>
           </section>
         </div>
       </section>
@@ -159,5 +303,6 @@
 
   <footer class="site-footer"><div class="container"><p>&copy; Jer's Neuroscience Compendium</p></div></footer>
   <script src="../js/main.js"></script>
+  <script src="../js/topic-interactives.js"></script>
 </body>
 </html>

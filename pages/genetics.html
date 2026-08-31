@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Molecular Neuroscience &mdash; Jer's Neuroscience Compendium</title>
-  <meta name="description" content="Genetics and molecular neuroscience topic guide.">
+  <meta name="description" content="Explore DNA, gene expression, RNA, proteins, cell signalling, neuroplasticity, metabolism, inflammation, oxidative stress, and neurogenetics.">
   <link rel="stylesheet" href="../css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -73,6 +73,62 @@
             <dt>Protein</dt>
             <dd>A molecule built from amino acids that can provide structure, catalyse reactions, carry signals, or perform other cellular functions.</dd>
           </div>
+          <div id="enhancer">
+            <dt>Enhancer</dt>
+            <dd>A regulatory DNA sequence that can increase transcription by recruiting transcription factors and communicating with a gene promoter.</dd>
+          </div>
+          <div id="transcriptome">
+            <dt>Transcriptome</dt>
+            <dd>The complete collection of RNA molecules expressed by a cell or tissue at a particular time.</dd>
+          </div>
+          <div id="alternative-splicing">
+            <dt>Alternative splicing</dt>
+            <dd>The production of different mature RNA transcripts by combining exons from the same pre-mRNA in different ways.</dd>
+          </div>
+          <div id="epigenetics-term">
+            <dt>Epigenetics</dt>
+            <dd>Regulation of genome activity through chromatin and DNA modifications without changing the underlying DNA sequence.</dd>
+          </div>
+          <div id="phosphorylation">
+            <dt>Phosphorylation</dt>
+            <dd>The reversible addition of a phosphate group to a molecule, commonly used to regulate protein activity and cell signalling.</dd>
+          </div>
+          <div id="second-messenger">
+            <dt>Second messenger</dt>
+            <dd>An intracellular signal, such as cAMP, Ca<sup>2+</sup>, IP<sub>3</sub>, or DAG, generated after a receptor is activated.</dd>
+          </div>
+          <div id="proteostasis">
+            <dt>Proteostasis</dt>
+            <dd>The coordinated synthesis, folding, trafficking, and removal of proteins that preserves a functional cellular proteome.</dd>
+          </div>
+          <div id="mitophagy">
+            <dt>Mitophagy</dt>
+            <dd>The selective autophagic removal of damaged or unnecessary mitochondria.</dd>
+          </div>
+          <div id="reactive-oxygen-species">
+            <dt>Reactive oxygen species</dt>
+            <dd>Reactive oxygen-containing molecules that can serve signalling functions but damage lipids, proteins, and nucleic acids when insufficiently controlled.</dd>
+          </div>
+          <div id="neuroinflammation-term">
+            <dt>Neuroinflammation</dt>
+            <dd>Coordinated immune and inflammatory signalling within the nervous system involving glia, neurons, vascular cells, and sometimes peripheral immune cells.</dd>
+          </div>
+          <div id="single-nucleotide-variant">
+            <dt>Single-nucleotide variant</dt>
+            <dd>A difference at one nucleotide position in the genome; its biological importance depends on its location and effect.</dd>
+          </div>
+          <div id="copy-number-variant">
+            <dt>Copy-number variant</dt>
+            <dd>A deletion or duplication that changes the number of copies of a genomic segment.</dd>
+          </div>
+          <div id="penetrance">
+            <dt>Penetrance</dt>
+            <dd>The proportion of people with a particular genetic variant who express the associated trait or condition.</dd>
+          </div>
+          <div id="polygenic">
+            <dt>Polygenic</dt>
+            <dd>Influenced by many genetic variants, usually with individually small effects, together with non-genetic factors.</dd>
+          </div>
         </dl>
       </section>
 
@@ -85,60 +141,140 @@
         <div class="subtopic-list">
           <section class="subtopic-section" id="dna-genetics">
             <h3>7.3 DNA &amp; Genetics</h3>
-            <p>Genes can be thought of as biological instructions. Many genes contain the information needed to build proteins, while others produce functional RNA molecules or help regulate when other genes are active.</p>
-            <p>DNA uses four nucleotide bases: adenine (A), thymine (T), cytosine (C), and guanine (G). In double-stranded DNA, A pairs with T and C pairs with G. Human genetic information is organized into chromosomes; most nucleated human cells contain 23 chromosome pairs.</p>
-            <p>Each nucleotide contains a nitrogenous base, a five-carbon sugar, and a phosphate group. DNA contains deoxyribose and usually uses thymine, while RNA contains ribose and usually uses uracil (U) in place of thymine.</p>
+            <p>DNA is a double-stranded polymer built from nucleotides containing adenine (A), thymine (T), cytosine (C), or guanine (G). Complementary pairing&mdash;A with T and C with G&mdash;allows each strand to serve as a template during replication. In the nucleus, DNA is wrapped around histone proteins to form chromatin and is organized into chromosomes; most nucleated human cells contain 23 chromosome pairs.</p>
+            <p>A <strong>gene</strong> is a genomic region that contributes to a functional RNA or protein product, together with regulatory sequences controlling where, when, and how much product is made. Protein-coding exons occupy only a small fraction of the genome. Promoters, enhancers, silencers, non-coding RNAs, chromatin structure, and three-dimensional contacts between distant DNA regions all contribute to gene regulation.</p>
+            <p>Nearly every neuron and glial cell contains essentially the same inherited genome, yet these cells differ because they activate different gene programs. A cortical pyramidal neuron, oligodendrocyte, and microglial cell express different receptors, channels, enzymes, and structural proteins. Cellular identity therefore emerges from genome regulation, not from each cell possessing a different set of genes.</p>
+            <p>Genetic variation includes single-nucleotide variants, short insertions or deletions, copy-number changes, repeat expansions, and large chromosomal alterations. A variant may disrupt a protein, change RNA splicing, alter a regulatory element, or have no measurable effect. Some neurological conditions follow a strong single-gene pattern, whereas most common brain traits and psychiatric conditions reflect many variants interacting with development and environment.</p>
+            <div class="subtopic-section__note"><strong>Key distinction:</strong> genetic influence is not genetic destiny. Penetrance, variant effect size, developmental timing, cell type, environmental exposure, and chance all shape whether and how a genetic difference becomes biologically visible.</div>
           </section>
 
           <section class="subtopic-section" id="gene-expression">
             <h3>7.4 Gene Expression</h3>
-            <p>Gene expression describes how cells use information encoded in DNA to produce functional RNA and proteins. Neurons and glia regulate this process across development, activity, experience, and changing physiological conditions.</p>
+            <p>Gene expression is the controlled use of DNA information to produce RNA and, for protein-coding genes, protein. Transcription begins when transcription factors and co-regulators make a promoter accessible and recruit RNA polymerase II. Enhancers can act over long genomic distances by looping toward promoters, allowing combinations of developmental signals and ongoing cellular activity to tune transcription.</p>
+            <p>Neural activity can rapidly reach the genome. Ca<sup>2+</sup> entering through NMDA receptors or voltage-gated calcium channels activates pathways including CaMK, Ras&ndash;ERK, and cAMP&ndash;PKA. These pathways regulate transcription factors such as CREB and induce immediate-early genes including <em>FOS</em>, <em>EGR1</em>, and <em>ARC</em>. Their products then alter later gene programs, synaptic structure, excitability, and plasticity.</p>
+            <p>Expression is specific to cell type, brain region, developmental stage, and time. A rise in messenger RNA does not guarantee a matching rise in protein: RNA stability, transport, translation, protein modification, and degradation all intervene. Modern transcriptomics can measure thousands of RNAs simultaneously, while single-cell and single-nucleus methods reveal programs that bulk tissue averages would conceal.</p>
+            <p>Homeostatic regulation is as important as activation. Neurons must respond to meaningful activity without allowing excitation to escalate indefinitely. Activity-dependent transcription therefore includes both effectors that strengthen selected connections and feedback genes that reduce excitability or restore network stability.</p>
+
+            <div class="concept-explorer" data-concept-explorer style="--concept-steps:5">
+              <div class="concept-explorer__header">
+                <h4>Follow information from gene to functional protein</h4>
+                <p>Select a stage to see what changes and where it occurs.</p>
+              </div>
+              <div class="concept-explorer__tabs" role="tablist" aria-label="Gene expression stages">
+                <button id="gene-stage-dna" class="concept-explorer__tab" type="button" role="tab" aria-selected="true" aria-controls="gene-panel-dna">1. Regulatory DNA</button>
+                <button id="gene-stage-transcription" class="concept-explorer__tab" type="button" role="tab" aria-selected="false" aria-controls="gene-panel-transcription" tabindex="-1">2. Transcription</button>
+                <button id="gene-stage-processing" class="concept-explorer__tab" type="button" role="tab" aria-selected="false" aria-controls="gene-panel-processing" tabindex="-1">3. RNA processing</button>
+                <button id="gene-stage-translation" class="concept-explorer__tab" type="button" role="tab" aria-selected="false" aria-controls="gene-panel-translation" tabindex="-1">4. Translation</button>
+                <button id="gene-stage-protein" class="concept-explorer__tab" type="button" role="tab" aria-selected="false" aria-controls="gene-panel-protein" tabindex="-1">5. Protein fate</button>
+              </div>
+              <div class="concept-explorer__panels">
+                <section id="gene-panel-dna" class="concept-explorer__panel" role="tabpanel" aria-labelledby="gene-stage-dna">
+                  <h5>Regulatory DNA establishes access</h5>
+                  <p>Chromatin state and transcription factors determine whether a promoter and its enhancers can recruit the transcriptional machinery.</p>
+                </section>
+                <section id="gene-panel-transcription" class="concept-explorer__panel" role="tabpanel" aria-labelledby="gene-stage-transcription">
+                  <h5>RNA polymerase copies the template</h5>
+                  <p>RNA polymerase II reads one DNA strand and synthesizes a complementary pre-mRNA containing both exons and introns.</p>
+                </section>
+                <section id="gene-panel-processing" class="concept-explorer__panel" role="tabpanel" aria-labelledby="gene-stage-processing">
+                  <h5>The transcript is edited for use</h5>
+                  <p>A 5&prime; cap, splicing, and a poly(A) tail support stability, export, localization, and translation; alternative choices can create distinct RNA isoforms.</p>
+                </section>
+                <section id="gene-panel-translation" class="concept-explorer__panel" role="tabpanel" aria-labelledby="gene-stage-translation">
+                  <h5>Ribosomes decode the mRNA</h5>
+                  <p>Transfer RNAs match anticodons to mRNA codons while the ribosome joins amino acids into a polypeptide.</p>
+                </section>
+                <section id="gene-panel-protein" class="concept-explorer__panel" role="tabpanel" aria-labelledby="gene-stage-protein">
+                  <h5>Folding and targeting determine function</h5>
+                  <p>The new polypeptide folds, may be chemically modified, and is delivered to the cytosol, nucleus, organelles, membrane, or extracellular space.</p>
+                </section>
+              </div>
+            </div>
           </section>
 
           <section class="subtopic-section" id="rna-processing">
             <h3>7.5 RNA &amp; RNA Processing</h3>
-            <p>Protein-coding information in DNA is first copied into pre-messenger RNA through transcription. During RNA processing, introns are removed and exons are joined through splicing, producing mature messenger RNA. Additional RNA molecules help regulate when, where, and how strongly genes are expressed.</p>
+            <p>RNA is chemically similar to DNA but usually single-stranded, contains ribose, and uses uracil in place of thymine. Messenger RNA (mRNA) carries coding information, ribosomal RNA forms the catalytic core of ribosomes, and transfer RNA delivers amino acids during translation. Many additional non-coding RNAs regulate chromatin, transcription, RNA stability, or translation.</p>
+            <p>A newly transcribed pre-mRNA is processed before translation. A 5&prime; cap protects the transcript and recruits translation machinery; spliceosomes remove introns and join exons; and cleavage followed by a poly(A) tail supports stability and export. <strong>Alternative splicing</strong> can combine exons in different patterns, allowing one gene to produce RNA and protein isoforms with different cellular properties.</p>
+            <p>Neurons make especially extensive use of RNA regulation because their axons and dendrites can extend far from the nucleus. RNA-binding proteins package selected transcripts into granules and transport them along the cytoskeleton. Signals at an active synapse can then release translational repression, permitting local protein synthesis near the site where new proteins are required.</p>
+            <p>RNA editing, alternative polyadenylation, microRNAs, and controlled RNA degradation add further layers. For example, A-to-I editing of the <em>GRIA2</em> transcript changes an amino acid in the GluA2 AMPA-receptor subunit and strongly limits Ca<sup>2+</sup> permeability. Disrupted splicing or RNA-binding proteins are implicated in conditions including spinal muscular atrophy, ALS, frontotemporal dementia, and fragile X syndrome.</p>
           </section>
 
           <section class="subtopic-section" id="protein-synthesis">
             <h3>7.6 Protein Synthesis</h3>
-            <p>Ribosomes translate messenger RNA by reading its sequence in three-nucleotide codons. Each codon specifies an amino acid or a translation signal, and the resulting amino-acid chain folds and may be modified to become a functional protein.</p>
-            <p>Neurons and glial cells use gene expression to produce receptors, ion channels, transporters, enzymes, structural proteins, and signalling molecules. Changes in which genes are active can influence development, synaptic plasticity, stress responses, adaptation, and disease processes.</p>
+            <p>Translation begins when a ribosome assembles near the 5&prime; end of an mRNA and identifies a start codon. During elongation, transfer RNAs pair their anticodons with three-base mRNA codons and deliver the corresponding amino acids. The ribosome catalyses peptide-bond formation until a stop codon recruits release factors and frees the completed polypeptide.</p>
+            <p>Protein destination is built into the process. Proteins remaining in the cytosol are generally synthesized on free ribosomes. A signal peptide on a membrane, lysosomal, or secreted protein directs the translating ribosome to rough endoplasmic reticulum, after which the protein can be folded, glycosylated, inspected, and transported through the Golgi apparatus.</p>
+            <p>Neurons also translate selected mRNAs locally in dendrites, axons, and growth cones. NMDA-receptor, neurotrophin, and metabotropic-receptor signals can regulate initiation factors and the mTOR pathway, producing synaptic proteins close to activated connections. This spatial control helps a neuron modify a subset of thousands of synapses without changing every connection equally.</p>
+            <p>Protein function continues to be regulated after translation through phosphorylation, ubiquitination, cleavage, trafficking, and assembly with other subunits. Molecular chaperones assist folding, while the ubiquitin&ndash;proteasome system and autophagy remove damaged or excess proteins. Failure of this proteostasis network can permit aggregation of proteins such as tau, &alpha;-synuclein, TDP-43, or huntingtin.</p>
           </section>
 
           <section class="subtopic-section" id="epigenetics">
             <h3>7.7 Epigenetics</h3>
-            <p>This section will examine molecular mechanisms that regulate gene activity without changing the underlying DNA sequence, including DNA methylation, histone modification, and chromatin remodelling.</p>
+            <p>Epigenetics concerns molecular systems that regulate genome activity without altering the DNA sequence itself. DNA is wrapped around histone octamers to form nucleosomes. Chemical marks on DNA or histones, nucleosome positioning, chromatin-remodelling complexes, and three-dimensional genome organization influence whether regulatory sequences are accessible.</p>
+            <p>DNA methyltransferases add methyl groups to cytosine, most often at CpG sites. Promoter methylation is frequently associated with reduced transcription, although the effect depends on genomic context. TET enzymes help generate oxidized derivatives such as 5-hydroxymethylcytosine, which is particularly abundant in the nervous system and participates in dynamic DNA-demethylation pathways.</p>
+            <p>Histone acetyltransferases add acetyl groups that generally weaken histone&ndash;DNA interactions and support accessible chromatin; histone deacetylases remove them. Histone methylation can either activate or repress transcription depending on the residue modified. These marks are interpreted by reader proteins and work with transcription factors rather than acting as a simple on/off code.</p>
+            <p>During development, epigenetic programs stabilize neuronal and glial identities. In mature neurons, activity can alter chromatin around plasticity-related genes, helping brief synaptic events produce longer-lasting transcriptional responses. Epigenetic dysregulation contributes to disorders such as Rett syndrome, caused by pathogenic variants in the methyl-DNA-binding protein MECP2.</p>
+            <div class="subtopic-section__note"><strong>Important nuance:</strong> “epigenetic” does not automatically mean permanent, inherited across generations, or caused by environment. Many neural epigenetic changes are reversible, cell-specific, and maintained only within the lifetime of a cell.</div>
           </section>
 
           <section class="subtopic-section" id="cell-signaling">
             <h3>7.8 Cell Signaling</h3>
-            <p>This section will introduce receptors, second messengers, protein kinases, and the intracellular pathways through which neurons and glial cells detect and respond to signals.</p>
+            <p>Cell signalling converts an extracellular or intracellular event into a coordinated response. <strong>Ionotropic receptors</strong> directly open ion channels and act within milliseconds. <strong>G-protein-coupled receptors</strong> activate G proteins and second messengers, while receptor tyrosine kinases such as Trk receptors phosphorylate docking proteins and initiate enzyme cascades. Steroid hormones can cross membranes and bind intracellular receptors that directly regulate transcription.</p>
+            <p>Second messengers amplify and distribute information. G<sub>s</sub>-coupled receptors stimulate adenylyl cyclase, increasing cAMP and protein kinase A activity. G<sub>q</sub>-coupled receptors activate phospholipase C, which generates IP<sub>3</sub> and DAG; IP<sub>3</sub> releases Ca<sup>2+</sup> from endoplasmic-reticulum stores, while DAG helps activate protein kinase C. Ca<sup>2+</sup> itself controls release, excitability, metabolism, transcription, and plasticity through proteins such as calmodulin.</p>
+            <p>Major signalling networks include Ras&ndash;RAF&ndash;MEK&ndash;ERK, which links receptors to transcription and structural change; PI3K&ndash;AKT&ndash;mTOR, which regulates survival, growth, and protein synthesis; JAK&ndash;STAT, used by many cytokine receptors; and NF-&kappa;B, a key regulator of inflammatory and stress responses. These are interacting networks rather than isolated linear pathways.</p>
+            <p>Specificity comes from location, timing, and molecular scaffolds. A brief Ca<sup>2+</sup> nanodomain beside a presynaptic channel can trigger vesicle fusion, while repeated nuclear Ca<sup>2+</sup> signals can alter transcription. Phosphatases, GTPase-activating proteins, phosphodiesterases, receptor internalization, and negative-feedback genes terminate signals and prevent chronic activation.</p>
+            <ul class="mechanism-list">
+              <li><strong>Fast electrical response:</strong> ionotropic glutamate, GABA, acetylcholine, and serotonin receptors change membrane conductance directly.</li>
+              <li><strong>Neuromodulation:</strong> dopamine, many serotonin receptors, metabotropic glutamate receptors, and neuropeptides act mainly through GPCRs.</li>
+              <li><strong>Growth and survival:</strong> BDNF binding to TrkB recruits ERK, PI3K&ndash;AKT, and PLC&gamma; pathways.</li>
+              <li><strong>Inflammatory response:</strong> cytokine and pattern-recognition receptors regulate JAK&ndash;STAT, MAPK, inflammasome, and NF-&kappa;B signalling.</li>
+            </ul>
           </section>
 
           <section class="subtopic-section" id="molecular-neuroplasticity">
             <h3>7.9 Molecular Neuroplasticity</h3>
-            <p>This section will explore the molecular changes that allow synapses and neural circuits to strengthen, weaken, and reorganize in response to activity and experience.</p>
+            <p>Neuroplasticity is the nervous system's capacity to change its functional or structural organization. At excitatory synapses, long-term potentiation (LTP) and long-term depression (LTD) are well-studied forms in which previous activity produces a persistent increase or decrease in synaptic strength. They are mechanisms available to neural circuits, not complete explanations of learning by themselves.</p>
+            <p>In a common form of hippocampal LTP, glutamate activates AMPA receptors and depolarizes the postsynaptic spine. Depolarization removes the voltage-dependent Mg<sup>2+</sup> block from NMDA receptors, allowing Ca<sup>2+</sup> entry. A relatively strong, brief Ca<sup>2+</sup> signal activates CaMKII and related kinases, increasing AMPA-receptor conductance and promoting receptor delivery and trapping at the postsynaptic density.</p>
+            <p>Smaller or more prolonged Ca<sup>2+</sup> elevations can favour phosphatases such as calcineurin and PP1, promoting AMPA-receptor dephosphorylation and internalization during LTD. Thus, the same synapse can interpret different activity patterns through the amplitude, duration, and location of Ca<sup>2+</sup> signalling. Presynaptic release probability, inhibitory transmission, and intrinsic ion channels are also plastic.</p>
+            <p>Long-lasting plasticity recruits actin remodelling, local translation, and activity-dependent transcription. BDNF&ndash;TrkB, ERK, CREB, Arc, and protein-synthesis pathways can stabilize changes in spine size and synaptic composition. Meanwhile, homeostatic scaling adjusts many synapses up or down when overall activity remains chronically low or high, preserving network stability while Hebbian mechanisms modify selected connections.</p>
+            <div class="subtopic-section__note"><strong>Plasticity is constrained:</strong> age, sleep, stress hormones, neuromodulators, previous activity, inhibitory circuits, and metaplasticity all influence whether the same input strengthens, weakens, or leaves a connection unchanged.</div>
           </section>
 
           <section class="subtopic-section" id="mitochondria-neuronal-energy">
             <h3>7.10 Mitochondria &amp; Neuronal Energy</h3>
-            <p>This section will examine how mitochondria produce cellular energy, regulate calcium and metabolism, and support the unusually high energy demands of neurons.</p>
+            <p>The brain consumes a disproportionate share of the body's energy because neurons continually restore ion gradients, propagate action potentials, recycle synaptic vesicles, clear neurotransmitters, and maintain long cellular processes. Most neuronal ATP is generated when mitochondria use the electron-transport chain to establish a proton gradient that drives ATP synthase through oxidative phosphorylation.</p>
+            <p>Mitochondria do more than produce ATP. They take up and release Ca<sup>2+</sup>, helping shape local signals and matching energy production to activity. They contribute to lipid synthesis, redox signalling, and programmed cell death. At presynaptic terminals, nearby mitochondria can support vesicle recycling and buffer the large Ca<sup>2+</sup> transients produced by repeated firing.</p>
+            <p>Because energy demand is spatially uneven, mitochondria are transported along microtubules by kinesin and dynein motors and anchored near active sites. Fusion allows mitochondrial contents to mix, fission supports distribution and quality control, and mitophagy removes damaged organelles. Proteins including PINK1 and Parkin participate in mitochondrial quality-control pathways and are linked to familial forms of Parkinson's disease.</p>
+            <p>Glucose metabolism is shared across neural and glial cells. Astrocytes take up synaptic glutamate and increase glycolysis; they can supply neurons with metabolic substrates including lactate, although the degree to which neurons rely on an astrocyte&ndash;neuron lactate shuttle varies with state and remains actively studied. Blood flow must also rise rapidly with local activity to deliver oxygen and glucose.</p>
+            <p>The mitochondrial genome encodes a small but essential set of respiratory-chain components and is inherited predominantly through the maternal line. Pathogenic mitochondrial-DNA or nuclear-gene variants can especially affect brain, muscle, and sensory systems because these tissues have high energy demands. Energy failure, impaired Ca<sup>2+</sup> handling, and excess reactive oxygen species can then reinforce one another.</p>
           </section>
 
           <section class="subtopic-section" id="neuroinflammation">
             <h3>7.11 Neuroinflammation</h3>
-            <p>This section will cover inflammatory signalling in the nervous system and the roles of microglia, astrocytes, cytokines, and peripheral immune activity.</p>
+            <p>Neuroinflammation is the coordinated immune response of the nervous system to infection, injury, abnormal proteins, altered metabolism, or cellular stress. Microglia are resident immune cells that continuously survey their environment. Astrocytes, endothelial cells, pericytes, oligodendrocytes, neurons, and infiltrating immune cells can also produce or respond to inflammatory signals.</p>
+            <p>Pattern-recognition receptors detect microbial molecules and damage-associated signals. Downstream NF-&kappa;B and inflammasome pathways can promote cytokines such as IL-1&beta;, TNF, and IL-6, chemokines that recruit cells, reactive oxygen or nitrogen species, and changes in phagocytosis. Complement proteins can tag material for removal and participate in synaptic refinement, although complement-dependent pruning is not universal across every region or condition.</p>
+            <p>The blood&ndash;brain barrier is an active interface formed by specialized endothelial cells, pericytes, astrocytic endfeet, and basement membrane. Inflammation can alter tight junctions, transport, and immune-cell adhesion. Signals also move in the opposite direction: neural and endocrine pathways can change peripheral immune activity, while circulating cytokines and immune cells influence brain function through several routes.</p>
+            <p>An acute response can contain infection, remove debris, support remyelination, and initiate repair. Persistent or dysregulated responses can impair synapses, myelin, vascular function, and neuronal survival. Microglia occupy many context-dependent states; the older “M1 versus M2” labels are too simple to capture their molecular diversity.</p>
+            <div class="subtopic-section__note"><strong>Cause and consequence:</strong> inflammatory markers found in a disorder may drive pathology, compensate for damage, or simply reflect it. Identifying the relevant cell state, timing, location, and trigger is essential before calling inflammation beneficial or harmful.</div>
           </section>
 
           <section class="subtopic-section" id="oxidative-stress">
             <h3>7.12 Oxidative Stress</h3>
-            <p>This section will introduce reactive oxygen species, antioxidant defences, and the ways oxidative imbalance can affect neural cells and contribute to disease.</p>
+            <p>Reactive oxygen species (ROS) include superoxide, hydrogen peroxide, and the highly reactive hydroxyl radical. Mitochondrial electron transport, NADPH oxidases, peroxisomes, and inflammatory cells can generate them. At controlled concentrations, ROS reversibly modify proteins and participate in signalling and plasticity; oxidative stress occurs when production exceeds antioxidant and repair capacity.</p>
+            <p>Superoxide dismutases convert superoxide to hydrogen peroxide. Catalase, glutathione peroxidases, peroxiredoxins, glutathione, and thioredoxin systems then limit peroxide and repair oxidized molecules. The transcription factor Nrf2 activates antioxidant-response genes and is particularly important in astrocytes, which supply neurons with precursors needed to synthesize glutathione.</p>
+            <p>Neural tissue is vulnerable because it uses abundant oxygen, contains oxidation-sensitive lipids, concentrates redox-active metals, and includes long-lived cells with high energetic demand. Uncontrolled ROS can drive lipid peroxidation, alter ion channels and enzymes, damage mitochondrial or nuclear DNA, and impair protein folding. Iron-dependent lipid-peroxide injury can contribute to ferroptosis.</p>
+            <p>Oxidative stress and mitochondrial dysfunction often form a feedback loop: damaged respiratory machinery leaks more electrons and produces more ROS, while oxidation further impairs mitochondria. Oxidative damage is documented in stroke, traumatic injury, and neurodegenerative disease, but a marker of oxidation does not establish it as the initiating cause.</p>
+            <p>Clinical antioxidant effects cannot be inferred from test-tube chemistry alone. A useful intervention must reach the relevant tissue and cellular compartment at an appropriate concentration without disrupting physiological redox signalling. This helps explain why broad antioxidant supplements have often produced inconsistent clinical results.</p>
           </section>
 
           <section class="subtopic-section" id="neurogenetics">
             <h3>7.13 Neurogenetics</h3>
-            <p>This section will explore how inherited variants, new mutations, gene regulation, and gene&ndash;environment interactions influence nervous-system traits and neurological disease.</p>
+            <p>Neurogenetics investigates how genomic variation influences nervous-system development, function, behaviour, and disease. <strong>Monogenic</strong> disorders can arise when one pathogenic variant has a large effect: examples include expanded <em>HTT</em> CAG repeats in Huntington's disease, many <em>SCN1A</em> variants in Dravet syndrome, and loss of <em>SMN1</em> function in spinal muscular atrophy. Even then, age of onset and severity can vary.</p>
+            <p>Other variants alter risk rather than determine outcome. The <em>APOE</em> &epsilon;4 allele increases the probability of late-onset Alzheimer's disease but is neither necessary nor sufficient for the disease. Many psychiatric and common neurological conditions are highly polygenic: thousands of common variants contribute small effects, while rare variants or copy-number changes may contribute larger effects in a subset of people.</p>
+            <p>Researchers use pedigrees and linkage analysis to follow large-effect variants in families; karyotyping and chromosomal microarrays to detect large changes or copy-number variants; exome and genome sequencing to identify rare sequence variants; and genome-wide association studies (GWAS) to test common variants across large populations. Functional genomics then asks which cell type, developmental period, regulatory element, RNA, or protein connects a statistical association to biology.</p>
+            <p>Key concepts include <strong>penetrance</strong>, the probability that a carrier expresses a trait; <strong>variable expressivity</strong>, differences in how strongly it appears; and <strong>pleiotropy</strong>, in which one gene influences multiple traits. Gene&ndash;environment interaction means that a variant's effect changes with exposure or context; it does not mean that every environmental effect alters DNA.</p>
+            <p>Genetics is beginning to guide treatment. Nusinersen modifies <em>SMN2</em> splicing in spinal muscular atrophy, and gene-replacement or RNA-targeting approaches are being developed for selected conditions. These successes require a defined molecular target; they do not make current polygenic scores a stand-alone diagnostic test for complex psychiatric or neurological disorders.</p>
+            <div class="subtopic-section__note"><strong>Interpretation matters:</strong> variant classification depends on population frequency, inheritance, predicted effect, functional evidence, and clinical findings. An ancestry-biased reference dataset can reduce accuracy for underrepresented populations, and results with medical implications require qualified genetic counselling.</div>
           </section>
         </div>
       </section>
@@ -147,5 +283,6 @@
 
   <footer class="site-footer"><div class="container"><p>&copy; Jer's Neuroscience Compendium</p></div></footer>
   <script src="../js/main.js"></script>
+  <script src="../js/topic-interactives.js"></script>
 </body>
 </html>
